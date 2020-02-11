@@ -3,6 +3,8 @@
 
 @charset "utf-8";
 
+
+
 // Example Defaults
 // $base-font-family: Helvetica, Arial, sans-serif;
 // $base-font-size:   16px;
@@ -61,8 +63,7 @@ header {
   background-color: #e2e2e2 !important;
 }
 
-.navbar-brand-rachkova {
-  max-height: 75px;
-  padding-left: 20%;
-  
+.navbar-brand-rachkova img {
+      max-height: 75px;
+      padding-left: 20%;
 }
