@@ -45,6 +45,44 @@ $theme-dark: #222;
         "base"
 ;
 
+$widthLevelZero: 410px;
+$widthLevelOneLower: 411px;
+$widthLevelOneHigher: 767px;
+$widthLevelTwoLower: 768px;
+$widthLevelTwoHigher: 989px;
+$widthLevelThreeLower: 990px;
+$widthLevelThreeHigher: 1199px;
+$widthLevelFour: 1199px;
+$widthLevelFive: 1600px;
+
+@mixin widthLevel00 {
+  @media (max-width: $widthLevelZero) { @content; }
+}
+
+@mixin widthLevel01 {
+  @media (min-width:$widthLevelOneLower) and (max-width:$widthLevelOneHigher)  { @content; }
+}
+
+@mixin widthLevel02 {
+  @media (min-width:$widthLevelTwoLower) and (max-width:$widthLevelTwoHigher) { @content; }
+}
+@mixin widthLevelMin02 {
+  @media (min-width:$widthLevelThreeLower) { @content; }
+}
+
+@mixin widthLevel03 {
+  @media (min-width:$widthLevelThreeLower) and (max-width:$widthLevelThreeHigher) { @content; }
+}
+
+
+@mixin widthLevel04 {
+  @media (min-width: $widthLevelFour) { @content; }
+}
+
+@mixin widthLevel05 {
+  @media (min-width: $widthLevelFive) { @content; }
+}
+
 // Adding a new Background Image
 header {
   background-image: url("../img/frontPageImage_01.jpg") !important;
@@ -61,9 +99,44 @@ header {
 // Changing Transparency at top
 .navbar-default {
   background-color: #e2e2e2 !important;
+  border-color: rgba(34, 34, 34, 0.5);
 }
 
 .navbar-brand-rachkova img {
       max-height: 75px;
       padding-left: 20%;
+}
+
+.navbar-nav > li > a {
+  padding-top: 30px !important;
+  font-size: 20px !important;
+}
+
+.navbar-default .nav > li > a, .navbar-default .nav > li > a:focus {
+  color: rgba(0,0,0,0.5) !important;
+}
+
+
+// Here are coming the customizations for the first view
+
+.header-content {
+  @include widthLevelMin02 {top:30% !important;}
+}
+
+
+// Viewport Animation (viewport.js)
+.come-in {
+  transform: translateY(150px);
+  animation: come-in 0.8s ease forwards;
+}
+.come-in:nth-child(odd) {
+  animation-duration: 0.6s;
+}
+.already-visible {
+  transform: translateY(0);
+  animation: none;
+}
+
+@keyframes come-in {
+  to { transform: translateY(0); }
 }
