@@ -43,7 +43,26 @@ $theme-dark: #222;
         "base"
 ;
 
+// Adding a new Background Image
 header {
   background-image: url("../img/frontPageImage_01.jpg") !important;
   background-attachment: fixed !important;
+}
+
+// Changing Height of Header
+.navbar {
+    min-height: 100px !important;
+    height: 100px;
+    max-height: 100px;
+}
+
+// Changing Transparency at top
+.navbar-default {
+  background-color: #e2e2e2 !important;
+}
+
+.navbar-brand-rachkova {
+  max-height: 75px;
+  padding-left: 20%;
+  
 }
