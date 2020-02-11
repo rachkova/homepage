@@ -42,3 +42,8 @@ $theme-dark: #222;
         "mixins",
         "base"
 ;
+
+.header-content {
+  background-image: url("../img/frontPageImage_01.jpg") !important;
+  background-attachment: fixed !important;
+}
