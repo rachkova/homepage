@@ -9,9 +9,9 @@ collections:
     title: Uploads
     output: true
 email: 
-description: ''
-baseurl: ''
-url: ''
+description: 
+baseurl: 
+url: 
 twitter_username: 
 github_username: 
 markdown: kramdown
