@@ -64,3 +64,41 @@
 {
 	font-family: 'Merriweather', 'Helvetica Neue', Arial, sans-serif;
 }
+
+$widthLevelZero: 410px;
+$widthLevelOneLower: 411px;
+$widthLevelOneHigher: 767px;
+$widthLevelTwoLower: 768px;
+$widthLevelTwoHigher: 989px;
+$widthLevelThreeLower: 990px;
+$widthLevelThreeHigher: 1199px;
+$widthLevelFour: 1199px;
+$widthLevelFive: 1600px;
+
+@mixin widthLevel00 {
+  @media (max-width: $widthLevelZero) { @content; }
+}
+
+@mixin widthLevel01 {
+  @media (min-width:$widthLevelOneLower) and (max-width:$widthLevelOneHigher)  { @content; }
+}
+
+@mixin widthLevel02 {
+  @media (min-width:$widthLevelTwoLower) and (max-width:$widthLevelTwoHigher) { @content; }
+}
+@mixin widthLevelMin02 {
+  @media (min-width:$widthLevelThreeLower) { @content; }
+}
+
+@mixin widthLevel03 {
+  @media (min-width:$widthLevelThreeLower) and (max-width:$widthLevelThreeHigher) { @content; }
+}
+
+
+@mixin widthLevel04 {
+  @media (min-width: $widthLevelFour) { @content; }
+}
+
+@mixin widthLevel05 {
+  @media (min-width: $widthLevelFive) { @content; }
+}
