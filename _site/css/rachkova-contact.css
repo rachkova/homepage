@@ -1,0 +1,11 @@
+.contact-container { width: 100%; min-height: 980px; background-color: #373737; display: flex; justify-content: center; }
+
+.contact-content { min-width: 1320px; max-width: 1320px; padding: 82px 20px 0px 20px; justify-content: flex-start; align-items: flex-start; display: flex; flex-flow: row; }
+
+.contact-description-container { min-width: 660px; max-width: 660px; padding-right: 50px; }
+
+.contact-header { font-size: 30px; font-weight: bold; color: #c6c6c6; }
+
+.contact-description { padding: 50px 0px 50px 0px; font-size: 20px; font-weight: 600; color: #c6c6c6; }
+
+.contact-googlemaps-container { min-height: 980px; min-width: 660px; max-width: 660px; }

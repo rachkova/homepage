@@ -1,0 +1,46 @@
+---
+---
+
+header {
+
+
+    position: relative;
+
+    background-size: cover;
+    background-position: center;
+    background-image: url("../img/header.jpg");
+
+    background-repeat: no-repeat;
+    // background-attachment: fixed;
+
+
+}
+
+.header-container-rachkova {
+
+    padding-top: 360px;
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+}
+
+.p-container-center  {
+
+  display: flex;
+  justify-content: center;
+
+  p {
+
+    max-width: 1320px !important;
+    align-self: center;
+
+    font-weight: bold;
+    font-size: 30px;
+
+  }
+}
