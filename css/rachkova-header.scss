@@ -1,0 +1,39 @@
+---
+---
+
+header {
+
+    position: relative;
+
+    background-size: cover;
+    background-position: center;
+    background-image: url("../img/header.jpg");
+
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+}
+
+.header-content-rachkova {
+
+    padding-top:360px;
+
+}
+
+hr {
+
+  border-color: #F22FF0;
+  border-width: 3px;
+  max-width: 50px;
+
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+
+  text-align: center;
+
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+
+}
