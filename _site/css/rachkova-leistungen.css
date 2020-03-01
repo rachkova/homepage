@@ -1,0 +1,13 @@
+.leistungen-container { width: 100%; min-height: 980px; background-image: url("../img/leistungen-background.png"); background-repeat: no-repeat; background-position: center; background-size: cover; background-attachment: fixed; display: flex; justify-content: center; }
+
+.leistungen-content { min-width: 1320px; max-width: 1320px; padding: 62px 20px 0px 20px; justify-content: flex-start; align-items: flex-start; }
+
+.leistungen-sub-container { padding-top: 100px; }
+
+.leistungen-element-container { padding: 20px 0 20px 0; display: flex; flex-flow: row; }
+
+.leistungen-element-h { flex: 1; font-weight: bold; font-size: 30px; color: #383533; }
+
+.leistungen-element-beschreibung { flex: 2; font-size: 25px; font-weight: 600; color: #383533; }
+
+.leistungen-element-h-single { font-weight: bold; font-size: 30px; color: #383533; }
