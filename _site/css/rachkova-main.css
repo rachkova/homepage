@@ -1,6 +1,8 @@
 html * { font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif; }
 
-html, body, header { height: 100% !important; min-height: 100% !important; min-width: 100%; }
+html, body, header { height: 100% !important; min-height: 100% !important; min-width: 100%; overflow-x: hidden; }
+
+body { padding: 0px; margin: 0px; }
 
 h1 { padding: 0px !important; margin: 0px !important; font-weight: bold; font-size: 72px; color: #383533; align-self: center; text-align: center; }
 

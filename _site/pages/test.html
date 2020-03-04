@@ -39,19 +39,11 @@ Kreative Lösungen für anspruchsvolle Architekturprojekte sind unser Markenzeic
 
 
 
-    <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
 
-    <!-- Custom Fonts -->
+
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
-    <!-- <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" type="text/css"> -->
 
-    <!-- Plugin CSS -->
-    <link rel="stylesheet" href="css/animate.min.css" type="text/css">
-
-    <!-- Custom CSS -->
-    <!-- <link rel="stylesheet" href="css/main.css" type="text/css"> -->
     <link rel="stylesheet" href="css/rachkova-main.css" type="text/css">
     <link rel="stylesheet" href="css/rachkova-navigation.css" type="text/css">
     <link rel="stylesheet" href="css/rachkova-header.css" type="text/css">
@@ -77,12 +69,11 @@ Kreative Lösungen für anspruchsvolle Architekturprojekte sind unser Markenzeic
   </div>
 
   <div class="nav-menu">
-    <div class="nav-element">Home</div>
-    <div class="nav-element">Projekte</div>
-    <div class="nav-element">Leistungen</div>
-    <div class="nav-element">Über Uns</div>
-    <div class="nav-element">Kontakt</div>
-
+    <div class="nav-element" onclick="smoothScroll(document.getElementById('header-rachkova'))">Home</div>
+    <div class="nav-element" onclick="smoothScroll(document.getElementById('projekte-index-rachkova'))">Projekte</div>
+    <div class="nav-element" onclick="smoothScroll(document.getElementById('leistungen-rachkova'))">Leistungen</div>
+    <div class="nav-element" onclick="smoothScroll(document.getElementById('about-rachkova'))">Über Uns</div>
+    <div class="nav-element" onclick="smoothScroll(document.getElementById('contact-rachkova'))">Kontakt</div>
 
   </div>
 
@@ -91,7 +82,7 @@ Kreative Lösungen für anspruchsvolle Architekturprojekte sind unser Markenzeic
 
   <header>
 
-    <div class="header-container-rachkova">
+    <div class="header-container-rachkova" id="header-rachkova">
 
             <h1>Willkommen</h1>
 
@@ -108,7 +99,7 @@ kreative lösungen für anspruchsvolle architekturprojekte sind unser markenzeic
 
 </header>
 
-  <div class="projekte-index-container">
+  <div class="projekte-index-container" id="projekte-index-rachkova">
   <div class="projekte-index-content">
 
     <h2>Projekte</h2>
@@ -125,7 +116,7 @@ kreative lösungen für anspruchsvolle architekturprojekte sind unser markenzeic
   </div>
 </div>
 
-  <div class="leistungen-container">
+  <div class="leistungen-container" id="leistungen-rachkova">
   <div class="leistungen-content">
 
     <h2>leistungen</h2>
@@ -155,7 +146,7 @@ kreative lösungen für anspruchsvolle architekturprojekte sind unser markenzeic
   </div>
 </div>
 
-  <div class="about-container">
+  <div class="about-container" id="about-rachkova">
   <div class="about-content">
 
 
@@ -171,14 +162,14 @@ kreative lösungen für anspruchsvolle architekturprojekte sind unser markenzeic
     </div>
 
     <div class="about-image">
-    
+
     </div>
 
 
   </div>
 </div>
 
-  <div class="cv-container">
+  <div class="cv-container" id="cv-rachkova">
   <div class="cv-content">
 
       <div class="cv-description-container">
@@ -211,7 +202,7 @@ kreative lösungen für anspruchsvolle architekturprojekte sind unser markenzeic
   </div>
 </div>
 
-  <div class="contact-container">
+  <div class="contact-container" id="contact-rachkova">
   <div class="contact-content">
 
 
@@ -243,13 +234,8 @@ kreative lösungen für anspruchsvolle architekturprojekte sind unser markenzeic
 
       <div class="contact-googlemaps-container">
 
-<<<<<<< HEAD
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2659.4329355650934!2d16.366163952014652!3d48.19827637912635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476d0782fce12db5%3A0xe39f0286b416098!2sPaniglgasse%2022%2C%201040%20Wien!5e0!3m2!1sde!2sat!4v1583094912247!5m2!1sde!2sat" width="660" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
 
-=======
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2659.4329355650934!2d16.366163952014652!3d48.19827637912635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476d0782fce12db5%3A0xe39f0286b416098!2sPaniglgasse%2022%2C%201040%20Wien!5e0!3m2!1sde!2sat!4v1583094912247!5m2!1sde!2sat" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-        
->>>>>>> StickyHeader
 
       </div>
 
@@ -262,9 +248,6 @@ kreative lösungen für anspruchsvolle architekturprojekte sind unser markenzeic
   <!-- jQuery -->
 <script src="js/jquery.js"></script>
 
-<!-- Bootstrap Core JavaScript -->
-<script src="js/bootstrap.min.js"></script>
-
 <!-- Plugin JavaScript -->
 <!-- <script src="js/jquery.easing.min.js"></script> -->
 <!-- <script src="js/jquery.fittext.js"></script> -->
@@ -275,6 +258,7 @@ kreative lösungen für anspruchsvolle architekturprojekte sind unser markenzeic
 <!-- Rachkova Scripts -->
 <script src="js/rachkova.js"></script>
 <script src="js/viewport.js"></script>
+<script src="js/rachkova-navigation.js"></script>
 
 
 </body>
