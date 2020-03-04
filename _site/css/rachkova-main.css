@@ -1,6 +1,6 @@
 html * { font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif; }
 
-html, body, header { height: 100% !important; min-height: 100% !important; min-width: 100%; overflow-x: hidden; }
+html, body, .header { height: 100% !important; min-height: 100% !important; min-width: 100%; overflow-x: hidden; }
 
 body { padding: 0px; margin: 0px; }
 

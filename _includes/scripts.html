@@ -1,14 +1,38 @@
 <!-- jQuery -->
-<script src="js/jquery.js"></script>
-
-<!-- Plugin JavaScript -->
-<!-- <script src="js/jquery.easing.min.js"></script> -->
-<!-- <script src="js/jquery.fittext.js"></script> -->
-<!-- <script src="js/wow.min.js"></script> -->
-
-<!-- Custom Theme JavaScript -->
-<!-- <script src="js/creative.js"></script> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <!-- Rachkova Scripts -->
-<script src="js/rachkova.js"></script>
-<script src="js/viewport.js"></script>
+<script src="js/jquery.lazy.min.js"></script>
+
+
 <script src="js/rachkova-navigation.js"></script>
+
+
+<script type="text/javascript">
+
+window.scroll() = function () { console.log ("scrolled") }
+
+</script>
+<script type="text/javascript">
+// Script for lazy loading
+
+
+    $(function() {
+        $('.lazy').Lazy({
+          afterLoad: function(element) {
+            $('.header-content-before').css({ "opacity": "1"});
+          },
+          effect: "fadeIn",
+          effectTime: 500,
+          threshold: 0
+        });
+    });
+
+    $(function() {
+      $('.lazy-fromBottom').Lazy({
+        effect: "fadeIn",
+        effectTime: 2000,
+        threshold: 0
+      });
+    });
+
+</script>

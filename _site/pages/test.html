@@ -45,6 +45,7 @@ Kreative Lösungen für anspruchsvolle Architekturprojekte sind unser Markenzeic
     <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
 
     <link rel="stylesheet" href="css/rachkova-main.css" type="text/css">
+    <link rel="stylesheet" href="css/rachkova-animations.css" type="text/css">
     <link rel="stylesheet" href="css/rachkova-navigation.css" type="text/css">
     <link rel="stylesheet" href="css/rachkova-header.css" type="text/css">
     <link rel="stylesheet" href="css/rachkova-projekte-index.css" type="text/css">
@@ -52,8 +53,6 @@ Kreative Lösungen für anspruchsvolle Architekturprojekte sind unser Markenzeic
     <link rel="stylesheet" href="css/rachkova-about.css" type="text/css">
     <link rel="stylesheet" href="css/rachkova-cv.css" type="text/css">
     <link rel="stylesheet" href="css/rachkova-contact.css" type="text/css">
-
-
 
 </head>
 
@@ -65,7 +64,7 @@ Kreative Lösungen für anspruchsvolle Architekturprojekte sind unser Markenzeic
   <div class="nav-left-spacer"></div>
 
   <div class="nav-logo-container">
-    <img src="../img/rachkova-logo.png">
+    <img src="../img/rachkova-logo.png" onclick="smoothScroll(document.getElementById('header-rachkova'))">
   </div>
 
   <div class="nav-menu">
@@ -80,15 +79,16 @@ Kreative Lösungen für anspruchsvolle Architekturprojekte sind unser Markenzeic
   <div class="nav-right-spacer"></div>
 </div>
 
-  <header>
+  <div class="header lazy" data-src="../img/header.jpg">
 
-    <div class="header-container-rachkova" id="header-rachkova">
 
-            <h1>Willkommen</h1>
+    <div class="header-container-rachkova lazy-header-content header-content-before " id="header-rachkova">
+
+            <div class="rachkova-animation-fromTop"><h1>Willkommen</h1></div>
 
             <hr>
 
-            <div class="p-container-center">
+            <div class="p-container-center rachkova-animation-fromBottom">
             <p>technische kompetenz und fachwissen können auch ein weibliches gesicht haben.
 kreative lösungen für anspruchsvolle architekturprojekte sind unser markenzeichen.</p>
 </div>
@@ -97,7 +97,7 @@ kreative lösungen für anspruchsvolle architekturprojekte sind unser markenzeic
 
     </div>
 
-</header>
+</div>
 
   <div class="projekte-index-container" id="projekte-index-rachkova">
   <div class="projekte-index-content">
@@ -124,21 +124,21 @@ kreative lösungen für anspruchsvolle architekturprojekte sind unser markenzeic
     <div class="leistungen-sub-container">
 
       <div class="leistungen-element-container">
-        <div class="leistungen-element-h">tragwerksplanung</div>
-        <div class="leistungen-element-beschreibung">anspruchsvolle tragwerke aus stahlbeton | tragwerke aus stahl und/oder holz | altbausanierungen und aufstockungen | tragwerke aus fertigteilen</div>
+        <div class="leistungen-element-h lazy-fromBottom">tragwerksplanung</div>
+        <div class="leistungen-element-beschreibung lazy-fromBottom">anspruchsvolle tragwerke aus stahlbeton | tragwerke aus stahl und/oder holz | altbausanierungen und aufstockungen | tragwerke aus fertigteilen</div>
       </div>
 
       <div class="leistungen-element-container">
-        <div class="leistungen-element-h">baudynamik</div>
-        <div class="leistungen-element-beschreibung">erdbebenberechnungen | antwortspektrumanalyse</div>
+        <div class="leistungen-element-h lazy-fromBottom">baudynamik</div>
+        <div class="leistungen-element-beschreibung lazy-fromBottom">erdbebenberechnungen | antwortspektrumanalyse</div>
       </div>
 
       <div class="leistungen-element-container">
-        <div class="leistungen-element-h-single">gutachten</div>
+        <div class="leistungen-element-h-single lazy-fromBottom">gutachten</div>
       </div>
 
       <div class="leistungen-element-container">
-        <div class="leistungen-element-h-single">prüfungsingenieurleistungen gem. wiener bauordnung</div>
+        <div class="leistungen-element-h-single lazy-fromBottom">prüfungsingenieurleistungen gem. wiener bauordnung</div>
       </div>
 
     </div>
@@ -246,19 +246,43 @@ kreative lösungen für anspruchsvolle architekturprojekte sind unser markenzeic
   
 
   <!-- jQuery -->
-<script src="js/jquery.js"></script>
-
-<!-- Plugin JavaScript -->
-<!-- <script src="js/jquery.easing.min.js"></script> -->
-<!-- <script src="js/jquery.fittext.js"></script> -->
-<!-- <script src="js/wow.min.js"></script> -->
-
-<!-- Custom Theme JavaScript -->
-<!-- <script src="js/creative.js"></script> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <!-- Rachkova Scripts -->
-<script src="js/rachkova.js"></script>
-<script src="js/viewport.js"></script>
+<script src="js/jquery.lazy.min.js"></script>
+
+
 <script src="js/rachkova-navigation.js"></script>
+
+
+<script type="text/javascript">
+
+window.scroll() = function () { console.log ("scrolled") }
+
+</script>
+<script type="text/javascript">
+// Script for lazy loading
+
+
+    $(function() {
+        $('.lazy').Lazy({
+          afterLoad: function(element) {
+            $('.header-content-before').css({ "opacity": "1"});
+          },
+          effect: "fadeIn",
+          effectTime: 500,
+          threshold: 0
+        });
+    });
+
+    $(function() {
+      $('.lazy-fromBottom').Lazy({
+        effect: "fadeIn",
+        effectTime: 2000,
+        threshold: 0
+      });
+    });
+
+</script>
 
 
 </body>

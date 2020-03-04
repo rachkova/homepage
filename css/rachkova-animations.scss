@@ -1,0 +1,47 @@
+---
+---
+
+.rachkova-animation-fromTop {
+    animation: fromTop 1s ease-in-out;
+        animation-name: fromTop;
+        animation-duration: 1s;
+        animation-timing-function: ease-in-out;
+        animation-delay: 0s;
+        animation-iteration-count: 5;
+        animation-direction: normal;
+        animation-fill-mode: none;
+        animation-play-state: running;
+}
+
+.rachkova-animation-fromBottom {
+    animation: fromBottom 1s ease-in-out;
+        animation-name: fromBottom;
+        animation-duration: 1s;
+        animation-timing-function: ease-in-out;
+        animation-delay: 0s;
+        animation-iteration-count: 5;
+        animation-direction: normal;
+        animation-fill-mode: none;
+        animation-play-state: running;
+}
+
+@keyframes fromTop {
+ 0% {
+
+  transform:translateY(-100px)
+ }
+ 100% {
+
+  transform:translateY(0)
+ }
+}
+@keyframes fromBottom {
+ 0% {
+
+  transform:translateY(100px)
+ }
+ 100% {
+
+  transform:translateY(0)
+ }
+}
