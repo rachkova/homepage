@@ -1,29 +1,34 @@
 ---
 ---
+.rachkova-animation-fromTop, .rachkova-animation-fromBottom, .rachkova-animation-fromLeft, .rachkova-animation-fromRight {
 
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    animation-play-state: running;
+
+}
 .rachkova-animation-fromTop {
     animation: fromTop 1s ease-in-out;
         animation-name: fromTop;
-        animation-duration: 1s;
-        animation-timing-function: ease-in-out;
-        animation-delay: 0s;
-        animation-iteration-count: 5;
-        animation-direction: normal;
-        animation-fill-mode: none;
-        animation-play-state: running;
 }
 
 .rachkova-animation-fromBottom {
     animation: fromBottom 1s ease-in-out;
         animation-name: fromBottom;
-        animation-duration: 1s;
-        animation-timing-function: ease-in-out;
-        animation-delay: 0s;
-        animation-iteration-count: 5;
-        animation-direction: normal;
-        animation-fill-mode: none;
-        animation-play-state: running;
 }
+.rachkova-animation-fromLeft {
+    animation: fromLeft 1s ease-in-out;
+        animation-name: fromLeft;
+}
+.rachkova-animation-fromRight {
+    animation: fromRight 1s ease-in-out;
+        animation-name: fromRight;
+}
+
 
 @keyframes fromTop {
  0% {
@@ -43,5 +48,25 @@
  100% {
 
   transform:translateY(0)
+ }
+}
+@keyframes fromLeft {
+ 0% {
+
+  transform:translateX(-100px)
+ }
+ 100% {
+
+  transform:translateX(0)
+ }
+}
+@keyframes fromRight {
+ 0% {
+
+  transform:translateX(100px)
+ }
+ 100% {
+
+  transform:translateX(0)
  }
 }

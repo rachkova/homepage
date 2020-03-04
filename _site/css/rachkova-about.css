@@ -8,4 +8,6 @@
 
 .about-image { min-height: 980px; min-width: 660px; max-width: 660px; background-image: url("../img/about.png"); background-position: center; }
 
+.about-image2 { min-height: 980px; min-width: 660px; max-width: 660px; min-height: 200px; background-position: center; }
+
 .about-description { padding-top: 100px; font-weight: 500; font-size: 20px; color: #c6c6c6; }
