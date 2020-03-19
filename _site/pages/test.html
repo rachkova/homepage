@@ -59,19 +59,24 @@ Kreative Lösungen für anspruchsvolle Architekturprojekte sind unser Markenzeic
 
 <body id="page-top">
 
-  <div class="rachkova-nav-container">
+  <div class="rachkova-nav-container screen-xl">
 
   <div class="nav-left-spacer"></div>
 
   <div class="nav-logo-container">
-    <img src="../img/rachkova-logo.png" onclick="smoothScroll(document.getElementById('header-rachkova'))">
+    <img src="../img/front/navigation/rachkova-logo.png" onclick="smoothScroll(document.getElementById('header-rachkova'))">
   </div>
 
   <div class="nav-menu">
+    <div class="nav-element" id="scrollfromTop"></div>
+    <div class="nav-element" id="ScreenHeight"></div>
+    <div class="nav-element" id="ProjekteTarget"></div>
+
+
     <div class="nav-element" onclick="smoothScroll(document.getElementById('header-rachkova'))">Home</div>
     <div class="nav-element" onclick="smoothScroll(document.getElementById('projekte-index-rachkova'))">Projekte</div>
     <div class="nav-element" onclick="smoothScroll(document.getElementById('leistungen-rachkova'))">Leistungen</div>
-    <div class="nav-element" onclick="smoothScroll(document.getElementById('about-rachkova'))">Über Uns</div>
+    <div class="nav-element" onclick="smoothScroll(document.getElementById('buero-rachkova'))">Büro</div>
     <div class="nav-element" onclick="smoothScroll(document.getElementById('contact-rachkova'))">Kontakt</div>
 
   </div>
@@ -79,21 +84,16 @@ Kreative Lösungen für anspruchsvolle Architekturprojekte sind unser Markenzeic
   <div class="nav-right-spacer"></div>
 </div>
 
-  <div class="header">
+  <div class="header" id="header-rachkova">
 
 
     <div class="header-container-rachkova">
 
             <div class="rachkova-animation-fromTop"><h1>Willkommen</h1></div>
 
-            <hr>
+            <div class="border-color-dark rachkova-hr-animation"><hr></div>
 
-            <div class="p-container-center rachkova-animation-fromBottom">
-            <p>technische kompetenz und fachwissen können auch ein weibliches gesicht haben.
-kreative lösungen für anspruchsvolle architekturprojekte sind unser markenzeichen.</p>
-</div>
-
-
+            
 
     </div>
 
@@ -102,10 +102,13 @@ kreative lösungen für anspruchsvolle architekturprojekte sind unser markenzeic
   <div class="projekte-index-container" id="projekte-index-rachkova">
   <div class="projekte-index-content">
 
-    <h2>Projekte</h2>
+    <div id="projekteHeader"><h2>Projekte</h2></div>
+
+    <div id="projekteHrAnimation" class="border-color-light"><hr></div>
 
     <div class="projekte-index-kategorien-container">
 
+      <div class="kategorien-element">alle projekte</div>
       <div class="kategorien-element">stahlbau</div>
       <div class="kategorien-element">holzbau</div>
       <div class="kategorien-element">anspruchsvolle EFH</div>
@@ -146,7 +149,7 @@ kreative lösungen für anspruchsvolle architekturprojekte sind unser markenzeic
   </div>
 </div>
 
-  <div class="about-container" id="about-rachkova">
+  <div class="about-container" id="buero-rachkova">
   <div class="about-content">
 
 
@@ -243,16 +246,14 @@ kreative lösungen für anspruchsvolle architekturprojekte sind unser markenzeic
 </div>
 
 
-  
 
   <!-- jQuery -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <!-- Rachkova Scripts -->
 
 <script>
-$('body').scroll(function(){
-   console.log('click');
-});
+
+
 </script>
 
 

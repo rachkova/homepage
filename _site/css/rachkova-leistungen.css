@@ -1,4 +1,4 @@
-.leistungen-container { width: 100%; min-height: 980px; background-image: url("../img/leistungen-background.png"); background-repeat: no-repeat; background-position: center; background-size: cover; background-attachment: fixed; display: flex; justify-content: center; }
+.leistungen-container { width: 100%; min-height: 980px; background-image: url("../img/front/leistungen/leistungen-background.png"); background-repeat: no-repeat; background-position: center; background-size: cover; background-attachment: fixed; display: flex; justify-content: center; }
 
 .leistungen-content { min-width: 1320px; max-width: 1320px; padding: 62px 20px 0px 20px; justify-content: flex-start; align-items: flex-start; }
 

@@ -73,7 +73,7 @@ $widthLevelTwoHigher: 989px;
 $widthLevelThreeLower: 990px;
 $widthLevelThreeHigher: 1199px;
 $widthLevelFour: 1199px;
-$widthLevelFive: 1600px;
+$widthLevelFive: 1920px;
 
 @mixin widthLevel00 {
   @media (max-width: $widthLevelZero) { @content; }

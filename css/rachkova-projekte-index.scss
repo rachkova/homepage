@@ -1,6 +1,9 @@
 ---
 ---
 
+#projekteHeader {
+  opacity: 0;
+}
 .projekte-index-container {
 
   width: 100%;
@@ -25,8 +28,8 @@
 
    padding: 0px 20px 0px 20px;
 
-   justify-content: flex-start;
-   align-items: flex-start;
+   justify-content: center;
+   align-items: center;
 
 }
 

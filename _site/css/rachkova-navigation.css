@@ -10,3 +10,5 @@
 
 .nav-element { line-height: 16px; font-size: 16px !important; text-transform: uppercase; font-weight: 700; color: #383533; padding: 60px 10px 20px 10px; }
 .nav-element:hover { cursor: pointer; }
+.nav-element:after { display: block; content: ''; border-bottom: solid 3px #383533; transform: scaleX(0); transition: transform 250ms ease-in-out; }
+.nav-element:hover:after { transform: scaleX(1); }
