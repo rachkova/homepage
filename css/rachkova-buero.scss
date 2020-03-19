@@ -1,0 +1,44 @@
+---
+---
+
+#bueroHeader {
+  opacity: 0;
+  color: #373737;
+}
+
+.buero-container {
+
+    width: 100%;
+    min-height: 980px;
+
+    background-image:url("../img/front/buero/buero-background.png");
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+
+}
+
+.buero-content {
+
+    min-width: 1320px;
+    max-width: 1320px;
+
+    padding: 62px 20px 0px 20px;
+
+    justify-content: flex-start;
+    align-items: flex-start;
+
+
+}
+
+.buero-sub-container {
+  padding-top: 100px;
+}
+
+.buero-description {
+
+}

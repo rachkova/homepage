@@ -1,4 +1,4 @@
-#projekteHeader { opacity: 0; }
+#projekteHeader { opacity: 0; color: #c6c6c6; }
 
 .projekte-index-container { width: 100%; height: 300px; background-color: #373737; margin-top: -20px; padding-top: 82px; display: flex; justify-content: center; }
 
