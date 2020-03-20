@@ -80,8 +80,8 @@ $stageFive: 1920px;
 
 .nav-logo-container {
 
-  @include widthLvl00 {width: 80%;}
-  @include widthLvl01 {width: 75%;}
+  @include widthLvl00 {width: 80%; display: flex; justify-content: center;}
+  @include widthLvl01 {width: 75%; display: flex; justify-content: center;}
   @include widthLvl02 {width: 85%;}
   @include widthLvl03 {width: 60%;}
   @include widthLvl04 {width: 55%;}
@@ -95,15 +95,18 @@ $stageFive: 1920px;
 
   & img {
     @include widthLvl00 {
+      text-align: center;
       max-width: 100%;
       height: auto;
-      padding-top: 31.5px;
+      align-self: center;
 
     }
     @include widthLvl01 {
-      max-width: 300px;
-      height: 41px;
-      padding-top: 29.5px;
+      text-align: center;
+      max-width: 100%;
+      height: auto;
+      align-self: center;
+
 
     }
     @include widthLvl02 {
