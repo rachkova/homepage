@@ -81,7 +81,7 @@ $stageFive: 1920px;
 .nav-logo-container {
 
   @include widthLvl00 {width: 80%;}
-  @include widthLvl01 {width: 85%;}
+  @include widthLvl01 {width: 75%;}
   @include widthLvl02 {width: 85%;}
   @include widthLvl03 {width: 60%;}
   @include widthLvl04 {width: 55%;}
@@ -95,15 +95,15 @@ $stageFive: 1920px;
 
   & img {
     @include widthLvl00 {
-      max-width: 525px;
-      height: 72px;
-      padding-top: 12.5px;
+      max-width: 100%;
+      height: auto;
+      padding-top: 31.5px;
 
     }
     @include widthLvl01 {
-      max-width: 525px;
-      height: 72px;
-      padding-top: 12.5px;
+      max-width: 300px;
+      height: 41px;
+      padding-top: 29.5px;
 
     }
     @include widthLvl02 {
@@ -133,13 +133,13 @@ $stageFive: 1920px;
 
 .nav-menu {
   @include widthLvl00 {
-    width: 10%;
+    width: 20%;
     justify-content: center;
 
 
   }
   @include widthLvl01 {
-    width: 10%;
+    width: 20%;
     justify-content: center;
 
 
@@ -225,7 +225,18 @@ $stageFive: 1920px;
 
 .item {
 
-    @include widthLvl00 {display: flex;}
+    @include widthLvl00 {
+      display: flex;
+
+      width: 33px;
+      height: 30px;
+      background: #fff;
+      margin: 2px;
+      padding: 2px;
+      border-radius: 2px;
+
+
+    }
     @include widthLvl01 {display: flex;}
     @include widthLvl02 {display: flex;}
     @include widthLvl03 {display: none;}
@@ -251,6 +262,17 @@ $stageFive: 1920px;
 
 
    span {
+     @include widthLvl00 {
+
+
+       left: 3.5px;
+       right: 3.5px;
+       width: 30px;
+       height: 3.5px;
+
+
+     }
+
       display: block;
       background: #383533;
       width: 50px;
@@ -260,14 +282,17 @@ $stageFive: 1920px;
       right: 7px;
 
       &.top {
+        @include widthLvl00 { top: 6px;}
          top: 12px;
       }
 
       &.middle {
+        @include widthLvl00 { top: 16px;}
          top: 27px;
       }
 
       &.bottom {
+        @include widthLvl00 { top: 26px;}
          top: 42px;
       }
 
@@ -297,6 +322,10 @@ $stageFive: 1920px;
 
    .top {
       margin-top: 5px;
+      @include widthLvl00 {
+            transform: translateY(5px) rotate(45deg);
+      }
+
       transform: translateY(10px) rotate(45deg);
 
    }
@@ -308,6 +337,10 @@ $stageFive: 1920px;
 
    .bottom {
       margin-top: 5px;
+      @include widthLvl00 {
+        transform: translateY(-15px) rotate(-45deg);
+      }
+
       transform: translateY(-20px) rotate(-45deg);
 
    }
