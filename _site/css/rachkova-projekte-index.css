@@ -1,8 +1,0 @@
-#projekteHeader { opacity: 0; color: #c6c6c6; }
-
-.projekte-index-container { width: 100%; height: 300px; background-color: #373737; margin-top: -20px; padding-top: 82px; display: flex; justify-content: center; }
-
-.projekte-index-content { max-width: 1320px; min-width: 1320px; padding: 0px 20px 0px 20px; justify-content: center; align-items: center; }
-
-.projekte-index-kategorien-container { display: flex; flex-flow: row; justify-content: space-between; padding-top: 100px; }
-.projekte-index-kategorien-container .kategorien-element { color: #c6c6c6; font-weight: bold; font-size: 30px; }

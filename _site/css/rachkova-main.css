@@ -4,9 +4,13 @@ html, body, .header { height: 100% !important; min-height: 100% !important; min-
 
 body { padding: 0px; margin: 0px; }
 
-h1 { padding: 0px !important; margin: 0px !important; font-weight: bold; font-size: 72px; color: #383533; align-self: center; text-align: center; }
+h1 { padding: 0px !important; margin: 0px !important; font-weight: bold; font-size: calc(42px + 6 * ((100vw - 320px) / 680)); color: #383533; align-self: center; text-align: center; }
+@media (min-width: 1920px) { h1 { font-size: 72px; } }
+@media (max-width: 410px) { h1 { font-size: 42px; } }
 
-h2 { text-transform: uppercase; padding: 0px !important; margin: 0px !important; font-weight: bold; font-size: 48px; align-self: center; text-align: center; }
+h2 { text-transform: uppercase; padding: 0px !important; margin: 0px !important; font-weight: bold; font-size: calc(28px + 6 * ((100vw - 320px) / 680)); align-self: center; text-align: center; }
+@media (min-width: 1920px) { h2 { font-size: 48px; } }
+@media (max-width: 410px) { h2 { font-size: 28px; } }
 
 .border-color-dark hr { border-color: #383533; }
 

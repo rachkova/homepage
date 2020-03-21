@@ -140,86 +140,8 @@ $('body').on('resize scroll', function() {
            console.log("Buero in View and changed");
        }
 
-   });
-
-
-
-// Event Listener
-jQuery(function(){
-
-
-
-  $('body').scroll(function(e){
-
-        // if ( !(projekteMain.hasClass("animationFired")) && isElementInViewport($('#projekte-index-rachkova')) )  {
-        //
-        //   projekteMain.addClass("animationFired");
-        //   projekteHeadline.addClass("rachkova-animation-fromTopFast");
-        //   projekteHeadline.css("opacity", "1");
-        //   projekteHr.addClass("rachkova-hr-animationFast");
-        //   projekteSub.addClass("rachkova-animation-fromBottomFast");
-        //   console.log("projekte in View and changed");
-        //
-        // }
-
-
-
-  });
 });
-  // $('body').scroll(function(e){
-  //
 
-  //
-  //     else if ( !(bueroMain.hasClass("animationFired")) &&  isElementInViewport($('#buero-rachkova')) ) {
-  //
-  //         bueroMain.addClass("animationFired");
-  //         bueroHeadline.addClass("rachkova-animation-fromTopFast");
-  //         bueroHeadline.css("opacity", "1");
-  //         bueroHr.addClass("rachkova-hr-animationFast");
-  //         bueroSub.addClass("rachkova-animation-fromBottomFast");
-  //         console.log("Buero in View and changed");
-  //     }
-  //
-  //   });
-
-  //
-  //
-  //
-  //   if ( !(projekteMain.hasClass("animationFired")) && isElementInViewport($('#projekte-index-rachkova')) )  {
-  //
-  //     projekteMain.addClass("animationFired");
-  //     projekteHeadline.addClass("rachkova-animation-fromTopFast");
-  //     projekteHeadline.css("opacity", "1");
-  //     projekteHr.addClass("rachkova-hr-animationFast");
-  //     projekteSub.addClass("rachkova-animation-fromBottomFast");
-  //     console.log("projekte in View and changed");
-  //
-  //   }
-  //
-//     else if ( !(leistungenMain.hasClass("animationFired")) && isElementInViewport($('#leistungen-rachkova')) ) {
-//
-//         leistungenMain.addClass("animationFired");
-//         leistungenHeadline.addClass("rachkova-animation-fromTopFast");
-//         leistungenHeadline.css("opacity", "1");
-//         leistungenHr.addClass("rachkova-hr-animationFast");
-//         leistungenSub.addClass("rachkova-animation-fromBottomFast");
-//         console.log("Leistungen in View and changed");
-//     }
-//
-//     else if ( !(bueroMain.hasClass("animationFired")) &&  isElementInViewport($('#buero-rachkova')) ) {
-//
-//         bueroMain.addClass("animationFired");
-//         bueroHeadline.addClass("rachkova-animation-fromTopFast");
-//         bueroHeadline.css("opacity", "1");
-//         bueroHr.addClass("rachkova-hr-animationFast");
-//         bueroSub.addClass("rachkova-animation-fromBottomFast");
-//         console.log("Buero in View and changed");
-//     }
-//
-//   });
-// });
-
-// disable enable scroll helpers
 
 // left: 37, up: 38, right: 39, down: 40,
 // spacebar: 32, pageup: 33, pagedown: 34, end: 35, home: 36
@@ -294,3 +216,7 @@ for(let i = 0; i < rippleElements.length; i++) {
     }, 900);
   }
 }
+// 
+// $("#initiate").on("click",function(){
+//    $(".mobileNav").toggleClass("hide");
+// }
