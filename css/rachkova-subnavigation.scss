@@ -39,42 +39,88 @@ $stageFive: 1920px;
   @media (min-width: $stageFive) { @content; }
 }
 
+.transitionAll {
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
 
-.rachkova-nav-container {
+.subnav-fluid {
+    @extend .transitionAll;
+    
+    background-color: #c6c6c6;
 
-    background-color: white;
-    // background-color: rgba(200,200,0,0.2);
     width: 100%;
     min-width: 100%;
 
     position: fixed;
-    top: 0px;
 
-    height: 100px;
-    min-height: 100px;
-    max-height: 100px;
+    margin-top: 100px;
+
+    height: 0px;
+
 
     z-index: 999;
 
     display: flex;
     flex-direction: row;
+    justify-content: center;
 
 }
 
-.nav-left-spacer, .nav-right-spacer {
+.subnav-left-spacer, .subnav-right-spacer {
 
-    @include widthLvl00 {width: 2.5%;}
-    @include widthLvl01 {width: 2.5%;}
-    @include widthLvl02 {width: 2.5%;}
-    @include widthLvl03 {width: 2.5%;}
-    @include widthLvl04 {width: 2.5%;}
-    @include widthLvl05 {width: 15.625%;}
+    // @include widthLvl00 {width: 10%;}
+    // @include widthLvl01 {width: 10%;}
+    // @include widthLvl02 {width: 10%;}
+    // @include widthLvl03 {width: 10%;}
+    // @include widthLvl04 {width: 10%;}
+    // @include widthLvl05 {width: 10%;}
 
-    width: 15.625%;
+    width: 25%;
     height: 100%;
     min-height: 100%;
 
 }
+
+
+.subnav-container {
+
+    display:flex;
+    width: 50%;
+    flex-direction: row;
+    justify-content: space-between;
+
+    text-align:center;
+    align-items: center;
+
+}
+
+.subnav-element {
+
+
+  text-align: center;
+  align-self: center;
+
+  .active {
+    @extend .transitionAll;
+    text-decoration: none;
+    color: #383533;
+    font-weight: 600;
+  }
+  .inactive {
+    @extend .transitionAll;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .inactive:hover {
+    color: #383533;
+  }
+}
+
+
 
 
 

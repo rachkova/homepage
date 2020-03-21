@@ -1,9 +1,39 @@
-<div class="subnavigation-fluid">
+<div class="subnav-fluid">
+
+  <div class="subnav-left-spacer"></div>
+
   <div class="subnav-container">
-    <div class="subnav-element">alle projekte</div>
-    <div class="subnav-element">stahlbetonbau</div>
-    <div class="subnav-element">stahl- und holzbau</div>
-    <div class="subnav-element">anspruchsvolle efh</div>
-    <div class="subnav-element">altbau</div>
+      {% if page.url contains "projekte" %}
+          <div class="subnav-element"><a class="active" href="projekte">alle projekte</a></div>
+        {% else %}
+          <div class="subnav-element"><a class="inactive" href="projekte">alle projekte</a></div>
+      {% endif %}
+
+      {% if page.url contains "stahlbeton" %}
+          <div class="subnav-element"><a class="active" href="stahlbetonbau">stahlbetonbau</a></div>
+        {% else %}
+          <div class="subnav-element"><a class="inactive" href="stahlbetonbau">stahlbetonbau</a></div>
+      {% endif %}
+
+      {% if page.url contains "stahlholzbau" %}
+          <div class="subnav-element"><a class="active" href="stahlholzbau">stahl- und holzbau</a></div>
+        {% else %}
+          <div class="subnav-element"><a class="inactive" href="stahlholzbau">stahl- und holzbau</a></div>
+      {% endif %}
+
+      {% if page.url contains "efh" %}
+          <div class="subnav-element"><a class="active" href="efh">anspruchsvolle efh</a></div>
+        {% else %}
+          <div class="subnav-element"><a class="inactive" href="efh">anspruchsvolle efh</a></div>
+      {% endif %}
+
+      {% if page.url contains "altbau" %}
+          <div class="subnav-element"><a class="active" href="altbau">altbau</a></div>
+        {% else %}
+          <div class="subnav-element"><a class="inactive" href="altbau">altbau</a></div>
+      {% endif %}
   </div>
+
+  <div class="subnav-right-spacer"></div>
+
 </div>
