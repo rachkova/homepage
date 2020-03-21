@@ -1,20 +1,4 @@
 ---
 title: Homepage
 timezone: UTC
-collections:
-  posts:
-    title: Posts
-    output: true
-  projekte:
-    title: Projekte
-    output: true
-  uploads:
-    title: Uploads
-    output: true
-email: 
-description: 
-baseurl: 
-url: 
-twitter_username: 
-github_username: 
-markdown: kramdown
+baseurl: ""

@@ -88,6 +88,108 @@ $stageFive: 1920px;
     font-weight: bold;
     font-size: 30px;
 
-    }
+  }
 
+}
+
+.projekte-container-fluid {
+
+  @include widthLvl00 {margin-top: 100px; padding-top: 0px;}
+  @include widthLvl01 {margin-top: 100px; padding-top: 0px;}
+  @include widthLvl02 {margin-top: 150px; padding-top: 0px;}
+
+  margin-top: 150px;
+  padding-top: 100px;
+
+  width: 100%;
+  height: auto;
+  background-color: rgba(100,100,0,0.3);
+  display: flex;
+  padding-top: 100px;
+
+}
+
+.projekte-container {
+
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.projekte-row-1, .projekte-row-2, .projekte-row-3 {
+
+  background-color: rgba(255,0,0,0.3);
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+
+  @include widthLvl00 {flex-direction: column;}
+  @include widthLvl01 {flex-direction: column;}
+  @include widthLvl02 {flex-direction: column;}
+
+}
+
+.projekte-spacer-vertical {
+  @include widthLvl00 {min-width: 0vw; max-width: 0vw; width: 0vw;}
+  @include widthLvl01 {min-width: 0vw; max-width: 0vw; width: 0vw;}
+  @include widthLvl02 {min-width: 0vw; max-width: 0vw; width: 0vw;}
+
+  min-width: 1.5vw; width: 1.5vw;
+
+
+  background-color: rgba(255,255,255,0.3);
+}
+
+.projekte-spacer-horizontal {
+
+  @include widthLvl03 {min-height: 1.5vw;}
+  @include widthLvl04 {min-height: 1.5vw;}
+  @include widthLvl05 {min-height: 1.5vw;}
+
+  background-color: rgba(0,255,0,0.2);
+
+}
+
+@for $i from 1 through 7 {
+  .projekte-element-#{$i} {
+    @include widthLvl00 {height: 40vh; min-width: 100vw; max-width: 100vw; width: 100vw; background-color: rgba(70,70,200,0.4); }
+    @include widthLvl01 {height: 40vh; min-width: 100vw; max-width: 100vw; width: 100vw; background-color: rgba(70,70,200,0.4); }
+    @include widthLvl02 {height: 40vh; min-width: 100vw; max-width: 100vw; width: 100vw; background-color: rgba(70,70,200,0.4); }
+  }
+}
+
+.projekte-element-1 {
+
+  @include widthLvl03 {height: 948px;}
+  @include widthLvl04 {height: 948px;}
+  @include widthLvl05 {height: 948px;}
+
+  width: 66%;
+
+}
+
+.projekte-element-2 {
+
+  width: 32.75%;
+
+  @include widthLvl03 {height: 948px;}
+  @include widthLvl04 {height: 948px;}
+  @include widthLvl05 {height: 948px;}
+
+}
+
+.projekte-element-3, .projekte-element-4 {
+  width: 48.5vw;
+  @include widthLvl03 {height: 632px;}
+  @include widthLvl04 {height: 632px;}
+  @include widthLvl05 {height: 632px;}
+
+}
+
+.projekte-element-5, .projekte-element-6, .projekte-element-7 {
+  width: 32.3vw;
+  @include widthLvl03 {height: 474px;}
+  @include widthLvl04 {height: 474px;}
+  @include widthLvl05 {height: 474px;}
 }
