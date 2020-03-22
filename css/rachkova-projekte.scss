@@ -1,7 +1,6 @@
 ---
 ---
 
-
 $stageZero: 410px;
 
 $stageOneLower: 411px;
@@ -141,6 +140,13 @@ $stageFive: 1920px;
   background-color: rgba(255,255,255,0.3);
 }
 
+.projekte-spacer-horizontal-mobile {
+  min-height: 1.5vw;
+  display: flex;
+  @include widthLvl03 {min-height: 0vw; display: none;}
+  @include widthLvl04 {min-height: 0vw; display: none;}
+  @include widthLvl05 {min-height: 0vw; display: none;}
+}
 .projekte-spacer-horizontal {
 
   @include widthLvl03 {min-height: 1.5vw;}
@@ -192,4 +198,5 @@ $stageFive: 1920px;
   @include widthLvl03 {height: 474px;}
   @include widthLvl04 {height: 474px;}
   @include widthLvl05 {height: 474px;}
+
 }

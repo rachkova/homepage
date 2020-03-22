@@ -2,3 +2,28 @@
 title: Homepage
 timezone: UTC
 baseurl: ""
+#
+
+collections:
+  projekte:
+    output: true
+    permalink: /projekte/:name
+
+defaults:
+  - scope:
+      path: ""
+      type: "projekte"
+    values:
+      layout: singleProject
+
+#
+# That way, _cupcakes/chocolate.md is outputted as cupcakes/chocolate/index.html
+# when the site is built and would be accessible as example.com/cupcakes/chocolate/.
+
+# Build settings
+markdown: kramdown
+timezone: Europe/Vienna
+encoding: utf-8
+
+sass:
+  sass_dir: css
