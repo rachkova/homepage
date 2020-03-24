@@ -2,7 +2,7 @@
 layout: singleProject
 titleMain: Haus K.
 titleSub: Haus K.
-category: efh
+Kategorie: efh
 
 description: |
           Konstruktion: Stahlbeton-Stahlkonstruktion.

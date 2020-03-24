@@ -7,7 +7,7 @@ baseurl: ""
 collections:
   projekte:
     output: true
-    permalink: /projekte/:name
+    permalink: :path
 
 defaults:
   - scope:

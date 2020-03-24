@@ -2,7 +2,7 @@
 layout: singleProject
 titleMain: Haus J.
 titleSub: Haus J.
-category: efh
+Kategorie: efh
 
 description: |
 

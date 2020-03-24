@@ -2,7 +2,7 @@
 layout: singleProject
 titleMain: Wettberwerb InfoBox
 titleSub: Wettberwerb InfoBox
-Kategorie: Stahlbetonbau
+Kategorie: Stahlholzbau
 
 description: |
         Tragwerk:

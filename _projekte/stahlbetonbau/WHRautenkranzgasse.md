@@ -1,6 +1,6 @@
 ---
 layout: singleProject
-titleMain: WH Habe die Ehre Gasse
+titleMain: Rautenkranzgasse
 titleSub: WHA Rautenkranzgasse 39-41, 1210 Wien
 Kategorie: Stahlbetonbau
 

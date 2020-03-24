@@ -2,7 +2,7 @@
 layout: singleProject
 titleMain: Haus am Attersee
 titleSub: Haus am Attersee
-category: efh
+Kategorie: efh
 
 description: |
         Tragwerk:
