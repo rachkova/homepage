@@ -4,6 +4,9 @@ timezone: UTC
 baseurl: ""
 #
 
+environment: dev
+development: "http://localhost:4000"
+
 collections:
   projekte:
     output: true

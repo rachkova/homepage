@@ -1,0 +1,278 @@
+---
+---
+
+$stageZero: 410px;
+
+$stageOneLower: 411px;
+$stageOneHigher: 767px;
+
+$stageTwoLower: 768px;
+$stageTwoHigher: 991px;
+
+$stageThreeLower: 992px;
+$stageThreeHigher: 1199px;
+
+$stageFourLower: 1200px;
+$stageFourHigher: 1919px;
+
+$stageFive: 1920px;
+
+@mixin widthLvl00 {
+  @media (max-width: $stageZero) { @content; }
+}
+
+@mixin widthLvl01 {
+  @media (min-width:$stageOneLower) and (max-width:$stageOneHigher)  { @content; }
+}
+
+@mixin widthLvl02 {
+  @media (min-width:$stageTwoLower) and (max-width:$stageTwoHigher) { @content; }
+}
+@mixin widthLvl03 {
+  @media (min-width:$stageThreeLower) and (max-width:$stageThreeHigher) { @content; }
+}
+@mixin widthLvl04 {
+  @media (min-width:$stageFourLower) and (max-width:$stageFourHigher) { @content; }
+}
+
+@mixin widthLvl05 {
+  @media (min-width: $stageFive) { @content; }
+}
+
+.projekt-container-fluid {
+
+  @include widthLvl00 {margin-top: 100px; padding-top: 0px;}
+  @include widthLvl01 {margin-top: 100px; padding-top: 0px;}
+  @include widthLvl02 {margin-top: 150px; padding-top: 0px;}
+
+  margin-top: 150px;
+  padding-top: 100px;
+
+  width: 100%;
+  height: auto;
+
+  display: flex;
+  padding-top: 100px;
+
+  flex-direction: row;
+  justify-content: flex-start;
+
+}
+
+.projekt-left-spacer {
+
+  @include widthLvl00 {width: 0vw;}
+  @include widthLvl01 {width: 0vw;}
+  @include widthLvl02 {width: 0vw;}
+  @include widthLvl03 {width: 2.5%;}
+  @include widthLvl04 {width: 2.5%;}
+  @include widthLvl05 {width: 15.625%;}
+
+  height: auto;
+  align-self: flex-start;
+
+}
+
+.projekt-content-container {
+
+  @include widthLvl00 {width: 100vw;}
+  @include widthLvl01 {width: 100vw;}
+  @include widthLvl02 {width: 100vw;}
+  @include widthLvl03 {width: 97.5%;}
+  @include widthLvl04 {width: 97.5%;}
+  @include widthLvl05 {width: 84.375%;}
+
+  height: auto;
+  align-self: flex-start;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+}
+
+.projekt-content-container-mobile {
+
+  @include widthLvl00 {display: flex;}
+  @include widthLvl01 {display: flex;}
+  @include widthLvl02 {display: none;}
+  @include widthLvl03 {display: none;}
+  @include widthLvl04 {display: none;}
+  @include widthLvl05 {display: none;}
+  width: 100vw;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+}
+
+.projekt-header {
+  width: 100%;
+  min-height: 50px;
+  display:flex;
+  justify-content: flex-start;
+  @include widthLvl00 { justify-content: center;}
+  @include widthLvl01 { justify-content: center;}
+  @include widthLvl02 { justify-content: center;}
+
+}
+
+.projekt-ImgDescriContainer {
+  padding-top: 24px;
+  @include widthLvl00 { padding-top: 0px;}
+  @include widthLvl01 { padding-top: 0px;}
+  @include widthLvl02 { padding-top: 0px;}
+  width: 100%;
+  min-height: 100%;
+
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+
+}
+.projekt-description-container {
+
+  display: flex;
+  justify-content: flex-start;
+  width: 20%;
+  flex-flow: column;
+
+  @include widthLvl00 {display: none;}
+  @include widthLvl01 {display: none;}
+  @include widthLvl02 {display: none;}
+
+
+}
+.projekt-description-top, .projekt-description-bottom {
+
+  @include widthLvl00 { display: none;}
+  @include widthLvl01 { display: none;}
+  @include widthLvl02 { display: none;}
+}
+.projekt-description-bottom {
+  padding-top: 24px;
+}
+
+
+
+.projekt-spacer-vertical {
+  @include widthLvl00 {min-width: 0vw; max-width: 0vw; width: 0vw;}
+  @include widthLvl01 {min-width: 0vw; max-width: 0vw; width: 0vw;}
+  @include widthLvl02 {min-width: 0vw; max-width: 0vw; width: 0vw;}
+
+  min-width: 1.5vw; width: 1.5vw;
+
+
+}
+
+.projekt-spacer-horizontal {
+
+  @include widthLvl03 {min-height: 1.5vw;}
+  @include widthLvl04 {min-height: 1.5vw;}
+  @include widthLvl05 {min-height: 1.5vw;}
+
+}
+
+.projekt-mainImg {
+  width: 80%;
+  @include widthLvl00 { width: 100%; min-width: 100%; position: relative;}
+  @include widthLvl01 { width: 100%; min-width: 100%; position: relative;}
+  @include widthLvl02 { width: 100%; min-width: 100%; position: relative;}
+
+  img {
+    max-width: 100%;
+    object-fit: cover;
+
+  }
+}
+
+.projekt-mobile-description {
+
+  display: flex;
+  position: absolute;
+  flex-flow: column;
+  max-width: 33%;
+  left: 10px;
+  top: 10px;
+
+  justify-content: flex-start;
+
+  @include widthLvl00 {display:none;}
+  @include widthLvl01 {display:none;}
+  @include widthLvl02 {display: flex;}
+  @include widthLvl03 {display:none;}
+  @include widthLvl04 {display:none;}
+  @include widthLvl05 {display:none;}
+  .projekt-mobile-description-element { padding-bottom: 5%;}
+  .projekt-mobile-description-element , .projekt-mobile-element {
+    width: auto;
+    color: #c6c6c6;
+
+    span {
+      background-color: #373737;
+
+    }
+  }
+
+}
+
+.projekt-gallery-container {
+
+  width: 100vw;
+  min-width: 100vw;
+  padding: 0px;
+  height: 600px;
+  background-color: rgba(100,100,20,0.2);
+  display: flex;
+
+  justify-content: flex-start;
+  flex-flow: row;
+
+  @include widthLvl00 {flex-flow: column; height: 300px;}
+  @include widthLvl01 {flex-flow: column; height: 300px;}
+  @include widthLvl02 {flex-flow: column; height: 400px;;}
+}
+
+.projekt-gallery-element-container {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  max-height: 600px;
+
+  @include widthLvl00 {max-height: 300px; min-width: 100vw; max-width: 100vw; width: 100vw;  }
+  @include widthLvl01 {max-height: 300px; min-width: 100vw; max-width: 100vw; width: 100vw;  }
+  @include widthLvl02 {max-height: 400px; min-width: 100vw; max-width: 100vw; width: 100vw;  }
+
+
+  width: 33%;
+  max-width: 33%;
+  overflow: hidden;
+
+
+}
+
+.projekt-gallery-element {
+
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      transition: all .5s;
+
+      width: 100%;
+      height: 100%;
+
+      &:hover {
+        transform: scale(1.05);
+        cursor: pointer;
+      }
+}

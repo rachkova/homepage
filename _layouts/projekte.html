@@ -3,6 +3,8 @@
 
 {% include head.html %}
 
+
+
 <body id="page-top">
 
   {% include navigation.html %}
@@ -28,35 +30,6 @@
   <div class="projekte-container-fluid">
     <div class="projekte-container">
 
-      {% comment %}
-      <!-- <div class="projekte-row-1">
-        <div class="projekte-element-1">
-          <br>
-          <br>
-          Sortierte Projekte, wobei die höchste Priorität zuerst kommt<br>
-          <br>
-          <br>
-
-          Gesamtanzahl der Projekte: {{ totalNrProjects}}<br>
-          Gesamtanzahl an loops: {{ NrForLoops }} <br>
-
-          <br>
-
-
-
-          {% for projekt in sortedProjects %}
-            {{ projekt.title }}, Priorität: {{ projekt.priorityAllProjects}}<br>
-          {% endfor %}
-
-          <br>
-        </div>
-      </div>
-
-      <div class="projekte-spacer-horizontal-mobile"></div>
-      <div class="projekte-spacer-horizontal"></div>
-      -->
-      {% endcomment %}
-
       <!-- Main Loop -->
       {% for projekt in sortedProjects %}
 
@@ -76,66 +49,71 @@
 
 
       <div class="projekte-row-1">
-
         <div class="projekte-spacer-horizontal-mobile"></div>
 
+        {% assign urlSize1 = sortedProjects[num1].path | size | minus: 4 %}
+        {% assign projectImgUrl1 = sortedProjects[num1].path | slice: 1, urlSize1 %}
 
-        <div class="projekte-element-1">
+        <div class="projekte-element-container-1">
+            <div class="projekte-element-1" onclick="clickLink('{{ development }}{{ sortedProjects[num1].url }}')" style="background-image: url('{{base.url}}/img/{{ projectImgUrl1 }}/{{ sortedProjects[num1].imgMain }}')">
 
-          {% if sortedProjects[num1].imgMain %}
+                {% if sortedProjects[num1].imgMain %}
+                      <div class="projekte-img-description">
+                          {{ sortedProjects[num1].titleMain }}<br>
+                      </div>
+                {% else %}
+                        <div class="projekte-img-description-big">
+                          {{ sortedProjects[num1].titleMain }}
+                        </div>
+                {% endif %}
 
-              {% assign urlSize1 = sortedProjects[num1].path | size | minus: 4 %}
-              {% assign projectUrl1 = sortedProjects[num1].path | slice: 1, urlSize1 %}
-              <img src="{{base.url}}/img/{{ projectUrl1 }}/main.jpg">
-              <div class="projekte-img-description">
-                  {{ sortedProjects[num1].titleMain }}
-              </div>
-              {% else %}
-                <div class="projekte-img-description-big">
-                  {{ sortedProjects[num1].titleMain }}
-                </div>
-          {% endif %}
-
-
+            </div>
         </div>
 
         <div class="projekte-spacer-horizontal-mobile"></div>
         <div class="projekte-spacer-vertical"></div>
 
-        {% if sortedProjects[num2] %}
-        <div class="projekte-element-2">
+        {% assign urlSize2 = sortedProjects[num2].path | size | minus: 4 %}
+        {% assign projectImgUrl2 = sortedProjects[num2].path | slice: 1, urlSize2 %}
 
-          {% if sortedProjects[num2].imgMain %}
+        <div class="projekte-element-container-2">
+        {% if sortedProjects[num2] %}{% else %}</div></div>{% break %}{% endif %}
 
-              {% assign urlSize2 = sortedProjects[num2].path | size | minus: 4 %}
-              {% assign projectUrl2 = sortedProjects[num2].path | slice: 1, urlSize2 %}
-              <img src="{{base.url}}/img/{{ projectUrl2 }}/main.jpg">
-              <div class="projekte-img-description">
-                  {{ sortedProjects[num2].titleMain }}
-              </div>
-              {% else %}
-                <div class="projekte-img-description-big">
-                  {{ sortedProjects[num2].titleMain }}
-                </div>
-          {% endif %}
+            <div class="projekte-element-2" onclick="clickLink('{{ development }}{{ sortedProjects[num2].url }}')" style="background-image: url('{{base.url}}/img/{{ projectImgUrl2 }}/{{ sortedProjects[num2].imgMain }}')">
+
+              {% if sortedProjects[num2].imgMain %}
+
+                  <div class="projekte-img-description">
+                      {{ sortedProjects[num2].titleMain }}
+                  </div>
+                  {% else %}
+                    <div class="projekte-img-description-big">
+                      {{ sortedProjects[num2].titleMain }}
+                    </div>
+              {% endif %}
+            </div>
+          </div>
+
         </div>
-      </div>
-      {% else %}<div class="projekte-element-2-placeholder"></div></div>{% break %}{% endif %}
+
 
 
 
       <div class="projekte-spacer-horizontal"></div>
       <div class="projekte-spacer-horizontal-mobile"></div>
 
-      {% if sortedProjects[num3] %}
-      <div class="projekte-row-2">
-      {% else %}{% break %}{% endif %}
-        <div class="projekte-element-3">
+      {% assign urlSize3 = sortedProjects[num3].path | size | minus: 4 %}
+      {% assign projectImgUrl3 = sortedProjects[num3].path | slice: 1, urlSize3 %}
+
+
+        <div class="projekte-row-2">
+
+          {% if sortedProjects[num3] %}<div class="projekte-element-container-3">
+          {% else %}</div>{% break %}{% endif %}
+
+        <div class="projekte-element-3" onclick="clickLink('{{ development }}{{ sortedProjects[num3].url }}')" style="background-image: url('{{base.url}}/img/{{ projectImgUrl3 }}/{{ sortedProjects[num3].imgMain }}')">
+
           {% if sortedProjects[num3].imgMain %}
-
-              {% assign urlSize3 = sortedProjects[num3].path | size | minus: 4 %}
-              {% assign projectUrl3 = sortedProjects[num3].path | slice: 1, urlSize3 %}
-              <img src="{{base.url}}/img/{{ projectUrl3 }}/main.jpg">
               <div class="projekte-img-description">
                   {{ sortedProjects[num3].titleMain }}
               </div>
@@ -144,110 +122,123 @@
                   {{ sortedProjects[num3].titleMain }}
                 </div>
           {% endif %}
+          </div>
         </div>
 
         <div class="projekte-spacer-horizontal-mobile"></div>
-        <div class="projekte-spacer-vertical">
+        <div class="projekte-spacer-vertical"></div>
 
-        </div>
+        {% assign urlSize4 = sortedProjects[num4].path | size | minus: 4 %}
+        {% assign projectImgUrl4 = sortedProjects[num4].path | slice: 1, urlSize4 %}
 
-        {% if sortedProjects[num4] %}
-        <div class="projekte-element-4">
-          {% else %}<div class="projekte-element-4-placeholder"></div></div>{% break %}{% endif %}
+        <div class="projekte-element-container-4">
+        {% if sortedProjects[num4] %}{% else %}</div></div>{% break %}{% endif %}
 
-          {% if sortedProjects[num4].imgMain %}
+              <div class="projekte-element-4" onclick="clickLink('{{ development }}{{ sortedProjects[num4].url }}')" style="background-image: url('{{base.url}}/img/{{ projectImgUrl4 }}/{{ sortedProjects[num4].imgMain }}')">
 
-              {% assign urlSize4 = sortedProjects[num4].path | size | minus: 4 %}
-              {% assign projectUrl4 = sortedProjects[num4].path | slice: 1, urlSize4 %}
-              <img src="{{base.url}}/img/{{ projectUrl4 }}/main.jpg">
+
+            {% if sortedProjects[num4].imgMain %}
+
               <div class="projekte-img-description">
                   {{ sortedProjects[num4].titleMain }}
               </div>
-              {% else %}
+            {% else %}
                 <div class="projekte-img-description-big">
                   {{ sortedProjects[num4].titleMain }}
                 </div>
           {% endif %}
 
-        </div>
-        <div class="projekte-spacer-horizontal-mobile"></div>
+            </div>
+          </div>
       </div>
 
+      <div class="projekte-spacer-horizontal-mobile"></div>
       <div class="projekte-spacer-horizontal"></div>
 
-      {% if sortedProjects[num5] %}
+
+      {% assign urlSize5 = sortedProjects[num5].path | size | minus: 4 %}
+      {% assign projectImgUrl5 = sortedProjects[num5].path | slice: 1, urlSize5 %}
+
+
       <div class="projekte-row-3">
-      {% else %}{% break %}{% endif %}
 
-        <div class="projekte-element-5">
 
-          {% if sortedProjects[num5].imgMain %}
 
-              {% assign urlSize5 = sortedProjects[num5].path | size | minus: 4 %}
-              {% assign projectUrl5 = sortedProjects[num5].path | slice: 1, urlSize5 %}
-              <img src="{{base.url}}/img/{{ projectUrl5 }}/main.jpg">
-              <div class="projekte-img-description">
-                  {{ sortedProjects[num5].titleMain }}
-              </div>
-              {% else %}
-                <div class="projekte-img-description-big">
-                  {{ sortedProjects[num5].titleMain }}
+        {% if sortedProjects[num5] %}<div class="projekte-element-container-5">{% else %}</div>{% break %}{% endif %}
+
+          <div class="projekte-element-5" onclick="clickLink('{{ development }}{{ sortedProjects[num5].url }}')" style="background-image: url('{{base.url}}/img/{{ projectImgUrl5 }}/{{ sortedProjects[num5].imgMain }}')">
+            {% if sortedProjects[num5].imgMain %}
+                <div class="projekte-img-description">
+                    {{ sortedProjects[num5].titleMain }}
                 </div>
-          {% endif %}
-
+                {% else %}
+                  <div class="projekte-img-description-big">
+                    {{ sortedProjects[num5].titleMain }}
+                  </div>
+            {% endif %}
+          </div>
         </div>
 
         <div class="projekte-spacer-horizontal-mobile"></div>
         <div class="projekte-spacer-vertical"></div>
 
-        {% if sortedProjects[num6] %}
-        <div class="projekte-element-6">
-        {% else %}<div class="projekte-element-6-placeholder"></div><div class="projekte-element-7-placeholder"></div></div>{% break %}{% endif %}
+        {% assign urlSize6 = sortedProjects[num6].path | size | minus: 4 %}
+        {% assign projectImgUrl6 = sortedProjects[num6].path | slice: 1, urlSize6 %}
 
-          {% if sortedProjects[num6].imgMain %}
 
-              {% assign urlSize6 = sortedProjects[num6].path | size | minus: 4 %}
-              {% assign projectUrl6 = sortedProjects[num6].path | slice: 1, urlSize6 %}
-              <img src="{{base.url}}/img/{{ projectUrl6 }}/main.jpg">
+        <div class="projekte-element-container-6">
+        {% if sortedProjects[num6] %}{% else %}</div><div class="projekte-element-container-7"></div></div>{% break %}{% endif %}
+
+          <div class="projekte-element-6" onclick="clickLink('{{ development }}{{ sortedProjects[num6].url }}')" style="background-image: url('{{ base.url }}/img/{{ projectImgUrl6 }}/{{ sortedProjects[num6].imgMain }}')">
+
+            {% if sortedProjects[num6].imgMain %}
               <div class="projekte-img-description">
-                  {{ sortedProjects[num6].titleMain }}
+                    {{ sortedProjects[num6].titleMain }}<br>
+                    {{sortedProjects[num7].path }}<br>
+                    {{sortedProjects[num7].titleMain }}<br>
+                    {% if sortedProjects[num7] %}exists{% else %}does not exist{% endif %}<br>
+                    {% if sortedProjects[num6] %}exists{% else %}does not exist{% endif %}<br>
               </div>
+
               {% else %}
                 <div class="projekte-img-description-big">
                   {{ sortedProjects[num6].titleMain }}
                 </div>
-          {% endif %}
-
+            {% endif %}
+          </div>
         </div>
+
 
         <div class="projekte-spacer-horizontal-mobile"></div>
         <div class="projekte-spacer-vertical"></div>
 
 
-        {% if sortedProjects[num7] %}
-        <div class="projekte-element-7">
-        {% else %}<div class="projekte-element-7-placeholder"></div></div>{% break %}{% endif %}
+
+        {% assign urlSize7 = sortedProjects[num7].path | size | minus: 4 %}
+        {% assign projectImgUrl7 = sortedProjects[num7].path | slice: 1, urlSize7 %}
+
+        <div class="projekte-element-container-7">
+        {% if sortedProjects[num7] %}{% else %}</div></div>{% break %}{% endif %}
+
+          <div class="projekte-element-7" onclick="clickLink('{{ development }}{{ sortedProjects[num7].url }}')" style="background-image: url('{{ base.url }}/img/{{ projectImgUrl7 }}/{{ sortedProjects[num7].imgMain }}')">
 
           {% if sortedProjects[num7].imgMain %}
-
-              {% assign urlSize7 = sortedProjects[num7].path | size | minus: 4 %}
-              {% assign projectUrl7 = sortedProjects[num7].path | slice: 1, urlSize7 %}
-              <img src="{{base.url}}/img/{{ projectUrl7 }}/main.jpg">
               <div class="projekte-img-description">
                   {{ sortedProjects[num7].titleMain }}
               </div>
-              {% else %}
-                <div class="projekte-img-description-big">
-                  {{ sortedProjects[num7].titleMain }}
-                </div>
+          {% else %}
+              <div class="projekte-img-description-big">
+                {{ sortedProjects[num7].titleMain }}
+              </div>
           {% endif %}
-        </div>
 
-        <div class="projekte-spacer-horizontal-mobile"></div>
+          </div>
+        </div>
 
       </div>
 
       <div class="projekte-spacer-horizontal"></div>
+
 
       {% endfor %}
 

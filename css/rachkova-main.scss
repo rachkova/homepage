@@ -131,3 +131,16 @@ p {
   text-align: center;
 
 }
+
+
+.anchormargin {
+  position: relative;
+
+  @include widthLvl00 {top: -50px;}
+  @include widthLvl01 {top: -50px;}
+  @include widthLvl02 {top: -50px;}
+  @include widthLvl03 {top: -50px;}
+  @include widthLvl04 {top: -50px;}
+  @include widthLvl05 {top: -50px;}
+
+}

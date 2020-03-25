@@ -76,7 +76,7 @@ $stageFive: 1920px;
 .projekte-index-kategorien-container {
 
   display: flex;
-  flex-flow: row;
+  flex-direction: row;
   justify-content: space-between;
 
   padding-top: 100px;
@@ -112,7 +112,7 @@ $stageFive: 1920px;
 
   width: 100%;
   display: flex;
-  flex-direction: column;
+  flex-flow: column;
 
 }
 
@@ -156,7 +156,20 @@ $stageFive: 1920px;
 }
 
 @for $i from 1 through 7 {
-  .projekte-element-#{$i}, .projekte-element-#{$i}-placeholder {
+  .projekte-element-container-#{$i} {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include widthLvl00 {height: 40vh; min-width: 100vw; max-width: 100vw; width: 100vw;  }
+    @include widthLvl01 {height: 40vh; min-width: 100vw; max-width: 100vw; width: 100vw;  }
+    @include widthLvl02 {height: 40vh; min-width: 100vw; max-width: 100vw; width: 100vw;  }
+  }
+  .projekte-element-#{$i} {
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 
     position: relative;
     overflow: hidden;
@@ -164,16 +177,16 @@ $stageFive: 1920px;
     align-items: center;
     justify-content: center;
 
+    transition: all .5s;
 
-    @include widthLvl00 {height: 40vh; min-width: 100vw; max-width: 100vw; width: 100vw;  }
-    @include widthLvl01 {height: 40vh; min-width: 100vw; max-width: 100vw; width: 100vw;  }
-    @include widthLvl02 {height: 40vh; min-width: 100vw; max-width: 100vw; width: 100vw;  }
+    width: 100%;
+    height: 100%;
 
     img {
+      object-fit: cover;
       transition: transform .3s;
       // filter: grayscale(100%);
-      object-fit: cover;
-      align-self: center;
+
 
     }
 
@@ -201,29 +214,28 @@ $stageFive: 1920px;
       font-size: 60px;
     }
   }
+
+  .projekte-element-#{$i}:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+  }
 }
 
-.projekte-element-1 {
-
-  @include widthLvl03 {height: 948px;}
-  @include widthLvl04 {height: 948px;}
-  @include widthLvl05 {height: 948px;}
-
+.projekte-element-container-1 {
   width: 66%;
-
-}
-
-.projekte-element-2, .projekte-element-2-placeholder {
-
-  width: 32.75%;
-
   @include widthLvl03 {height: 948px;}
   @include widthLvl04 {height: 948px;}
   @include widthLvl05 {height: 948px;}
-
+}
+.projekte-element-container-2 {
+  width: 32.75%;
+  @include widthLvl03 {height: 948px;}
+  @include widthLvl04 {height: 948px;}
+  @include widthLvl05 {height: 948px;}
 }
 
-.projekte-element-3, .projekte-element-4, .projekte-element-4-placeholder {
+
+.projekte-element-container-3, .projekte-element-container-4 {
   width: 48.5vw;
   @include widthLvl03 {height: 632px;}
   @include widthLvl04 {height: 632px;}
@@ -231,18 +243,10 @@ $stageFive: 1920px;
 
 }
 
-.projekte-element-5, .projekte-element-6, .projekte-element-7, .projekte-element-6-placeholder, .projekte-element-7-placeholder {
+.projekte-element-container-5, .projekte-element-container-6, .projekte-element-container-7 {
   width: 32.3vw;
   @include widthLvl03 {height: 474px;}
   @include widthLvl04 {height: 474px;}
   @include widthLvl05 {height: 474px;}
 
-}
-
-@for $i from 1 through 7 {
-  .projekte-element-#{$i}-placeholder {
-  @include widthLvl00 {max-height: 0vh; display: none;}
-  @include widthLvl01 {max-height: 0vh; display: none;}
-  @include widthLvl02 {max-height: 0vh; display: none;}
-  }
 }

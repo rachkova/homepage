@@ -52,6 +52,7 @@ Kreative Lösungen für anspruchsvolle Architekturprojekte sind unser Markenzeic
     <link rel="stylesheet" href="css/rachkova-subnavigation.css" type="text/css">
     <link rel="stylesheet" href="css/rachkova-header.css" type="text/css">
     <link rel="stylesheet" href="css/rachkova-projekte.css" type="text/css">
+    <link rel="stylesheet" href="css/rachkova-projekt.css" type="text/css">
     <link rel="stylesheet" href="css/rachkova-leistungen.css" type="text/css">
     <link rel="stylesheet" href="css/rachkova-buero.css" type="text/css">
     <link rel="stylesheet" href="css/rachkova-cv.css" type="text/css">
@@ -75,13 +76,15 @@ Kreative Lösungen für anspruchsvolle Architekturprojekte sind unser Markenzeic
     <div class="nav-element" id="ScreenHeight"></div>
     <div class="nav-element" id="ProjekteTarget"></div>
 
+    
 
-    <div class="nav-element" onclick="smoothScroll(document.getElementById('header-rachkova'))">Home</div>
-    <div class="nav-element"><a href="../projekte">Projekte</a></div>
-    <div class="nav-element" onclick="smoothScroll(document.getElementById('leistungen-rachkova'))">Leistungen</div>
-    <div class="nav-element" onclick="smoothScroll(document.getElementById('buero-rachkova'))">Büro</div>
-    <div class="nav-element" onclick="smoothScroll(document.getElementById('contact-rachkova'))">Kontakt</div>
+        <div class="nav-element" onclick="clickLink('/#header')">Home</div>
+        <div class="nav-element" onclick="clickLink('/projekte')">Projekte</a></div>
+        <div class="nav-element" onclick="clickLink('/#leistungen')">Leistungen</div>
+        <div class="nav-element" onclick="clickLink('/#buero')">Büro</div>
+        <div class="nav-element" onclick="clickLink('/#kontakt')">Kontakt</div>
 
+    
     <div id="initiate" class="item item-transition item-b color-button myRipple">
       <span class="top"></span>
       <span class="middle"></span>
@@ -94,7 +97,7 @@ Kreative Lösungen für anspruchsvolle Architekturprojekte sind unser Markenzeic
   <div class="nav-right-spacer"></div>
 </div>
 
-  <div class="header" id="header-rachkova">
+  <a id="header"><div class="header" id="header-rachkova">
 
 
     <div class="header-container-rachkova">
@@ -107,7 +110,7 @@ Kreative Lösungen für anspruchsvolle Architekturprojekte sind unser Markenzeic
 
     </div>
 
-</div>
+</div></a>
 
   <div class="projekte-index-container" id="projekte-index-rachkova">
   <div class="projekte-index-content">
@@ -128,8 +131,9 @@ Kreative Lösungen für anspruchsvolle Architekturprojekte sind unser Markenzeic
 
   </div>
 </div>
+<a class="anchormargin" id="leistungen"></a>
 
-  <div class="leistungen-container">
+  <div class="leistungen-container"><a name="leistungen"></a>
   <div class="leistungen-content" id="leistungen-rachkova">
 
     <div id="leistungenHeader"><h2>leistungen</h2></div>
@@ -160,6 +164,7 @@ Kreative Lösungen für anspruchsvolle Architekturprojekte sind unser Markenzeic
 
   </div>
 </div>
+<a class="anchormargin" id="buero"></a>
 
   <div class="buero-container" id="buero-rachkova">
   <div class="buero-content">
@@ -206,12 +211,12 @@ Kreative Lösungen für anspruchsvolle Architekturprojekte sind unser Markenzeic
           vorsitzende der arbeitsgruppe der ziviltechnikerinnen bei der kammer der architekten und ingeneurkonsulenten für wien, niederösterreich und burgenland von 2005 bis 2007
         </div>
         </div>
-      </div>
 
-  </div>
+
+    </div>
 </div>
 
-  <div class="kontakt-container" id="kontakt-rachkova">
+  <a id="kontakt"><div class="kontakt-container" id="kontakt-rachkova"></a>
   <div class="kontakt-content">
 
 
@@ -249,6 +254,7 @@ Kreative Lösungen für anspruchsvolle Architekturprojekte sind unser Markenzeic
 
   </div>
 </div>
+</a>
 
 
 
@@ -259,6 +265,8 @@ Kreative Lösungen für anspruchsvolle Architekturprojekte sind unser Markenzeic
 <script src="js/rachkova-subnavigation.js"></script>
 <script src="js/rachkova-navigation.js"></script>
 <script src="js/rachkova-viewport.js"></script>
+<script src="js/rachkova-modal.js"></script>
+<script src="js/rachkova-lazyloading.js"></script>
 
 
 </body>

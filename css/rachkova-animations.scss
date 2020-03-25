@@ -32,6 +32,10 @@
     animation: fromLeft 1s ease-in-out;
         animation-name: fromLeft;
 }
+.rachkova-animation-fromLeftOpacity {
+    animation: fromLeftOpacity .5s ease-in-out;
+        animation-name: fromLeftOpacity;
+}
 .rachkova-animation-fromRight {
     animation: fromRight 1s ease-in-out;
         animation-name: fromRight;
@@ -45,6 +49,10 @@
 .rachkova-hr-animationFast {
     animation: hrAni 0.5s ease-in-out;
     animation-name: hrAni;
+}
+.rachkova-opacity {
+    animation: Opacity 0.5s ease-in-out;
+    animation-name: Opacity;
 }
 
 @keyframes hrAni {
@@ -96,6 +104,16 @@
   transform:translateX(0)
  }
 }
+@keyframes fromLeftOpacity {
+ 0% {
+  opacity: 0;
+  transform:translateX(-100px)
+ }
+ 100% {
+  opacity: 1;
+  transform:translateX(0)
+ }
+}
 @keyframes fromRight {
  0% {
 
@@ -104,5 +122,16 @@
  100% {
 
   transform:translateX(0)
+ }
+}
+
+@keyframes Opacity {
+ 0% {
+  opacity: 0;
+
+ }
+ 100% {
+  opacity: 1;
+
  }
 }

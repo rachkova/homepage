@@ -9,11 +9,99 @@
 
   {% include subnavigation.html %}
 
-  <div class="projekte-container-fluid">
-    <div class="projekte-container">
+  {% assign projekte = site.projekte %}
+  {% for object in projekte %}
+  {% if object.url == page.url %}
+  {% assign projekt = object %}
+  {% else %}{% continue %}
+  {% endif %}
+  {% endfor %}
 
+  <div class="projekt-container-fluid">
+
+    <div class="projekt-left-spacer"></div>
+
+
+    <div class="projekt-content-container">
+
+
+      <div class="projekt-header rachkova-animation-fromTopFast">
+        <h2>{{ projekt.titleMain }}</h2>
+      </div>
+
+      <div class="projekt-ImgDescriContainer">
+        <div class="projekt-description-container">
+
+          <div class="projekt-description-top rachkova-animation-fromLeftOpacity">
+            {{ projekt.description }}
+          </div>
+          <div class="projekt-description-bottom rachkova-animation-fromLeftOpacity">
+            Architektur: {{ projekt.Architektur}}
+            <br>
+            Auftraggeber: {{ projekt.Auftraggeber }}
+            <br>
+            Bauzeit: {{ projekt.Bauzeit }}
+            <br>
+            Leistung: {{ projekt.Leistung }}
+            <br>
+          </div>
+
+        </div>
+
+        <div class="projekt-spacer-vertical"></div>
+        <div class="projekt-mainImg rachkova-opacity">
+          <img src="../img/projekte{{ projekt.url }}/{{ projekt.imgMain }}">
+          <div class="projekt-mobile-description rachkova-animation-fromLeftOpacity">
+            <div class="projekt-mobile-description-element"><span>{{ projekt.description }}</span></div>
+            <div class="projekt-mobile-element"><span>Architektur: {{ projekt.Architektur}}</span></div>
+            <div class="projekt-mobile-element"><span>Auftraggeber: {{ projekt.Auftraggeber }}</span></div>
+            <div class="projekt-mobile-element"><span>Bauzeit: {{ projekt.Bauzeit }}</span></div>
+            <div class="projekt-mobile-element"><span>Leistung: {{ projekt.Leistung }}</span></div>
+          </div>
+        </div>
+
+      </div>
 
     </div>
+
+</div>
+
+  <div class="projekt-content-container-mobile">
+    <div class="projekt-mobile-description-element"><span>{{ projekt.description }}</span></div>
+    <div class="projekt-mobile-element"><span>Architektur: {{ projekt.Architektur}}</span></div>
+    <div class="projekt-mobile-element"><span>Auftraggeber: {{ projekt.Auftraggeber }}</span></div>
+    <div class="projekt-mobile-element"><span>Bauzeit: {{ projekt.Bauzeit }}</span></div>
+    <div class="projekt-mobile-element"><span>Leistung: {{ projekt.Leistung }}</span></div>
+  </div>
+
+  <div class="projekt-spacer-horizontal"></div>
+  <div class="projekte-spacer-horizontal-mobile"></div>
+
+  <div class="projekt-gallery-container">
+
+      {% assign gallery = projekt.imgGallery %}
+
+      {% for image in gallery %}
+      <div class="projekt-spacer-vertical"></div>
+        <div class="projekt-gallery-element-container">
+
+          {% assign pathhelper = "/img/projekte" %}
+
+
+          <div class="projekt-gallery-element" style="background-image: url('{{ site.baseurl }}{{pathhelper}}{{ page.url }}/{{ image }}');" onclick=triggerModal()">
+
+          </div>
+        </div>
+
+        <div class="projekt-spacer-vertical"></div>
+        <div class="projekte-spacer-horizontal-mobile"></div>
+
+      {% endfor %}
+
+
+  </div>
+
+
   </div>
 
   {% include scripts.html %}

@@ -27,14 +27,38 @@ window.smoothScroll = function(target) {
 
 }
 
-$.fn.isInViewport = function() {
-  var elementTop = $(this).offset().top;
-  var elementBottom = elementTop + $(this).outerHeight();
+window.clickLink = function(target) {
 
-  var viewportTop = $(window).scrollTop();
-  var viewportBottom = viewportTop + $(window).height();
+  if (target.indexOf("#leistungen") >= 0) {
+    window.location.href = target;
+    smoothScroll(document.getElementById('leistungen-rachkova'));
+  }
+  if (target.indexOf("#buero") >= 0) {
+    window.location.href = target;
+    smoothScroll(document.getElementById('buero-rachkova'));
+  }
+  else {
+    window.location.href = target;
+  }
+}
 
-  return elementBottom > viewportTop && elementTop < viewportBottom;
+$.fn.isInViewport = function(inViewType){
+    var viewport = {};
+    viewport.top = $(window).scrollTop();
+    viewport.bottom = viewport.top + $(window).height();
+    var bounds = {};
+    bounds.top = this.offset().top;
+    bounds.bottom = bounds.top + this.outerHeight();
+    switch(inViewType){
+      case 'bottomOnly':
+        return ((bounds.bottom <= viewport.bottom) && (bounds.bottom >= viewport.top));
+      case 'topOnly':
+        return ((bounds.top <= viewport.bottom) && (bounds.top >= viewport.top));
+      case 'both':
+        return ((bounds.top >= viewport.top) && (bounds.bottom <= viewport.bottom));
+      default:
+        return ((bounds.top >= viewport.top) && (bounds.bottom <= viewport.bottom));
+    }
 };
 
 
@@ -64,7 +88,7 @@ $.fn.isInViewport = function() {
 
 $('body').on('resize scroll', function() {
 
-    if ( !(projekteMain.hasClass("animationFired")) && $('#projekte-index-rachkova').isInViewport() ) {
+    if ( !(projekteMain.hasClass("animationFired")) && $('#projekte-index-rachkova').isInViewport('topOnly') ) {
 
       projekteMain.addClass("animationFired");
       projekteHeadline.addClass("rachkova-animation-fromTopFast");
@@ -74,7 +98,7 @@ $('body').on('resize scroll', function() {
       console.log("projekte in View and changed");
 
     }
-    else if ( !(leistungenMain.hasClass("animationFired")) && $('#leistungen-rachkova').isInViewport() ) {
+    else if ( !(leistungenMain.hasClass("animationFired")) && $('#leistungen-rachkova').isInViewport('topOnly') ) {
 
         leistungenMain.addClass("animationFired");
         leistungenHeadline.addClass("rachkova-animation-fromTopFast");
@@ -84,7 +108,7 @@ $('body').on('resize scroll', function() {
         console.log("Leistungen in View and changed");
     }
 
-    else if ( !(bueroMain.hasClass("animationFired")) &&  $('#buero-rachkova').isInViewport() ) {
+    else if ( !(bueroMain.hasClass("animationFired")) &&  $('#buero-rachkova').isInViewport('topOnly') ) {
 
         bueroMain.addClass("animationFired");
         bueroHeadline.addClass("rachkova-animation-fromTopFast");
@@ -94,7 +118,7 @@ $('body').on('resize scroll', function() {
         console.log("Buero in View and changed");
     }
 
-    else if ( !(cvMain.hasClass("animationFired")) &&  $('#cv-rachkova').isInViewport() ) {
+    else if ( !(cvMain.hasClass("animationFired")) &&  $('#cv-rachkova').isInViewport('topOnly') ) {
 
         cvMain.addClass("animationFired");
         cvHeadline.addClass("rachkova-animation-fromTopFast");
@@ -110,34 +134,34 @@ $('body').on('resize scroll', function() {
 
  $( window ).on('load', function(){
 
-       if ( !(projekteMain.hasClass("animationFired")) && $('#projekte-index-rachkova').isInViewport() ) {
+       if ( $('#projekte-index-rachkova').isInViewport('topOnly') ) {
 
          projekteMain.addClass("animationFired");
          projekteHeadline.addClass("rachkova-animation-fromTopFast");
          projekteHeadline.css("opacity", "1");
          projekteHr.addClass("rachkova-hr-animationFast");
          projekteSub.addClass("rachkova-animation-fromBottomFast");
-         console.log("projekte in View and changed");
+         console.log("Window Loaded, projekte in View and changed");
 
        }
-       else if ( !(leistungenMain.hasClass("animationFired")) && $('#leistungen-rachkova').isInViewport() ) {
+       else if ( $('#leistungen-rachkova').isInViewport('topOnly') ) {
 
            leistungenMain.addClass("animationFired");
            leistungenHeadline.addClass("rachkova-animation-fromTopFast");
            leistungenHeadline.css("opacity", "1");
            leistungenHr.addClass("rachkova-hr-animationFast");
            leistungenSub.addClass("rachkova-animation-fromBottomFast");
-           console.log("Leistungen in View and changed");
+           console.log("Window Loaded, Leistungen in View and changed");
        }
 
-       else if ( !(bueroMain.hasClass("animationFired")) &&  $('#buero-rachkova').isInViewport() ) {
+       else if ( $('#buero-rachkova').isInViewport('topOnly') ) {
 
            bueroMain.addClass("animationFired");
            bueroHeadline.addClass("rachkova-animation-fromTopFast");
            bueroHeadline.css("opacity", "1");
            bueroHr.addClass("rachkova-hr-animationFast");
            bueroSub.addClass("rachkova-animation-fromBottomFast");
-           console.log("Buero in View and changed");
+           console.log("Window Loaded, Buero in View and changed");
        }
 
 });
@@ -216,7 +240,7 @@ for(let i = 0; i < rippleElements.length; i++) {
     }, 900);
   }
 }
-// 
+//
 // $("#initiate").on("click",function(){
 //    $(".mobileNav").toggleClass("hide");
 // }

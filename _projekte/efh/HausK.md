@@ -19,6 +19,6 @@ Bauzeit: 2011
 Auftraggeber: privat
 Leistung: Einreichstatik
 
-imgMain: main.png
-imgGallery: [ 'img01.png', 'img02.png', 'img03.png']
+imgMain: main.jpg
+imgGallery: [ 'img01.jpg', 'img02.jpg', 'img03.jpg', 'img04.jpg', 'img05.jpg']
 ---

@@ -19,3 +19,11 @@ h2 { text-transform: uppercase; padding: 0px !important; margin: 0px !important;
 hr { border-width: 4px; border-style: solid; max-width: 120px; min-width: 120px; margin-top: 38px; margin-bottom: 38px; text-align: center; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; }
 
 p { text-align: center; }
+
+.anchormargin { position: relative; }
+@media (max-width: 410px) { .anchormargin { top: -50px; } }
+@media (min-width: 411px) and (max-width: 767px) { .anchormargin { top: -50px; } }
+@media (min-width: 768px) and (max-width: 991px) { .anchormargin { top: -50px; } }
+@media (min-width: 992px) and (max-width: 1199px) { .anchormargin { top: -50px; } }
+@media (min-width: 1200px) and (max-width: 1919px) { .anchormargin { top: -50px; } }
+@media (min-width: 1920px) { .anchormargin { top: -50px; } }

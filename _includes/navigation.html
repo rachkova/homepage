@@ -11,13 +11,23 @@
     <div class="nav-element" id="ScreenHeight"></div>
     <div class="nav-element" id="ProjekteTarget"></div>
 
+    {% if page.url contains "stahl" or "efh" or "altbau" or "projekte" %}
+
+        <div class="nav-element" onclick="clickLink('{{ environment }}/#header')">Home</div>
+        <div class="nav-element" onclick="clickLink('{{ environment }}/projekte')">Projekte</a></div>
+        <div class="nav-element" onclick="clickLink('{{ environment }}/#leistungen')">Leistungen</div>
+        <div class="nav-element" onclick="clickLink('{{ environment }}/#buero')">Büro</div>
+        <div class="nav-element" onclick="clickLink('{{ environment }}/#kontakt')">Kontakt</div>
+
+    {% else %}
 
     <div class="nav-element" onclick="smoothScroll(document.getElementById('header-rachkova'))">Home</div>
-    <div class="nav-element"><a href="../projekte">Projekte</a></div>
-    <div class="nav-element" onclick="smoothScroll(document.getElementById('leistungen-rachkova'))">Leistungen</div>
-    <div class="nav-element" onclick="smoothScroll(document.getElementById('buero-rachkova'))">Büro</div>
-    <div class="nav-element" onclick="smoothScroll(document.getElementById('contact-rachkova'))">Kontakt</div>
+    <div class="nav-element" onclick="clickLink('{{ environment }}/projekte')">Projekte</div>
+    <div class="nav-element" onclick="clickLink('{{ environment }}/#leistungen')">Leistungen</div>
+    <div class="nav-element" onclick="clickLink('{{ environment }}/#buero')">Büro</div>
+    <div class="nav-element" onclick="clickLink('{{ environment }}/#kontakt')">Kontakt</div>
 
+    {% endif %}
     <div id="initiate" class="item item-transition item-b color-button myRipple">
       <span class="top"></span>
       <span class="middle"></span>
