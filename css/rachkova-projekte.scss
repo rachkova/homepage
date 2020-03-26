@@ -47,29 +47,37 @@ $stageFive: 1920px;
 .projekte-index-container {
 
   width: 100%;
-  height: 300px;
+  height: auto;
+  @include widthLvl00 { height: auto;padding-top: 10%; padding-bottom: 10%;}
+  @include widthLvl01 { height: auto;padding-top: 10%; padding-bottom: 10%;}
+  @include widthLvl02 { height: auto;padding-top: 10%; padding-bottom: 10%;}
   background-color: #373737;
 
   // its a hack, dont remove this
   margin-top: -20px;
   //
-  padding-top: 82px;
+  @include widthLvl03 { height: auto; padding-top: 10%; padding-bottom: 10%;}
+  @include widthLvl04 { height: auto; padding-top: 5%; padding-bottom: 5%;}
+  @include widthLvl05 { height: auto; padding-top: 3%; padding-bottom: 3%;}
 
   display: flex;
   justify-content: center;
-
 
 }
 
 .projekte-index-content {
 
-   max-width: 1320px;
-   min-width: 1320px;
+    @include widthLvl00 { min-width: 100%; max-width: 100%; width: 100%; padding: 0px 20px 0px 20px;}
+    @include widthLvl01 { min-width: 100%; max-width: 100%; width: 100%; padding: 0px 20px 0px 20px;}
+    @include widthLvl02 { min-width: 100%; max-width: 100%; width: 100%; padding: 0px 20px 0px 20px;}
+    @include widthLvl03 { min-width: 100%; max-width: 100%; width: 100%; padding: 0px 20px 0px 20px;}
+    @include widthLvl04 { min-width: 100%; max-width: 100%; width: 100%; padding: 0px;}
+    @include widthLvl05 { min-width: 1320px;; max-width: 1320px;; width: 1320px; padding: 0px 20px 0px 20px;}
 
-   padding: 0px 20px 0px 20px;
 
-   justify-content: center;
-   align-items: center;
+
+     justify-content: center;
+     align-items: center;
 
 }
 
@@ -77,15 +85,44 @@ $stageFive: 1920px;
 
   display: flex;
   flex-direction: row;
+
   justify-content: space-between;
 
-  padding-top: 100px;
+
+  @include widthLvl00 { flex-direction: column;  text-align: center;align-items: center;justify-content: center;}
+  @include widthLvl01 { flex-direction: column;  text-align: center;align-items: center;justify-content: center;}
+  @include widthLvl02 { flex-direction: column;  text-align: center;align-items: center;justify-content: center;}
 
   .kategorien-element {
 
     color: #c6c6c6;
-    font-weight: bold;
-    font-size: 30px;
+    font-weight: 600;
+
+    @media screen and (orientation:landscape) { font-size: 16px; }
+
+    @include widthLvl00 { font-size: 28px; flex-direction: column;padding-top: 5%;}
+    @include widthLvl01 { font-size: 28px; flex-direction: column;padding-top: 5%;}
+    @include widthLvl02 { font-size: 28px; flex-direction: column;padding-top: 5%;}
+    @include widthLvl03 { font-size: 28px;}
+    @include widthLvl04 { font-size: 32px;}
+    @include widthLvl05 { font-size: 36px;}
+
+
+  }
+  .kategorien-element:hover {
+    color: white;
+    cursor: pointer;
+  }
+
+  .kategorien-spacer {
+
+      @include widthLvl00 {min-width: 0%; width: 0%;}
+      @include widthLvl01 {min-width: 0%; width: 0%;}
+      @include widthLvl02 {min-width: 0%; width: 0%;}
+      @include widthLvl03 {min-width: 0%; width: 0%;}
+      @include widthLvl04 {min-width: 0%; width: 2.5%;}
+      @include widthLvl05 {min-width: 0%; width: 0%;}
+
 
   }
 
@@ -170,6 +207,8 @@ $stageFive: 1920px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    filter: grayscale(60%);
+    -webkit-filter: grayscale(60%); /* Safari 6.0 - 9.0 */
 
     position: relative;
     overflow: hidden;
@@ -185,13 +224,13 @@ $stageFive: 1920px;
     img {
       object-fit: cover;
       transition: transform .3s;
-      // filter: grayscale(100%);
+
 
 
     }
 
     img:hover {
-      // filter: grayscale(0);
+      filter: grayscale(0);
       transform: scale(1.1);
       cursor: pointer;
 
@@ -216,8 +255,11 @@ $stageFive: 1920px;
   }
 
   .projekte-element-#{$i}:hover {
+    filter:none;
     transform: scale(1.05);
     cursor: pointer;
+    filter: grayscale(0%);
+    -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
   }
 }
 

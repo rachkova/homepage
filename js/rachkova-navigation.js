@@ -3,6 +3,7 @@ var modalClose = $("#modalClose");
 var mobileNavigation = $("#modalMobileNavigation");
 
 window.smoothScroll = function(target) {
+
    var scrollContainer = target;
    // document.getElementById('header-rachkova')
    do { //find scroll container
@@ -39,7 +40,7 @@ window.clickLink = function(target) {
       mobileNavigation.toggleClass('visible');
     }
     window.location.href = target;
-    smoothScroll(document.getElementById('leistungen-rachkova'));
+    // smoothScroll(document.getElementById('leistungen-rachkova'));
   }
   if (target.indexOf("#buero") >= 0) {
     if ( ($( window ).width() < 992) && ( ( mobileNavigation.hasClass('visible')) || (modal.hasClass('visible')) ) ) {
@@ -48,7 +49,7 @@ window.clickLink = function(target) {
       mobileNavigation.toggleClass('visible');
     }
     window.location.href = target;
-    smoothScroll(document.getElementById('buero-rachkova'));
+    // smoothScroll(document.getElementById('buero-rachkova'));
   }
   if (target.indexOf("#kontakt") >= 0) {
     if ( ($( window ).width() < 992) && ( ( mobileNavigation.hasClass('visible')) || (modal.hasClass('visible')) ) ) {
@@ -57,7 +58,7 @@ window.clickLink = function(target) {
       mobileNavigation.toggleClass('visible');
     }
     window.location.href = target;
-    smoothScroll(document.getElementById('buero-rachkova'));
+    // smoothScroll(document.getElementById('kontakt-rachkova'));
   }
   else {
     window.location.href = target;

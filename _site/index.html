@@ -68,7 +68,7 @@ Kreative Lösungen für anspruchsvolle Architekturprojekte sind unser Markenzeic
   <div class="nav-left-spacer"></div>
 
   <div class="nav-logo-container">
-    <img src="../img/front/navigation/rachkova-logo.png" onclick="smoothScroll(document.getElementById('header-rachkova'))">
+    <img src="../img/front/navigation/rachkova-logo.png" onclick="clickLink('/#header')">
   </div>
 
   <div class="nav-menu">
@@ -77,14 +77,13 @@ Kreative Lösungen für anspruchsvolle Architekturprojekte sind unser Markenzeic
     <div class="nav-element" id="ProjekteTarget"></div>
 
     
+        <div class="nav-element" onclick="smoothScroll(document.getElementById('header-rachkova'))">Home</div>
+    
 
-        <div class="nav-element" onclick="clickLink('/#header')">Home</div>
         <div class="nav-element" onclick="clickLink('/projekte')">Projekte</a></div>
         <div class="nav-element" onclick="clickLink('/#leistungen')">Leistungen</div>
         <div class="nav-element" onclick="clickLink('/#buero')">Büro</div>
         <div class="nav-element" onclick="clickLink('/#kontakt')">Kontakt</div>
-
-    
 
     <div id="initiate" class="item item-transition item-b color-button myRipple">
 
@@ -136,18 +135,18 @@ Kreative Lösungen für anspruchsvolle Architekturprojekte sind unser Markenzeic
     <div id="projekteHrAnimation" class="border-color-light"><hr></div>
 
     <div class="projekte-index-kategorien-container">
-
-      <div class="kategorien-element">alle projekte</div>
-      <div class="kategorien-element">stahlbau</div>
-      <div class="kategorien-element">holzbau</div>
-      <div class="kategorien-element">anspruchsvolle EFH</div>
-      <div class="kategorien-element">altbau</div>
-
+      <div class="kategorien-spacer"></div>
+      <div class="kategorien-element"onclick="clickLink('/projekte')">alle projekte</div>
+      <div class="kategorien-element"onclick="clickLink('/stahlbau')">stahlbau</div>
+      <div class="kategorien-element"onclick="clickLink('/stahlholzbau')">stahl- und holzbau</div>
+      <div class="kategorien-element"onclick="clickLink('/efh')">anspruchsvolle efh</div>
+      <div class="kategorien-element"onclick="clickLink('/altbau')">altbau</div>
+      <div class="kategorien-spacer"></div>
     </div>
 
   </div>
 </div>
-<a class="anchormargin" id="leistungen"></a>
+<a class="anchormarginLeistungen" id="leistungen"></a>
 
   <div class="leistungen-container"><a name="leistungen"></a>
   <div class="leistungen-content" id="leistungen-rachkova">
@@ -177,6 +176,19 @@ Kreative Lösungen für anspruchsvolle Architekturprojekte sind unser Markenzeic
       </div>
 
     </div>
+
+    <div class="leistungen-mobile-content">
+        <div class="leistungen-mobile-element-h">tragwerksplanung</div>
+            <div class="leistungen-mobile-element-sub">anspruchsvolle tragwerke aus stahlbeton</div>
+            <div class="leistungen-mobile-element-sub">altbausanierungen und aufstockungen</div>
+            <div class="leistungen-mobile-element-sub">tragwerke aus fertigteilen</div>
+        <div class="leistungen-mobile-element-h">baudynamik</div>
+            <div class="leistungen-mobile-element-sub">erdbebenberechnungen</div>
+            <div class="leistungen-mobile-element-sub">antwortspektrumanalyse</div>
+        <div class="leistungen-mobile-element-h">gutachten</div>
+        <div class="leistungen-mobile-element-h">prüfungsingenieurleistungen gem. wiener bauordnung</div>
+    </div>
+
 
   </div>
 </div>

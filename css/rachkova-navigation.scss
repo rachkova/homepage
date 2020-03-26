@@ -94,6 +94,7 @@ $stageFive: 1920px;
   overflow: hidden;
 
   & img {
+    transition: all .3s ease-in-out; 
     @include widthLvl00 {
       text-align: center;
       max-width: 100%;
@@ -127,6 +128,7 @@ $stageFive: 1920px;
     padding-top: 5px;
     height: 90px;
     &:hover {
+      opacity: 0.8;
       cursor: pointer;
     }
   }

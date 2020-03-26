@@ -17,6 +17,9 @@ h2 { text-transform: uppercase; padding: 0px !important; margin: 0px !important;
 .border-color-light hr { border-color: #c6c6c6; }
 
 hr { border-width: 4px; border-style: solid; max-width: 120px; min-width: 120px; margin-top: 38px; margin-bottom: 38px; text-align: center; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; }
+@media (max-width: 410px) { hr { margin-top: 5%; margin-bottom: 5%; } }
+@media (min-width: 411px) and (max-width: 767px) { hr { margin-top: 5%; margin-bottom: 5%; } }
+@media (min-width: 768px) and (max-width: 991px) { hr { margin-top: 5%; margin-bottom: 5%; } }
 
 p { text-align: center; }
 
@@ -27,3 +30,11 @@ p { text-align: center; }
 @media (min-width: 992px) and (max-width: 1199px) { .anchormargin { top: -50px; } }
 @media (min-width: 1200px) and (max-width: 1919px) { .anchormargin { top: -50px; } }
 @media (min-width: 1920px) { .anchormargin { top: -50px; } }
+
+.anchormarginLeistungen { position: relative; }
+@media (max-width: 410px) { .anchormarginLeistungen { top: -50px; } }
+@media (min-width: 411px) and (max-width: 767px) { .anchormarginLeistungen { top: -50px; } }
+@media (min-width: 768px) and (max-width: 991px) { .anchormarginLeistungen { top: -50px; } }
+@media (min-width: 992px) and (max-width: 1199px) { .anchormarginLeistungen { top: -50px; } }
+@media (min-width: 1200px) and (max-width: 1919px) { .anchormarginLeistungen { top: -50px; } }
+@media (min-width: 1920px) { .anchormarginLeistungen { top: -80px; } }

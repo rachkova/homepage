@@ -113,6 +113,9 @@ hr {
   max-width:120px;
   min-width: 120px;
 
+  @include widthLvl00 {margin-top: 5%; margin-bottom: 5%;}
+  @include widthLvl01 {margin-top: 5%; margin-bottom: 5%;}
+  @include widthLvl02 {margin-top: 5%; margin-bottom: 5%;}
   margin-top: 38px;
   margin-bottom: 38px;
 
@@ -141,5 +144,16 @@ p {
   @include widthLvl03 {top: -50px;}
   @include widthLvl04 {top: -50px;}
   @include widthLvl05 {top: -50px;}
+
+}
+.anchormarginLeistungen {
+  position: relative;
+
+  @include widthLvl00 {top: -50px;}
+  @include widthLvl01 {top: -50px;}
+  @include widthLvl02 {top: -50px;}
+  @include widthLvl03 {top: -50px;}
+  @include widthLvl04 {top: -50px;}
+  @include widthLvl05 {top: -80px;}
 
 }

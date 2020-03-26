@@ -1,15 +1,61 @@
 ---
 ---
 
+$stageZero: 410px;
+
+$stageOneLower: 411px;
+$stageOneHigher: 767px;
+
+$stageTwoLower: 768px;
+$stageTwoHigher: 991px;
+
+$stageThreeLower: 992px;
+$stageThreeHigher: 1199px;
+
+$stageFourLower: 1200px;
+$stageFourHigher: 1919px;
+
+$stageFive: 1920px;
+
+@mixin widthLvl00 {
+  @media (max-width: $stageZero) { @content; }
+}
+
+@mixin widthLvl01 {
+  @media (min-width:$stageOneLower) and (max-width:$stageOneHigher)  { @content; }
+}
+
+@mixin widthLvl02 {
+  @media (min-width:$stageTwoLower) and (max-width:$stageTwoHigher) { @content; }
+}
+@mixin widthLvl03 {
+  @media (min-width:$stageThreeLower) and (max-width:$stageThreeHigher) { @content; }
+}
+@mixin widthLvl04 {
+  @media (min-width:$stageFourLower) and (max-width:$stageFourHigher) { @content; }
+}
+
+@mixin widthLvl05 {
+  @media (min-width: $stageFive) { @content; }
+}
+
 #leistungenHeader {
   opacity: 0;
   color: #373737;
 }
 
+
 .leistungen-container {
 
     width: 100%;
-    min-height: 980px;
+
+
+    @include widthLvl00 { height: auto; padding-top: 10%; padding-bottom: 10%; background-attachment: scroll;}
+    @include widthLvl01 { height: auto; padding-top: 10%; padding-bottom: 10%; background-attachment: scroll;}
+    @include widthLvl02 { height: auto; padding-top: 10%; padding-bottom: 10%; background-attachment: scroll;}
+    @include widthLvl03 { height: auto; padding-top: 10%; padding-bottom: 10%; background-attachment: scroll;}
+    @include widthLvl04 { height: auto; padding-top: 5%; padding-bottom: 5%; }
+    @include widthLvl05 { height: 980px; padding-top: 3%; padding-bottom: 3%; }
 
     background-image: url("../img/front/leistungen/leistungen-background.png");
     background-repeat: no-repeat;
@@ -24,10 +70,16 @@
 
 .leistungen-content {
 
+    @include widthLvl00 { min-width: 100%; width: 100%; max-width: 100%; overflow: hidden; padding: 0px;}
+    @include widthLvl01 { min-width: 100%; width: 100%; max-width: 100%; overflow: hidden; padding: 0px;}
+    @include widthLvl02 { min-width: 100%; width: 100%; max-width: 100%; overflow: hidden; padding: 0px;}
+    @include widthLvl03 { min-width: 100%; width: 100%; max-width: 100%; overflow: hidden; padding: 0px;}
+    @include widthLvl04 { min-width: 68.75%; max-width: 68.75%; width: 68.75%; overflow: hidden; padding: 0px;}
+
     min-width: 1320px;
     max-width: 1320px;
 
-    padding: 62px 20px 0px 20px;
+    padding: 0px 20px 0px 20px;
 
     justify-content: flex-start;
     align-items: flex-start;
@@ -36,7 +88,30 @@
 
 .leistungen-sub-container {
 
-    padding-top: 100px;
+
+    @include widthLvl00 { display: none; padding-top: 0px; }
+    @include widthLvl01 { display: none; padding-top: 0px; }
+    @include widthLvl02 { display: none; padding-top: 0px; }
+    @include widthLvl03 { padding-top: 0px; padding-left: 2.5%; padding-right:2.5%; }
+    @include widthLvl04 {  }
+    @include widthLvl05 {  }
+
+    width: 100%;
+
+}
+
+.leistungen-mobile-content {
+  display: none;
+  @include widthLvl00 { display: flex; }
+  @include widthLvl01 { display: flex; }
+  @include widthLvl02 { display: flex; }
+
+  width: 100%;
+  height: auto;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
 }
 
@@ -53,6 +128,18 @@
   font-weight: bold;
   font-size: 30px;
 
+  @include widthLvl00 { font-size: 18px;}
+  @include widthLvl01 { font-size: 18px;}
+  @include widthLvl02 { font-size: 18px;}
+
+
+  color: #383533;
+
+}
+.leistungen-mobile-element-h {
+
+  font-weight: 600;
+  font-size: 18px;
   color: #383533;
 
 }
@@ -63,6 +150,7 @@
   font-size: 25px;
   font-weight: 600;
   color: #383533;
+  @include widthLvl04 {padding-left: 2.5%;}
 }
 
 .leistungen-element-h-single {
