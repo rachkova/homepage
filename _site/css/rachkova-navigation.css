@@ -35,9 +35,7 @@
 @media (min-width: 411px) and (max-width: 767px) { .nav-element { display: none; } }
 @media (min-width: 768px) and (max-width: 991px) { .nav-element { display: none; } }
 @media (min-width: 992px) and (max-width: 1199px) { .nav-element { font-weight: 600; font-size: 13px; line-height: 13px; padding: 56px 10px 20px 10px; } }
-.nav-element:hover { cursor: pointer; }
-.nav-element:after { display: block; content: ''; border-bottom: solid 3px #383533; transform: scaleX(0); transition: transform 250ms ease-in-out; }
-.nav-element:hover:after { transform: scaleX(1); }
+.nav-element:hover { cursor: pointer; color: #c6c6c6; }
 
 .ripple { position: absolute; background: #fff; border-radius: 50%; width: 5px; height: 5px; animation: rippleEffect .6s 1; opacity: 0; }
 
@@ -67,3 +65,36 @@
 .item-b.active .middle { opacity: 0; transform: scale(0, 0); }
 .item-b.active .bottom { margin-top: 5px; transform: translateY(-20px) rotate(-45deg); }
 @media (max-width: 410px) { .item-b.active .bottom { transform: translateY(-15px) rotate(-45deg); } }
+
+#myModal { min-width: 100vw; min-height: 100%; position: absolute; top: 0px; left: 0px; z-index: 2; background-color: rgba(0, 0, 0, 0.5); overflow: hidden; }
+@media (max-width: 410px) { #myModal { margin-top: 100px; } }
+@media (min-width: 411px) and (max-width: 767px) { #myModal { margin-top: 100px; } }
+@media (min-width: 768px) and (max-width: 991px) { #myModal { margin-top: 100px; } }
+@media (min-width: 992px) and (max-width: 1199px) { #myModal { margin-top: 100px; } }
+@media (min-width: 1200px) and (max-width: 1919px) { #myModal { margin-top: 100px; } }
+@media (min-width: 1920px) { #myModal { margin-top: 100px; } }
+
+.modal { display: none; }
+.modal.visible { display: flex; }
+.modal:hover { cursor: pointer; }
+
+#modalMobileNavigation { z-index: 3; position: absolute; top: 0px; left: 0px; overflow: auto; background-color: #383533; padding-top: 100px; height: 100%; display: flex; }
+@media (min-width: 768px) and (max-width: 991px) { #modalMobileNavigation { padding-top: 150px; } }
+
+.modalNav { transition: all .3s ease-in-out; width: 0vw; min-width: 0vw; max-width: 0vw; }
+@media (max-width: 410px) { .modalNav.visible { width: 100vw; min-width: 100vw; max-width: 100vw; } }
+@media (min-width: 411px) and (max-width: 767px) { .modalNav.visible { width: 100vw; min-width: 100vw; max-width: 100vw; } }
+@media (min-width: 768px) and (max-width: 991px) { .modalNav.visible { width: 60vw; min-width: 60vw; max-width: 60vw; } }
+
+.mobileNavigationContainer { padding-top: 50px; padding-left: 50px; display: flex; flex-direction: column; }
+@media (max-width: 410px) { .mobileNavigationContainer { padding-top: 5%; padding-left: 5%; padding-bottom: 10%; } }
+@media (min-width: 411px) and (max-width: 767px) { .mobileNavigationContainer { padding-top: 5%; padding-left: 5%; padding-bottom: 10%; } }
+@media screen and (orientation: landscape) { .mobileNavigationContainer { padding-top: 2.5%; padding-left: 2.5%; } }
+
+.nav-element-mobile { color: #c6c6c6; transition: all .3s ease-in-out; font-weight: 600; }
+.nav-element-mobile.primary { font-size: 42px; }
+@media screen and (orientation: landscape) { .nav-element-mobile.primary { font-size: 20px; } }
+.nav-element-mobile.secondary { font-size: 28px; padding-left: 28px; }
+@media (min-width: 768px) and (max-width: 991px) { .nav-element-mobile.secondary { display: none; } }
+@media screen and (orientation: landscape) { .nav-element-mobile.secondary { font-size: 18px; padding-left: 18px; } }
+.nav-element-mobile:hover { color: white; cursor: pointer; }

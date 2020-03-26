@@ -24,7 +24,6 @@ window.smoothScroll = function(target) {
    scroll(scrollContainer, scrollContainer.scrollTop, targetY, 0);
 
    // load animation at target
-
 }
 
 window.clickLink = function(target) {
@@ -205,12 +204,39 @@ function enableScroll() {
     document.onkeydown = null;
 }
 
-// Burger
+var modal = $("#myModal");
+var modalClose = $("#modalClose");
+var mobileNavigation = $("#modalMobileNavigation");
+
+// Burger & Modal Control
+$( window ).on('resize', function() {
+    if ( ($( window ).width() > 991) && ( ( mobileNavigation.hasClass('visible')) || (modal.hasClass('visible')) ) ) {
+
+      modal.toggleClass('visible');
+      mobileNavigation.toggleClass('visible');
+      $('.item-transition').toggleClass('active');
+      console.log("Disabled menu and modal due to window width change");
+    }
+
+});
+
+
 (function($) {
    $('.item-transition').on('click', function() {
       $(this).toggleClass('active');
+      modal.toggleClass('visible');
+      mobileNavigation.toggleClass('visible');
    });
-
+   modal.on('click', function() {
+      $('.item-transition').toggleClass('active');
+      modal.toggleClass('visible');
+      mobileNavigation.toggleClass('visible');
+   });
+   modalClose.on('click', function() {
+      $('.item-transition').toggleClass('active');
+      modal.toggleClass('visible');
+      mobileNavigation.toggleClass('visible');
+   });
    $('.item-animation').on('click', function() {
       if($(this).hasClass('active-in')) {
          $(this).removeClass('active-in');
@@ -221,6 +247,14 @@ function enableScroll() {
       }
    });
 })(jQuery);
+
+window.triggerModal = function(src) {
+
+    modal.toggleClass('visible');
+    alert("this is the source: " + src);
+
+}
+
 
 
 const rippleElements = document.getElementsByClassName("myRipple");
@@ -240,7 +274,3 @@ for(let i = 0; i < rippleElements.length; i++) {
     }, 900);
   }
 }
-//
-// $("#initiate").on("click",function(){
-//    $(".mobileNav").toggleClass("hide");
-// }

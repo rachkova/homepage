@@ -85,16 +85,32 @@ Kreative Lösungen für anspruchsvolle Architekturprojekte sind unser Markenzeic
         <div class="nav-element" onclick="clickLink('/#kontakt')">Kontakt</div>
 
     
+
     <div id="initiate" class="item item-transition item-b color-button myRipple">
+
       <span class="top"></span>
       <span class="middle"></span>
       <span class="bottom"></span>
+
     </div>
-
-
   </div>
 
   <div class="nav-right-spacer"></div>
+</div>
+
+<div id="modalMobileNavigation" class="modalNav">
+
+    <div class="mobileNavigationContainer">
+      <div class="nav-element-mobile primary" onclick="clickLink('/#header')">Home</div>
+      <div class="nav-element-mobile primary" onclick="clickLink('/projekte')">Projekte</a></div>
+          <div class="nav-element-mobile secondary" onclick="clickLink('/stahlbetonbau')">stahlbetonbau</a></div>
+          <div class="nav-element-mobile secondary" onclick="clickLink('/stahlholzbau')">stahl- und holzbau</a></div>
+          <div class="nav-element-mobile secondary" onclick="clickLink('/efh')">anspruchsvolle efh</a></div>
+          <div class="nav-element-mobile secondary" onclick="clickLink('/altbau')">altbau</a></div>
+      <div class="nav-element-mobile primary" onclick="clickLink('/#leistungen')">Leistungen</div>
+      <div class="nav-element-mobile primary" onclick="clickLink('/#buero')">Büro</div>
+      <div class="nav-element-mobile primary" onclick="clickLink('/#kontakt')">Kontakt</div>
+    </div>
 </div>
 
   <a id="header"><div class="header" id="header-rachkova">
@@ -256,7 +272,13 @@ Kreative Lösungen für anspruchsvolle Architekturprojekte sind unser Markenzeic
 </div>
 </a>
 
+  <div id="myModal" class="modal">
 
+    <span id="modalclose">&times;</span>
+    <img class="modal-content" id="img01">
+    <div id="caption"></div>
+
+</div>
 
   <!-- jQuery -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

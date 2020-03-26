@@ -28,14 +28,30 @@
     <div class="nav-element" onclick="clickLink('{{ environment }}/#kontakt')">Kontakt</div>
 
     {% endif %}
+
     <div id="initiate" class="item item-transition item-b color-button myRipple">
+
       <span class="top"></span>
       <span class="middle"></span>
       <span class="bottom"></span>
+
     </div>
-
-
   </div>
 
   <div class="nav-right-spacer"></div>
+</div>
+
+<div id="modalMobileNavigation" class="modalNav">
+
+    <div class="mobileNavigationContainer">
+      <div class="nav-element-mobile primary" onclick="clickLink('{{ environment }}/#header')">Home</div>
+      <div class="nav-element-mobile primary" onclick="clickLink('{{ environment }}/projekte')">Projekte</a></div>
+          <div class="nav-element-mobile secondary" onclick="clickLink('{{ environment }}/stahlbetonbau')">stahlbetonbau</a></div>
+          <div class="nav-element-mobile secondary" onclick="clickLink('{{ environment }}/stahlholzbau')">stahl- und holzbau</a></div>
+          <div class="nav-element-mobile secondary" onclick="clickLink('{{ environment }}/efh')">anspruchsvolle efh</a></div>
+          <div class="nav-element-mobile secondary" onclick="clickLink('{{ environment }}/altbau')">altbau</a></div>
+      <div class="nav-element-mobile primary" onclick="clickLink('{{ environment }}/#leistungen')">Leistungen</div>
+      <div class="nav-element-mobile primary" onclick="clickLink('{{ environment }}/#buero')">Büro</div>
+      <div class="nav-element-mobile primary" onclick="clickLink('{{ environment }}/#kontakt')">Kontakt</div>
+    </div>
 </div>
