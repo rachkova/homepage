@@ -96,5 +96,5 @@
 @media screen and (orientation: landscape) { .nav-element-mobile.primary { font-size: 20px; } }
 .nav-element-mobile.secondary { font-size: 28px; padding-left: 28px; }
 @media (min-width: 768px) and (max-width: 991px) { .nav-element-mobile.secondary { display: none; } }
-@media screen and (orientation: landscape) { .nav-element-mobile.secondary { font-size: 18px; padding-left: 18px; } }
+@media screen and (orientation: landscape) { .nav-element-mobile.secondary { font-size: 16px; padding-left: 16px; } }
 .nav-element-mobile:hover { color: white; cursor: pointer; }

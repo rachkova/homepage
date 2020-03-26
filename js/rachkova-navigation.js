@@ -1,3 +1,7 @@
+var modal = $("#myModal");
+var modalClose = $("#modalClose");
+var mobileNavigation = $("#modalMobileNavigation");
+
 window.smoothScroll = function(target) {
    var scrollContainer = target;
    // document.getElementById('header-rachkova')
@@ -29,10 +33,29 @@ window.smoothScroll = function(target) {
 window.clickLink = function(target) {
 
   if (target.indexOf("#leistungen") >= 0) {
+    if ( ($( window ).width() < 992) && ( ( mobileNavigation.hasClass('visible')) || (modal.hasClass('visible')) ) ) {
+      $('.item-transition').toggleClass('active');
+      modal.toggleClass('visible');
+      mobileNavigation.toggleClass('visible');
+    }
     window.location.href = target;
     smoothScroll(document.getElementById('leistungen-rachkova'));
   }
   if (target.indexOf("#buero") >= 0) {
+    if ( ($( window ).width() < 992) && ( ( mobileNavigation.hasClass('visible')) || (modal.hasClass('visible')) ) ) {
+      $('.item-transition').toggleClass('active');
+      modal.toggleClass('visible');
+      mobileNavigation.toggleClass('visible');
+    }
+    window.location.href = target;
+    smoothScroll(document.getElementById('buero-rachkova'));
+  }
+  if (target.indexOf("#kontakt") >= 0) {
+    if ( ($( window ).width() < 992) && ( ( mobileNavigation.hasClass('visible')) || (modal.hasClass('visible')) ) ) {
+      $('.item-transition').toggleClass('active');
+      modal.toggleClass('visible');
+      mobileNavigation.toggleClass('visible');
+    }
     window.location.href = target;
     smoothScroll(document.getElementById('buero-rachkova'));
   }
@@ -204,9 +227,10 @@ function enableScroll() {
     document.onkeydown = null;
 }
 
-var modal = $("#myModal");
-var modalClose = $("#modalClose");
-var mobileNavigation = $("#modalMobileNavigation");
+// Those are defined on top of file
+// var modal = $("#myModal");
+// var modalClose = $("#modalClose");
+// var mobileNavigation = $("#modalMobileNavigation");
 
 // Burger & Modal Control
 $( window ).on('resize', function() {

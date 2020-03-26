@@ -455,7 +455,7 @@ $stageFive: 1920px;
     font-size: 28px;
     @include widthLvl02 {display: none;}
     padding-left: 28px;
-    @media screen and (orientation:landscape) { font-size: 18px; padding-left: 18px;}
+    @media screen and (orientation:landscape) { font-size: 16px; padding-left: 16px;}
   }
   &:hover {
     color: white;
