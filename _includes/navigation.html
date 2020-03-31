@@ -11,7 +11,7 @@
     <div class="nav-element" id="ScreenHeight"></div>
     <div class="nav-element" id="ProjekteTarget"></div>
 
-    {% if page.url contains "stahl" or page.url contains "efh" or page.url contains "altbau" %}
+    {% if page.url contains "stahl" or page.url contains "efh" or page.url contains "altbau" or page.url contains "projekte" %}
         <div class="nav-element" onclick="clickLink('{{ environment }}/#header')">Home</div>
     {% else %}
         <div class="nav-element" onclick="smoothScroll(document.getElementById('header-rachkova'))">Home</div>

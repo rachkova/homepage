@@ -7,9 +7,9 @@ body { padding: 0px; margin: 0px; }
 .border-color-light hr { border-color: #c6c6c6; }
 
 hr { border-width: 4px; border-style: solid; max-width: 120px; min-width: 120px; margin-top: 38px; margin-bottom: 38px; text-align: center; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; }
-@media (max-width: 410px) { hr { margin-top: 5%; margin-bottom: 5%; } }
-@media (min-width: 411px) and (max-width: 767px) { hr { margin-top: 5%; margin-bottom: 5%; } }
-@media (min-width: 768px) and (max-width: 989px) { hr { margin-top: 5%; margin-bottom: 5%; } }
+@media (max-width: 410px) { hr { border-width: 2px; min-width: 60px; max-width: 60px; margin-top: 20px; margin-bottom: 20px; } }
+@media (min-width: 411px) and (max-width: 767px) { hr { border-width: 3px; min-width: 80px; max-width: 80px; margin-top: 30px; margin-bottom: 30px; } }
+@media (min-width: 768px) and (max-width: 989px) { hr { border-width: 3px; min-width: 100px; max-width: 100px; margin-top: 5%; margin-bottom: 5%; } }
 
 p { text-align: center; }
 

@@ -67,7 +67,7 @@ h1 {
   padding:0px !important;
   margin:0px !important;
 
-  font-weight: $fontweightBold;
+  font-weight: $fontweightBolder;
 
   color: $h1FontColor;
   align-self: center;
@@ -82,7 +82,7 @@ h2 {
   padding:0px !important;
   margin:0px !important;
 
-  font-weight: $fontweightBold;
+  font-weight: $fontweightBolder;
 
 
   align-self: center;
@@ -91,8 +91,10 @@ h2 {
 }
 
 .neli {
+  padding-top: 50px;
+
   @extend .font-size-3 ;
-  font-weight: $fontweightBold;
+  font-weight: $fontweightBolder;
   color: $h1FontColor;
 }
 
@@ -140,6 +142,7 @@ h2 {
 .leistungen-mobile-element-h {
 
   font-weight: $fontweightBold;
+  text-align: center;
   @extend .font-size-4 ;
   color: $h1FontColor;
 
@@ -178,17 +181,21 @@ h2 {
   color: $h1FontColor;
 
 }
-
+.projekte-preview-elements {
+  color: $colorLightGrey;
+  @extend .font-size-4 ;
+  font-weight: $fontweightBolder;
+}
 #projekteHeader {
     color:$colorLightGrey;
 }
 
 .kategorien-element {
 
-  @extend .font-size-3 ;
+  @extend .font-size-4 ;
 
   color:$colorLightGrey;
-  font-weight: $fontweightMedium;
+  font-weight: $fontweightBold;
   @include widthLvl00 {
       @media screen and (orientation:landscape) { font-size: 16px; }
   }
@@ -263,4 +270,6 @@ h2 {
 
 .buero-description {
   @extend .font-size-4 ;
+  text-align: center;
+  font-weight: $fontweightBolder;
 }

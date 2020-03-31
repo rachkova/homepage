@@ -2,18 +2,41 @@
 ---
 
 @import "import_colors";
+@import "import_mainResponsiveFunctions";
 
 #bueroHeader {
   opacity: 0;
   color: $colorDarkGrey;
 }
 
+.buero-grey-border {
+  width: 100%;
+
+  @include widthLvl00 {min-height: 50px;}
+  @include widthLvl01 {min-height: 50px;}
+
+  background-color: $colorLightGrey;
+  @include widthLvl02 {min-height: 75px;}
+  @include widthLvl03 {min-height: 100px;}
+  @include widthLvl04 {min-height: 100px;}
+  @include widthLvl05 {min-height: 150px;}
+
+  background-color: $colorLightGrey;
+
+}
+
 .buero-container {
 
     width: 100%;
-    min-height: 980px;
 
-    background-image:url("../img/front/buero/buero-background.png");
+
+    @include widthLvl00 {min-height: 480px;}
+    @include widthLvl01 {min-height: 580px;}
+    @include widthLvl02 {min-height: 680px;}
+    @include widthLvl03 {min-height: 780px;}
+    @include widthLvl04 {min-height: 880px;}
+    @include widthLvl05 {min-height: 980px;}
+
     position: relative;
     background-size: cover;
     background-position: center;
@@ -38,7 +61,8 @@
 }
 
 .buero-sub-container {
-  padding-top: 100px;
+  padding-top: 5%;
+  width: 100%;
 }
 
 .buero-description {

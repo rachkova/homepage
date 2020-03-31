@@ -86,6 +86,68 @@
 
 }
 
+.projekte-preview-img-container {
+  display: flex;
+
+  @include widthLvl00 {flex-flow: column; min-height: 200px; padding-top: 5%;}
+  @include widthLvl01 {flex-flow: column; min-height: 200px; padding-top: 5%;}
+  @include widthLvl02 {flex-flow: row; min-height: 300px; padding-top: 5%;}
+  @include widthLvl03 {flex-flow: row; min-height: 300px; padding-top: 15%;}
+  @include widthLvl04 {flex-flow: row; min-height: 500px; padding-top: 15%;}
+  @include widthLvl05 {flex-flow: row; min-height: 500px; padding-top: 15%;}
+
+
+  align-items: center;
+  justify-content: center;
+
+}
+
+.projekte-preview-elements {
+
+  box-shadow: 0 1px 1px rgba(0,0,0,0.12),
+              0 2px 2px rgba(0,0,0,0.12),
+              0 4px 4px rgba(0,0,0,0.12),
+              0 8px 8px rgba(0,0,0,0.12),
+              0 16px 16px rgba(0,0,0,0.12);
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: grayscale(60%);
+  -webkit-filter: grayscale(60%); /* Safari 6.0 - 9.0 */
+
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: all .5s;
+
+  min-width: 20%;
+  max-width: 20%;
+
+  @include widthLvl00 {margin: 2.5%; min-width: 90%; max-width: 90%; min-height: 200px; max-height: 200px;}
+  @include widthLvl01 {margin: 2.5%; min-width: 90%; max-width: 90%; min-height: 200px; max-height: 200px;}
+  @include widthLvl02 {margin: 2.5%; min-height: 300px; max-height: 300px;}
+  @include widthLvl03 {margin: 2.5%; min-height: 300px; max-height: 300px;}
+  @include widthLvl04 {margin: 2.5%; min-height: 400px; max-height: 400px;}
+  @include widthLvl05 {margin: 2.5%; min-height: 400px; max-height: 400px;}
+
+
+
+  &:hover {
+    filter: grayscale(0);
+    transform: scale(1.1);
+    @include widthLvl00 {transform: scale(1.05);}
+    @include widthLvl01 {transform: scale(1.05);}
+    cursor: pointer;
+    color: #fff;
+  }
+}
+
 .projekte-container-fluid {
 
   @include widthLvl00 {margin-top: 100px; padding-top: 0px;}

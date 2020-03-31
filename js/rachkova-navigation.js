@@ -126,6 +126,10 @@ window.lazyBackground = function(){
   var projekteHr = $('#projekteHrAnimation');
   var projekteHeadline = $('#projekteHeader');
   var projekteSub = $('.projekte-index-kategorien-container');
+  var projektePreview1 = $('#projekte-preview-1');
+  var projektePreview2 = $('#projekte-preview-2');
+  var projektePreview3 = $('#projekte-preview-3');
+  var projektePreview4 = $('#projekte-preview-4');
 
 
   var leistungenMain = $('#leistungen-rachkova');
@@ -149,7 +153,7 @@ window.lazyBackground = function(){
 $('body').on('resize scroll', function() {
 
     lazyBackground();
-    
+
     if ( !(projekteMain.hasClass("animationFired")) && $('#projekte-index-rachkova').isInViewport('topOnly') ) {
 
       projekteMain.addClass("animationFired");
@@ -157,6 +161,10 @@ $('body').on('resize scroll', function() {
       projekteHeadline.css("opacity", "1");
       projekteHr.addClass("rachkova-hr-animationFast");
       projekteSub.addClass("rachkova-animation-fromBottomFast");
+      projektePreview1.addClass("rachkova-animation-fromBottomFast");
+      projektePreview2.addClass("rachkova-animation-fromBottomFast");
+      projektePreview3.addClass("rachkova-animation-fromBottomFast");
+      projektePreview4.addClass("rachkova-animation-fromBottomFast");
       console.log("projekte in View and changed");
 
     }

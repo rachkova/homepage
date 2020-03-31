@@ -2,11 +2,23 @@
 ---
 
 @import "import_colors";
+@import "import_mainResponsiveFunctions";
 
 .kontakt-container {
 
     width: 100%;
-    min-height: 980px;
+
+    @include widthLvl00 { height: auto; padding-top: 10%; padding-bottom: 10%; background-attachment: scroll;}
+    @include widthLvl01 { height: auto; padding-top: 10%; padding-bottom: 10%; background-attachment: scroll;}
+    @include widthLvl02 { height: auto; padding-top: 10%; padding-bottom: 10%; background-attachment: scroll;}
+    @include widthLvl03 { height: auto; padding-top: 10%; padding-bottom: 10%; background-attachment: scroll;}
+    @include widthLvl04 { height: auto; padding-top: 5%; padding-bottom: 5%; }
+    @include widthLvl05 { height: 980px; padding-top: 3%; padding-bottom: 3%; }
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
 
     background-color: $colorDarkGrey;
 
@@ -17,26 +29,35 @@
 
 .kontakt-content {
 
-    min-width: 1320px;
-    max-width: 1320px;
 
     padding: 82px 20px 0px 20px;
+    @include widthLvl00 { flex-flow: column; min-width: 100%; width: 100%; max-width: 100%; overflow: hidden;}
+    @include widthLvl01 { flex-flow: column; min-width: 100%; width: 100%; max-width: 100%; overflow: hidden;}
+    @include widthLvl02 { min-width: 100%; width: 100%; max-width: 100%; overflow: hidden;}
+    @include widthLvl03 { min-width: 100%; width: 100%; max-width: 100%; overflow: hidden; padding: 0px;}
+    @include widthLvl04 { min-width: 68.75%; max-width: 68.75%; width: 68.75%; overflow: hidden; padding: 0px;}
+
+    min-width: 1320px;
+    max-width: 1320px;
 
     justify-content: flex-start;
     align-items: flex-start;
 
     display: flex;
     flex-flow: row;
-
 }
 
 .kontakt-description-container {
 
 
-    min-width: 660px;
-    max-width: 660px;
+    width: 100%;
 
     padding-right: 50px;
+
+    @include widthLvl00 {width: 100%; padding-left: 2.5%; padding-right: 2.5%;}
+    @include widthLvl01 {width: 100%; padding-left: 2.5%; padding-right: 2.5%;}
+    @include widthLvl02 {width: 100%; padding-left: 2.5%; padding-right: 2.5%;}
+    @include widthLvl03 {width: 40%; padding-left: 2.5%; padding-right: 0%;}
 
 }
 
@@ -48,9 +69,35 @@
 
 .kontakt-googlemaps-container {
 
-  min-height: 980px;
-
-  min-width: 660px;
-  max-width: 660px;
-
+  @include widthLvl05 {
+    max-width: 660px;
+    min-width: 660px;
+    min-height: 980px;
+  }
+  @include widthLvl03 {
+    max-width: 50%;
+    min-width: 50%;
+    min-height: 480px;
+  }
+  @include widthLvl02 {
+    max-width: 100%;
+    min-width: 100%;
+    min-height: 480px;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+  }
+  @include widthLvl01 {
+    max-width: 100%;
+    min-width: 100%;
+    min-height: 380px;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+  }
+  @include widthLvl00 {
+    max-width: 100%;
+    min-width: 100%;
+    min-height: 280px;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+  }
 }

@@ -1,5 +1,22 @@
-.cv-container { width: 100%; min-height: 740px; background-color: white; display: flex; justify-content: center; }
+.cv-container { width: 100%; background-repeat: no-repeat; background-position: center; background-size: cover; background-attachment: fixed; display: flex; justify-content: center; }
+@media (max-width: 410px) { .cv-container { height: auto; padding-top: 10%; padding-bottom: 10%; background-attachment: scroll; } }
+@media (min-width: 411px) and (max-width: 767px) { .cv-container { height: auto; padding-top: 10%; padding-bottom: 10%; background-attachment: scroll; } }
+@media (min-width: 768px) and (max-width: 989px) { .cv-container { height: auto; padding-top: 10%; padding-bottom: 10%; background-attachment: scroll; } }
+@media (min-width: 990px) and (max-width: 1199px) { .cv-container { height: auto; padding-top: 10%; padding-bottom: 10%; background-attachment: scroll; } }
+@media (min-width: 1199px) { .cv-container { height: auto; padding-top: 5%; padding-bottom: 10%; } }
+@media (min-width: 1920px) { .cv-container { height: 1080px; padding-top: 3%; padding-bottom: 7%; } }
 
-.cv-content { min-width: 1320px; max-width: 1320px; padding: 82px 20px 0px 20px; justify-content: flex-start; align-items: flex-start; display: flex; flex-flow: row; }
+.cv-content { height: auto; min-width: 1320px; max-width: 1320px; justify-content: flex-start; align-items: flex-start; }
+@media (max-width: 410px) { .cv-content { min-width: 100%; width: 100%; max-width: 100%; overflow: hidden; padding: 0px; } }
+@media (min-width: 411px) and (max-width: 767px) { .cv-content { min-width: 100%; width: 100%; max-width: 100%; overflow: hidden; padding: 0px; } }
+@media (min-width: 768px) and (max-width: 989px) { .cv-content { min-width: 100%; width: 100%; max-width: 100%; overflow: hidden; padding: 0px; } }
+@media (min-width: 990px) and (max-width: 1199px) { .cv-content { min-width: 100%; width: 100%; max-width: 100%; overflow: hidden; padding: 0px; } }
+@media (min-width: 1199px) { .cv-content { min-width: 68.75%; max-width: 68.75%; width: 68.75%; overflow: hidden; padding: 0px; } }
 
-.cv-description { padding-top: 100px; }
+.cv-description-container { width: 100%; }
+
+.cv-description { width: 100%; padding-bottom: 75px; }
+@media (max-width: 410px) { .cv-description { word-wrap: break-word; overflow-wrap: break-word; padding-top: 0px; padding-left: 2.5%; padding-right: 2.5%; } }
+@media (min-width: 411px) and (max-width: 767px) { .cv-description { padding-top: 0px; padding-left: 2.5%; padding-right: 2.5%; } }
+@media (min-width: 768px) and (max-width: 989px) { .cv-description { padding-top: 0px; padding-left: 2.5%; padding-right: 2.5%; } }
+@media (min-width: 990px) and (max-width: 1199px) { .cv-description { padding-top: 0px; padding-left: 2.5%; padding-right: 2.5%; } }
