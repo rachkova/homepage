@@ -67,10 +67,12 @@ window.clickLink = function(target) {
 
 $.fn.isInViewport = function(inViewType){
     var viewport = {};
+    var $this = $(this)
     viewport.top = $(window).scrollTop();
     viewport.bottom = viewport.top + $(window).height();
     var bounds = {};
-    bounds.top = this.offset().top;
+
+    bounds.top = $this.offset().top;
     bounds.bottom = bounds.top + this.outerHeight();
     switch(inViewType){
       case 'bottomOnly':
@@ -83,6 +85,41 @@ $.fn.isInViewport = function(inViewType){
         return ((bounds.top >= viewport.top) && (bounds.bottom <= viewport.bottom));
     }
 };
+
+
+
+window.lazyBackground = function(){
+		$('.nl-image[data-background]:visible').each(function(){
+      console.log("processing: " + this);
+			var $this = $(this)
+			var src = $this.data('background')
+			var imageTop = $this.offset().top
+			var windowSize = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight
+			var windowBottom = $(document).scrollTop() + windowSize
+			if(imageTop <= windowBottom){
+				$this.addClass('nl-loading')
+				$img = $('<img>').attr('src', src).on('load', function(){
+					$(this).remove()
+					$this
+						.css({
+							'opacity': 0,
+							'background-image': 'url(' + src + ')'
+						})
+						.removeClass('nl-loading')
+						.addClass('nl-loaded')
+						.animate({
+							'opacity': 1
+						}, 'fast')
+						.removeAttr('data-background')
+				})
+			}
+		})
+	}
+
+
+
+
+
 
 
   var projekteMain = $('#projekte-index-rachkova');
@@ -111,6 +148,8 @@ $.fn.isInViewport = function(inViewType){
 
 $('body').on('resize scroll', function() {
 
+    lazyBackground();
+    
     if ( !(projekteMain.hasClass("animationFired")) && $('#projekte-index-rachkova').isInViewport('topOnly') ) {
 
       projekteMain.addClass("animationFired");
@@ -156,6 +195,8 @@ $('body').on('resize scroll', function() {
 });
 
  $( window ).on('load', function(){
+
+      lazyBackground();
 
        if ( $('#projekte-index-rachkova').isInViewport('topOnly') ) {
 

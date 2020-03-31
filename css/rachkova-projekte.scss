@@ -3,6 +3,7 @@
 
 @import "import_mainResponsiveFunctions";
 @import "import_colors";
+@import "import_transitionsextend";
 
 
 #projekteHeader {
@@ -160,6 +161,8 @@
     @include widthLvl02 {height: 40vh; min-width: 100vw; max-width: 100vw; width: 100vw;  }
   }
   .projekte-element-#{$i} {
+
+    @extend .background-preloader ;
 
     background-position: center;
     background-repeat: no-repeat;
