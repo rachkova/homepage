@@ -1,12 +1,14 @@
 ---
 ---
 
+@import "import_colors";
+
 .kontakt-container {
 
     width: 100%;
     min-height: 980px;
 
-    background-color: #373737;
+    background-color: $colorDarkGrey;
 
     display: flex;
     justify-content: center;
@@ -38,19 +40,10 @@
 
 }
 
-.kontakt-header {
-  font-size: 30px;
-  font-weight: bold;
-  color: #c6c6c6;
-}
-
 .kontakt-description {
 
   padding: 50px 0px 50px 0px;
-  font-size: 20px;
-  font-weight: 600;
 
-  color: #c6c6c6;
 }
 
 .kontakt-googlemaps-container {

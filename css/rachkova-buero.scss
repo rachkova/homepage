@@ -1,9 +1,11 @@
 ---
 ---
 
+@import "import_colors";
+
 #bueroHeader {
   opacity: 0;
-  color: #373737;
+  color: $colorDarkGrey;
 }
 
 .buero-container {

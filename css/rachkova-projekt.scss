@@ -1,43 +1,9 @@
 ---
+# Front matter comment to ensure Jekyll properly reads file.
 ---
 
-$stageZero: 410px;
-
-$stageOneLower: 411px;
-$stageOneHigher: 767px;
-
-$stageTwoLower: 768px;
-$stageTwoHigher: 991px;
-
-$stageThreeLower: 992px;
-$stageThreeHigher: 1199px;
-
-$stageFourLower: 1200px;
-$stageFourHigher: 1919px;
-
-$stageFive: 1920px;
-
-@mixin widthLvl00 {
-  @media (max-width: $stageZero) { @content; }
-}
-
-@mixin widthLvl01 {
-  @media (min-width:$stageOneLower) and (max-width:$stageOneHigher)  { @content; }
-}
-
-@mixin widthLvl02 {
-  @media (min-width:$stageTwoLower) and (max-width:$stageTwoHigher) { @content; }
-}
-@mixin widthLvl03 {
-  @media (min-width:$stageThreeLower) and (max-width:$stageThreeHigher) { @content; }
-}
-@mixin widthLvl04 {
-  @media (min-width:$stageFourLower) and (max-width:$stageFourHigher) { @content; }
-}
-
-@mixin widthLvl05 {
-  @media (min-width: $stageFive) { @content; }
-}
+@import "import_mainResponsiveFunctions";
+@import "import_colors";
 
 .projekt-container-fluid {
 
@@ -207,10 +173,10 @@ $stageFive: 1920px;
   .projekt-mobile-description-element { padding-bottom: 5%;}
   .projekt-mobile-description-element , .projekt-mobile-element {
     width: auto;
-    color: #c6c6c6;
+    color: $colorLightGrey;
 
     span {
-      background-color: #373737;
+      background-color: $colorDarkGrey;
 
     }
   }

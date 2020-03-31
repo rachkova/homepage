@@ -1,51 +1,9 @@
 ---
 ---
 
-$stageZero: 410px;
-
-$stageOneLower: 411px;
-$stageOneHigher: 767px;
-
-$stageTwoLower: 768px;
-$stageTwoHigher: 991px;
-
-$stageThreeLower: 992px;
-$stageThreeHigher: 1199px;
-
-$stageFourLower: 1200px;
-$stageFourHigher: 1919px;
-
-$stageFive: 1920px;
-
-@mixin widthLvl00 {
-  @media (max-width: $stageZero) { @content; }
-}
-
-@mixin widthLvl01 {
-  @media (min-width:$stageOneLower) and (max-width:$stageOneHigher)  { @content; }
-}
-
-@mixin widthLvl02 {
-  @media (min-width:$stageTwoLower) and (max-width:$stageTwoHigher) { @content; }
-}
-@mixin widthLvl03 {
-  @media (min-width:$stageThreeLower) and (max-width:$stageThreeHigher) { @content; }
-}
-@mixin widthLvl04 {
-  @media (min-width:$stageFourLower) and (max-width:$stageFourHigher) { @content; }
-}
-
-@mixin widthLvl05 {
-  @media (min-width: $stageFive) { @content; }
-}
-
-.transitionAll {
-  -webkit-transition: all .3s ease-in-out;
-  -moz-transition: all .3s ease-in-out;
-  -o-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
-}
-
+@import "import_mainResponsiveFunctions";
+@import "import_transitionsextend";
+@import "import_colors";
 .subnav-fluid {
 
 
@@ -55,7 +13,7 @@ $stageFive: 1920px;
 
     @extend .transitionAll;
 
-    background-color: #c6c6c6;
+    background-color: $colorLightGrey;
 
     width: 100%;
     min-width: 100%;
@@ -103,28 +61,4 @@ $stageFive: 1920px;
     text-align:center;
     align-items: center;
 
-}
-
-.subnav-element {
-
-  font-size: 16px;
-
-  text-align: center;
-  align-self: center;
-
-  .active {
-    @extend .transitionAll;
-    text-decoration: none;
-    color: #383533;
-    font-weight: 600;
-  }
-  .inactive {
-    @extend .transitionAll;
-    color: white;
-    text-decoration: none;
-    font-weight: 600;
-  }
-  .inactive:hover {
-    color: #383533;
-  }
 }

@@ -1,50 +1,9 @@
 ---
 ---
 
+@import "import_mainResponsiveFunctions";
+@import "import_colors";
 
-$stageZero: 410px;
-
-$stageOneLower: 411px;
-$stageOneHigher: 767px;
-
-$stageTwoLower: 768px;
-$stageTwoHigher: 991px;
-
-$stageThreeLower: 992px;
-$stageThreeHigher: 1199px;
-
-$stageFourLower: 1200px;
-$stageFourHigher: 1919px;
-
-$stageFive: 1920px;
-
-@mixin widthLvl00 {
-  @media (max-width: $stageZero) { @content; }
-}
-
-@mixin widthLvl01 {
-  @media (min-width:$stageOneLower) and (max-width:$stageOneHigher)  { @content; }
-}
-
-@mixin widthLvl02 {
-  @media (min-width:$stageTwoLower) and (max-width:$stageTwoHigher) { @content; }
-}
-@mixin widthLvl03 {
-  @media (min-width:$stageThreeLower) and (max-width:$stageThreeHigher) { @content; }
-}
-@mixin widthLvl04 {
-  @media (min-width:$stageFourLower) and (max-width:$stageFourHigher) { @content; }
-}
-
-@mixin widthLvl05 {
-  @media (min-width: $stageFive) { @content; }
-}
-
-html * {
-    font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
-    // font-size:
-
-}
 html, body, .header {
 
   height: 100% !important;
@@ -59,49 +18,11 @@ body {
 
 }
 
-h1 {
-
-  padding:0px !important;
-  margin:0px !important;
-
-  font-weight: bold;
-
-  // Font size für Bildschirme breiter als 1920px
-  @include widthLvl05 {font-size: 72px;}
-  // Font Size für die kleinsten Handys
-  @include widthLvl00 {font-size: 42px;}
-  // Zwischen diesen Bildschirmbreiten wollen wir nun einen flüssigen Übergang von 42px zu 72px
-  font-size: calc(42px + 6 * ((100vw - 320px) / 680));
-
-  color: #383533;
-  align-self: center;
-  text-align: center;
-
-}
-
-h2 {
-
-  text-transform: uppercase;
-
-  padding:0px !important;
-  margin:0px !important;
-
-  font-weight: bold;
-
-  @include widthLvl05 {font-size: 48px;}
-  @include widthLvl00 {font-size: 28px;}
-  font-size: calc(28px + 6 * ((100vw - 320px) / 680));
-
-  align-self: center;
-  text-align: center;
-
-}
-
 .border-color-dark hr {
-    border-color: #383533;
+    border-color: $colorDarkGrey;
 }
 .border-color-light hr {
-    border-color: #c6c6c6;
+    border-color: $colorLightGrey;
   }
 
 

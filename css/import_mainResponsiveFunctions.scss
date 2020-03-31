@@ -1,0 +1,37 @@
+$widthLevelZero: 410px;
+$widthLevelOneLower: 411px;
+$widthLevelOneHigher: 767px;
+$widthLevelTwoLower: 768px;
+$widthLevelTwoHigher: 989px;
+$widthLevelThreeLower: 990px;
+$widthLevelThreeHigher: 1199px;
+$widthLevelFour: 1199px;
+$widthLevelFive: 1920px;
+
+@mixin widthLvl00 {
+  @media (max-width: $widthLevelZero) { @content; }
+}
+
+@mixin widthLvl01 {
+  @media (min-width:$widthLevelOneLower) and (max-width:$widthLevelOneHigher)  { @content; }
+}
+
+@mixin widthLvl02 {
+  @media (min-width:$widthLevelTwoLower) and (max-width:$widthLevelTwoHigher) { @content; }
+}
+@mixin widthLvlMin02 {
+  @media (min-width:$widthLevelThreeLower) { @content; }
+}
+
+@mixin widthLvl03 {
+  @media (min-width:$widthLevelThreeLower) and (max-width:$widthLevelThreeHigher) { @content; }
+}
+
+
+@mixin widthLvl04 {
+  @media (min-width: $widthLevelFour) { @content; }
+}
+
+@mixin widthLvl05 {
+  @media (min-width: $widthLevelFive) { @content; }
+}

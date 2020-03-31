@@ -2,6 +2,4 @@
 
 .cv-content { min-width: 1320px; max-width: 1320px; padding: 82px 20px 0px 20px; justify-content: flex-start; align-items: flex-start; display: flex; flex-flow: row; }
 
-.neli { font-size: 30px; font-weight: bold; color: #383533; }
-
-.cv-description { padding-top: 100px; font-weight: 600; font-size: 20px; color: #c6c6c6; }
+.cv-description { padding-top: 100px; }

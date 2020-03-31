@@ -1,44 +1,8 @@
 ---
 ---
 
-$stageZero: 410px;
-
-$stageOneLower: 411px;
-$stageOneHigher: 767px;
-
-$stageTwoLower: 768px;
-$stageTwoHigher: 991px;
-
-$stageThreeLower: 992px;
-$stageThreeHigher: 1199px;
-
-$stageFourLower: 1200px;
-$stageFourHigher: 1919px;
-
-$stageFive: 1920px;
-
-@mixin widthLvl00 {
-  @media (max-width: $stageZero) { @content; }
-}
-
-@mixin widthLvl01 {
-  @media (min-width:$stageOneLower) and (max-width:$stageOneHigher)  { @content; }
-}
-
-@mixin widthLvl02 {
-  @media (min-width:$stageTwoLower) and (max-width:$stageTwoHigher) { @content; }
-}
-@mixin widthLvl03 {
-  @media (min-width:$stageThreeLower) and (max-width:$stageThreeHigher) { @content; }
-}
-@mixin widthLvl04 {
-  @media (min-width:$stageFourLower) and (max-width:$stageFourHigher) { @content; }
-}
-
-@mixin widthLvl05 {
-  @media (min-width: $stageFive) { @content; }
-}
-
+@import "import_mainResponsiveFunctions";
+@import "import_colors";
 
 .rachkova-nav-container {
 
@@ -94,7 +58,7 @@ $stageFive: 1920px;
   overflow: hidden;
 
   & img {
-    transition: all .3s ease-in-out; 
+    transition: all .3s ease-in-out;
     @include widthLvl00 {
       text-align: center;
       max-width: 100%;
@@ -180,36 +144,18 @@ $stageFive: 1920px;
 
   @include widthLvl03 {
 
-    font-weight: 600;
-    font-size: 13px;
-    line-height: 13px;
     padding: 56px 10px 20px 10px;
 
   }
 
-  line-height: 16px;
-  font-size: 16px;
-  text-transform: uppercase;
-  font-weight: 700;
-  color: #383533;
 
   padding: 60px 10px 20px 10px;
 
     &:hover {
       cursor: pointer;
-      color: #c6c6c6;
-      // color: $color-primary-hover;
-    }
+      color: $colorLightGrey;
 
-    // &:after {
-    //   display:block;
-    //   content: '';
-    //   border-bottom: solid 3px #383533;
-    //   transform: scaleX(0);
-    //   transition: transform 250ms ease-in-out;
-    // }
-    //
-    // &:hover:after { transform: scaleX(1); }
+    }
 
 }
 
@@ -280,7 +226,7 @@ $stageFive: 1920px;
      }
 
       display: block;
-      background: #383533;
+      background: $colorDarkGrey;
       width: 50px;
       height: 7px;
       position: absolute;
@@ -395,7 +341,7 @@ $stageFive: 1920px;
   top:0px;
   left: 0px;
   overflow: auto;
-  background-color: #383533;
+  background-color: $modalDarkGrey;
   padding-top: 100px;
   @include widthLvl02 {
     padding-top: 150px;
@@ -445,22 +391,10 @@ $stageFive: 1920px;
 
 .nav-element-mobile {
 
-  color: #c6c6c6;
-  transition: all .3s ease-in-out;
-  font-weight: 600;
-
-  &.primary {
-    font-size: 42px;
-    @media screen and (orientation:landscape) { font-size: 20px; }
-  }
   &.secondary {
-    font-size: 28px;
+
     @include widthLvl02 {display: none;}
     padding-left: 28px;
-    @media screen and (orientation:landscape) { font-size: 16px; padding-left: 16px;}
-  }
-  &:hover {
-    color: white;
-    cursor: pointer;
+    @media screen and (orientation:landscape) { padding-left: 16px;}
   }
 }

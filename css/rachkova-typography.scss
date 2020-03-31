@@ -1,0 +1,266 @@
+---
+---
+
+@import "import_mainResponsiveFunctions";
+@import "import_colors";
+@import "import_transitionsextend";
+
+$fontweightBolder: 700;
+$fontweightBold: 600;
+$fontweightMedium: 500;
+$fontweightNormal: 400;
+
+html * {
+    font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+    // font-size:
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.nav-font-size {
+  font-size: 16px;
+}
+
+.font-size-1 {
+
+    font-size: calc(42px + 6 * ((100vw - 320px) / 680));
+
+    @include widthLvl00 {font-size: 42px;}
+    @include widthLvl05 {font-size: 72px;}
+
+}
+
+.font-size-2 {
+
+  font-size: calc(28px + 6 * ((100vw - 320px) / 680));
+
+  @include widthLvl00 {font-size: 28px;}
+  @include widthLvl05 {font-size: 48px;}
+
+}
+
+.font-size-3 {
+
+  @include widthLvl00 { font-size: 22px;}
+  @include widthLvl01 { font-size: 24px;}
+  @include widthLvl02 { font-size: 26px;}
+  @include widthLvl03 { font-size: 28px;}
+  @include widthLvl04 { font-size: 30px;}
+  @include widthLvl05 { font-size: 32px;}
+
+}
+
+.font-size-4 {
+
+  @include widthLvl00 { font-size: 18px;}
+  @include widthLvl01 { font-size: 19px;}
+  @include widthLvl02 { font-size: 20px;}
+  @include widthLvl03 { font-size: 22px;}
+  @include widthLvl04 { font-size: 24px;}
+  @include widthLvl05 { font-size: 25px;}
+
+}
+
+h1 {
+
+  @extend .font-size-1 ;
+  padding:0px !important;
+  margin:0px !important;
+
+  font-weight: $fontweightBold;
+
+  color: $h1FontColor;
+  align-self: center;
+  text-align: center;
+
+}
+
+h2 {
+  @extend .font-size-2 ;
+  text-transform: uppercase;
+
+  padding:0px !important;
+  margin:0px !important;
+
+  font-weight: $fontweightBold;
+
+
+  align-self: center;
+  text-align: center;
+
+}
+
+.neli {
+  @extend .font-size-3 ;
+  font-weight: $fontweightBold;
+  color: $h1FontColor;
+}
+
+.cv-description {
+
+
+  @extend .font-size-4 ;
+  font-weight: normal;
+  color: $colorLightGrey;
+
+}
+
+.p-container-center p {
+
+    font-weight: $fontweightBold;
+    @extend .font-size-3 ;
+
+}
+
+
+.kontakt-header {
+  @extend .font-size-3 ;
+  font-weight: $fontweightBold;
+  color:$colorLightGrey;
+}
+
+.kontakt-description {
+  @extend .font-size-4 ;
+  font-weight: $fontweightNormal;
+
+  color:$colorLightGrey;
+}
+
+.leistungen-element-h {
+  flex: 1;
+
+  font-weight: $fontweightBold;
+  @extend .font-size-4 ;
+
+
+  color: $h1FontColor;
+
+}
+
+.leistungen-mobile-element-h {
+
+  font-weight: $fontweightBold;
+  @extend .font-size-4 ;
+  color: $h1FontColor;
+
+}
+.leistungen-element-beschreibung {
+
+  flex: 2;
+  @extend .font-size-4 ;
+  font-weight: $fontweightNormal;
+  color: $h1FontColor;
+  @include widthLvl04 {padding-left: 2.5%;}
+}
+
+.leistungen-element-h-single {
+
+    font-weight: $fontweightBold;
+    @extend .font-size-4 ;
+
+    color: $h1FontColor;
+}
+
+
+.nav-element {
+
+  @include widthLvl03 {
+
+    font-weight: $fontweightBold;
+    line-height: 13px;
+
+  }
+
+  line-height: 16px;
+  @extend .nav-font-size ;
+  text-transform: uppercase;
+  font-weight: $fontweightBolder;
+  color: $h1FontColor;
+
+}
+
+#projekteHeader {
+    color:$colorLightGrey;
+}
+
+.kategorien-element {
+
+  @extend .font-size-3 ;
+
+  color:$colorLightGrey;
+  font-weight: $fontweightMedium;
+  @include widthLvl00 {
+      @media screen and (orientation:landscape) { font-size: 16px; }
+  }
+
+}
+
+
+.nav-element-mobile {
+
+  color:$colorLightGrey;
+  transition: all .3s ease-in-out;
+  font-weight: $fontweightBold;
+
+  &.primary {
+    font-size: 42px;
+    @media screen and (orientation:landscape) { font-size: 20px; }
+  }
+  &.secondary {
+    font-size: 28px;
+    @media screen and (orientation:landscape) { font-size: 16px; }
+  }
+  &:hover {
+    color: white;
+    cursor: pointer;
+  }
+}
+
+.projekt-description-bottom, .projekt-description-top {
+  @extend .font-size-4 ;
+}
+@for $i from 1 through 7 {
+  .projekte-element-#{$i} {
+    .projekte-img-description {
+
+      background-color:$colorDarkGrey;
+      color:$colorLightGrey;
+
+      @extend .font-size-4 ;
+    }
+    .projekte-img-description-big {
+
+      color:$colorLightGrey;
+      word-break: break-word;
+      @extend .font-size-3 ;
+    }
+  }
+}
+
+.subnav-element {
+
+  @extend .nav-font-size ;
+
+  text-align: center;
+  align-self: center;
+
+  .active {
+    @extend .transitionAll;
+    text-decoration: none;
+    color: $h1FontColor;
+    font-weight: $fontweightBold;
+  }
+  .inactive {
+    @extend .transitionAll;
+    color: white;
+    text-decoration: none;
+    font-weight: $fontweightBold;
+  }
+  .inactive:hover {
+    color: $h1FontColor;
+  }
+}
+
+.buero-description {
+  @extend .font-size-4 ;
+}
