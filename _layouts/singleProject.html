@@ -17,6 +17,12 @@
   {% endif %}
   {% endfor %}
 
+  <div id="projekt-gallery-modal gallery-modal">
+    <div class="modalImageContainer">
+
+    </div>
+  </div>
+
   <div class="projekt-container-fluid">
 
     <div class="projekt-left-spacer"></div>
@@ -81,13 +87,15 @@
 
       {% assign gallery = projekt.imgGallery %}
 
-      {% for image in gallery %}
       <div class="projekt-spacer-vertical"></div>
+
+      {% for image in gallery %}
+
         <div class="projekt-gallery-element-container">
 
           {% assign pathhelper = "/img/projekte" %}
 
-          <div class="nl-image projekt-gallery-element background-preloader" data-background="{{ site.baseurl }}{{pathhelper}}{{ page.url }}/{{ image }}">
+          <div class="nl-image projekt-gallery-element background-preloader" onclick="projektGalleryModal('{{ development }}{{ sortedProjects[num2].url }}')" data-background="{{ site.baseurl }}{{pathhelper}}{{ page.url }}/{{ image }}">
 
           </div>
         </div>

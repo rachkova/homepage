@@ -189,7 +189,6 @@
   min-width: 100vw;
   padding: 0px;
   height: 600px;
-  background-color: rgba(100,100,20,0.2);
   display: flex;
 
   justify-content: flex-start;
@@ -241,4 +240,33 @@
         transform: scale(1.05);
         cursor: pointer;
       }
+}
+
+
+#projekt-gallery-modal {
+  width: 100%;
+  min-width: 100vw;
+  min-height: 100%;
+
+  @include widthLvl00 {margin-top: 100px;}
+  @include widthLvl01 {margin-top: 100px;}
+  @include widthLvl02 {margin-top: 100px;}
+  @include widthLvl03 {margin-top: 100px;}
+  @include widthLvl04 {margin-top: 100px;}
+  @include widthLvl05 {margin-top: 100px;}
+
+  position: absolute;
+  top:0px;
+  left: 0px;
+  z-index: 2;
+
+  background-color: rgba(0,0,0,0.5);
+
+  display: none;
+  &.visible {
+    display: flex;
+  }
+  &:hover {
+    cursor: pointer;
+  }
 }
