@@ -229,7 +229,7 @@ h2 {
 @for $i from 1 through 7 {
   .projekte-element-#{$i} {
     .projekte-img-description {
-      
+      @extend .transitionAllFast ;
       background-color: $colorDarkGreyRgba;
 
       @include widthLvl01 {padding-left: 2.5%; padding-right: 2.5%;}
@@ -244,11 +244,17 @@ h2 {
     }
 
     .projekte-img-description-big {
-
+      @extend .transitionAllFast ;
       color:$colorLightGrey;
       word-break: break-word;
       @extend .font-size-3 ;
     }
+  }
+  .projekte-element-#{$i}:hover .projekte-img-description {
+    color: #fff;
+  }
+  .projekte-element-#{$i}:hover .projekte-img-description-big {
+    color: #fff;
   }
 }
 
