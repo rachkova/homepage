@@ -50,6 +50,7 @@
 
       <div class="projekte-row-2">
         <div class="projekte-spacer-horizontal-mobile"></div>
+        <div class="projekte-spacer-vertical"></div>
 
         {% assign urlSize1 = sortedProjects[num1].path | size | minus: 4 %}
         {% assign projectImgUrl1 = sortedProjects[num1].path | slice: 1, urlSize1 %}
@@ -107,7 +108,7 @@
 
 
         <div class="projekte-row-1">
-
+          <div class="projekte-spacer-vertical"></div>
           {% if sortedProjects[num3] %}<div class="projekte-element-container-1">
           {% else %}</div>{% break %}{% endif %}
 
@@ -161,6 +162,7 @@
 
 
       <div class="projekte-row-3">
+        <div class="projekte-spacer-vertical"></div>
 
 
 
