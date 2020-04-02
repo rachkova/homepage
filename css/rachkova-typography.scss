@@ -61,6 +61,17 @@ html * {
 
 }
 
+.font-size-5 {
+
+  @include widthLvl00 { font-size: 16px;}
+  @include widthLvl01 { font-size: 16px;}
+  @include widthLvl02 { font-size: 18px;}
+  @include widthLvl03 { font-size: 18px;}
+  @include widthLvl04 { font-size: 20px;}
+  @include widthLvl05 { font-size: 20px;}
+
+}
+
 h1 {
 
   @extend .font-size-1 ;
@@ -224,7 +235,7 @@ h2 {
 }
 
 .projekt-description-bottom, .projekt-description-top {
-  @extend .font-size-4 ;
+  @extend .font-size-5 ;
 }
 @for $i from 1 through 7 {
   .projekte-element-#{$i} {
