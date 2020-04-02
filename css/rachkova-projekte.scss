@@ -146,6 +146,12 @@
     cursor: pointer;
     color: #fff;
   }
+  &:hover * {
+      font-weight: bolder;
+      color: #fff;
+
+  }
+
 }
 
 .projekte-container-fluid {

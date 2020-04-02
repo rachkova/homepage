@@ -229,7 +229,7 @@ h2 {
 @for $i from 1 through 7 {
   .projekte-element-#{$i} {
     .projekte-img-description {
-
+      
       background-color: $colorDarkGreyRgba;
 
       @include widthLvl01 {padding-left: 2.5%; padding-right: 2.5%;}
@@ -238,8 +238,11 @@ h2 {
       padding-left: 1%; padding-right: 1%;
       color:$colorLightGrey;
 
-      @extend .font-size-4 ;
+      @extend .nav-font-size ;
+
+
     }
+
     .projekte-img-description-big {
 
       color:$colorLightGrey;
