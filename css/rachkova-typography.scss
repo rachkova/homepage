@@ -230,7 +230,12 @@ h2 {
   .projekte-element-#{$i} {
     .projekte-img-description {
 
-      background-color:$colorDarkGrey;
+      background-color: $colorDarkGreyRgba;
+
+      @include widthLvl01 {padding-left: 2.5%; padding-right: 2.5%;}
+      @include widthLvl02 {padding-left: 2.5%; padding-right: 2.5%;}
+      @include widthLvl03 {padding-left: 2%; padding-right: 2%;}
+      padding-left: 1%; padding-right: 1%;
       color:$colorLightGrey;
 
       @extend .font-size-4 ;
