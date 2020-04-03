@@ -30,6 +30,41 @@
   <div class="projekte-container-fluid">
     <div class="projekte-container">
 
+      {% if page.url contains "todos" %}
+
+
+        <style>
+
+        .todosContainer {
+          width: 100%;
+          min-width: 100%;
+          min-height: 100vh;
+          background-color: rgba(100,100,0,0.2);
+          display: flex;
+          justify-content: center;
+          text-align: center;
+        }
+        .todosContent {
+          width: 1320px;
+          max-width: 1320px;
+          text-align: left;
+          background-color: rgba(0,100,200,0.3);
+          align-self: center;
+          justify-content: flex-start;
+
+        }
+        </style>
+        <div class="todosContainer">
+          <div class="todosContent">
+
+            {{ content }}
+
+          </div>
+        </div>
+
+
+      {% endif %}
+
       <!-- Main Loop -->
       {% for projekt in sortedProjects %}
 
@@ -94,7 +129,7 @@
               {% endif %}
             </div>
           </div>
-          
+
           <div class="projekte-spacer-vertical"></div>
 
         </div>
