@@ -171,7 +171,7 @@
         {% assign projectImgUrl4 = sortedProjects[num4].path | slice: 1, urlSize4 %}
 
         <div class="projekte-element-container-2">
-        {% if sortedProjects[num4] %}{% else %}</div></div>{% break %}{% endif %}
+        {% if sortedProjects[num4] %}{% else %}</div></div><div class="projekte-spacer-horizontal"></div>{% break %}{% endif %}
 
               <div class="nl-image projekte-element-2" onclick="clickLink('{{ development }}{{ sortedProjects[num4].url }}')" data-background="{{base.url}}/img/{{ projectImgUrl4 }}/{{ sortedProjects[num4].imgMain }}">
 
@@ -227,7 +227,7 @@
 
 
         <div class="projekte-element-container-6">
-        {% if sortedProjects[num6] %}{% else %}</div><div class="projekte-element-container-7"></div></div>{% break %}{% endif %}
+        {% if sortedProjects[num6] %}{% else %}</div><div class="projekte-element-container-7"></div></div><div class="projekte-spacer-horizontal"></div>{% break %}{% endif %}
 
           <div class="nl-image projekte-element-6" onclick="clickLink('{{ development }}{{ sortedProjects[num6].url }}')" data-background="{{ base.url }}/img/{{ projectImgUrl6 }}/{{ sortedProjects[num6].imgMain }}">
 
@@ -243,8 +243,8 @@
                 </div>
             {% endif %}
           </div>
-          <div class="projekte-spacer-vertical"></div>
         </div>
+        <div class="projekte-spacer-vertical"></div>
 
 
         <div class="projekte-spacer-horizontal-mobile"></div>
@@ -255,7 +255,7 @@
         {% assign projectImgUrl7 = sortedProjects[num7].path | slice: 1, urlSize7 %}
 
         <div class="projekte-element-container-7">
-        {% if sortedProjects[num7] %}{% else %}</div></div>{% break %}{% endif %}
+        {% if sortedProjects[num7] %}{% else %}</div></div><div class="projekte-spacer-horizontal"></div>{% break %}{% endif %}
 
           <div class="nl-image projekte-element-7" onclick="clickLink('{{ development }}{{ sortedProjects[num7].url }}')" data-background="{{ base.url }}/img/{{ projectImgUrl7 }}/{{ sortedProjects[num7].imgMain }}">
 

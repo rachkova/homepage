@@ -318,6 +318,7 @@
 
 .projekte-element-container-5, .projekte-element-container-6, .projekte-element-container-7 {
   width: 32.3vw;
+  max-width: 32.3vw;
   @include widthLvl03 {height: 474px;}
   @include widthLvl04 {height: 474px;}
   @include widthLvl05 {height: 474px;}
