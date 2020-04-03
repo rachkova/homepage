@@ -59,15 +59,23 @@
 @keyframes hrAni {
  0% {
   opacity: 0;
+  /* Enable hardware acceleration to fix laggy transitions */
+  -webkit-transform: scaleX(0);
+  -moz-transform: scaleX(0);
+  -ms-transform: scaleX(0);
+  -o-transform: scaleX(0);
   transform: scaleX(0);
-  // transform:translateY(-100px);
  }
  80% {
    opacity: 1;
  }
  100% {
 
-  transform: scaleX(1);
+   -webkit-transform: scaleX(1);
+   -moz-transform: scaleX(1);
+   -ms-transform: scaleX(1);
+   -o-transform: scaleX(1);
+   transform: scaleX(1);
   // transform:translateY(0px);
  }
 }
