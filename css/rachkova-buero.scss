@@ -6,22 +6,19 @@
 
 #bueroHeader {
   opacity: 0;
-  color: $colorDarkGrey;
+  color: $colorLightGrey;
 }
 
 .buero-grey-border {
   width: 100%;
+  background-color: $colorDarkGrey;
 
-  @include widthLvl00 {min-height: 50px;}
-  @include widthLvl01 {min-height: 50px;}
-
-  background-color: $colorLightGrey;
-  @include widthLvl02 {min-height: 75px;}
-  @include widthLvl03 {min-height: 100px;}
-  @include widthLvl04 {min-height: 100px;}
-  @include widthLvl05 {min-height: 150px;}
-
-  background-color: $colorLightGrey;
+  @include widthLvl00 {min-height: 25px;}
+  @include widthLvl01 {min-height: 25px;}
+  @include widthLvl02 {min-height: 25px;}
+  @include widthLvl03 {min-height: 25px;}
+  @include widthLvl04 {min-height: 25px;}
+  @include widthLvl05 {min-height: 25px;}
 
 }
 
@@ -63,6 +60,7 @@
 .buero-sub-container {
   padding-top: 5%;
   width: 100%;
+  padding-bottom: 5%;
 }
 
 .buero-description {

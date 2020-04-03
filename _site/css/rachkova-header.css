@@ -1,6 +1,12 @@
 .header { position: relative; background-image: url("../img/front/header/header.jpg"); background-size: cover; background-position: center; background-repeat: no-repeat; }
 
-.header-container-rachkova { padding-top: 360px; width: 100%; display: flex; flex-direction: column; justify-content: center; text-align: center; }
+.header-container-rachkova { width: 100%; display: flex; flex-direction: column; justify-content: center; text-align: center; }
+@media (max-width: 410px) { .header-container-rachkova { padding-top: 30%; } }
+@media (min-width: 411px) and (max-width: 767px) { .header-container-rachkova { padding-top: 30%; } }
+@media (min-width: 768px) and (max-width: 989px) { .header-container-rachkova { padding-top: 30%; } }
+@media (min-width: 990px) and (max-width: 1199px) { .header-container-rachkova { padding-top: 30%; } }
+@media (min-width: 1199px) { .header-container-rachkova { padding-top: 360px; } }
+@media (min-width: 1920px) { .header-container-rachkova { padding-top: 360px; } }
 
 .p-container-center { display: flex; justify-content: center; }
 .p-container-center p { max-width: 1320px !important; align-self: center; }

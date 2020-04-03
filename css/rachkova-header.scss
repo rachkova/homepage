@@ -1,5 +1,6 @@
 ---
 ---
+@import "import_mainResponsiveFunctions";
 
 .header {
 
@@ -16,7 +17,12 @@
 
 .header-container-rachkova {
 
-    padding-top: 360px;
+    @include widthLvl00 {padding-top: 30%;}
+    @include widthLvl01 {padding-top: 30%;}
+    @include widthLvl02 {padding-top: 30%;}
+    @include widthLvl03 {padding-top: 30%;}
+    @include widthLvl04 {padding-top: 360px;}
+    @include widthLvl05 {padding-top: 360px;}
     width: 100%;
 
     display: flex;

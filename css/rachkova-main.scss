@@ -28,15 +28,16 @@ body {
 
 hr {
 
-  border-width: 4px ;
+  border-width: 2px ;
   border-style: solid;
 
-  max-width:120px;
-  min-width: 120px;
+  max-width:100px;
+  min-width: 100px;
 
   @include widthLvl00 {border-width: 2px ;min-width:60px; max-width:60px; margin-top: 20px; margin-bottom: 20px;}
   @include widthLvl01 {border-width: 3px ;min-width:80px; max-width:80px;margin-top: 30px; margin-bottom: 30px;}
   @include widthLvl02 {border-width: 3px ;min-width:100px; max-width:100px;margin-top: 5%; margin-bottom: 5%;}
+  
   margin-top: 38px;
   margin-bottom: 38px;
 

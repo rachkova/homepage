@@ -100,14 +100,6 @@ h2 {
 
 }
 
-.neli {
-  padding-top: 50px;
-
-  @extend .font-size-3 ;
-  font-weight: $fontweightBolder;
-  color: $h1FontColor;
-}
-
 .cv-description {
 
 
@@ -126,7 +118,7 @@ h2 {
 
 
 .kontakt-header {
-  @extend .font-size-3 ;
+  @extend .font-size-4 ;
   font-weight: $fontweightBold;
   color:$colorLightGrey;
 }
@@ -290,6 +282,13 @@ h2 {
   .inactive:hover {
     color: $h1FontColor;
   }
+}
+
+.neli {
+
+  @extend .font-size-4 ;
+  font-weight: $fontweightBolder;
+  color: $colorDarkGrey;
 }
 
 .buero-description {

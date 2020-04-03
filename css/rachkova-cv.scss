@@ -8,12 +8,12 @@
   width: 100%;
 
 
-  @include widthLvl00 { height: auto; padding-top: 10%; padding-bottom: 10%; background-attachment: scroll;}
-  @include widthLvl01 { height: auto; padding-top: 10%; padding-bottom: 10%; background-attachment: scroll;}
-  @include widthLvl02 { height: auto; padding-top: 10%; padding-bottom: 10%; background-attachment: scroll;}
-  @include widthLvl03 { height: auto; padding-top: 10%; padding-bottom: 10%; background-attachment: scroll;}
-  @include widthLvl04 { height: auto; padding-top: 5%; padding-bottom: 10%; }
-  @include widthLvl05 { height: 1080px; padding-top: 3%; padding-bottom: 7%; }
+  @include widthLvl00 { height: auto; background-attachment: scroll;}
+  @include widthLvl01 { height: auto; background-attachment: scroll;}
+  @include widthLvl02 { height: auto; background-attachment: scroll;}
+  @include widthLvl03 { height: auto; background-attachment: scroll;}
+  @include widthLvl04 { height: auto; }
+  @include widthLvl05 { height: 1080px;}
 
   background-repeat: no-repeat;
   background-position: center;

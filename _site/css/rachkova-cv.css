@@ -1,10 +1,10 @@
 .cv-container { width: 100%; background-repeat: no-repeat; background-position: center; background-size: cover; background-attachment: fixed; display: flex; justify-content: center; }
-@media (max-width: 410px) { .cv-container { height: auto; padding-top: 10%; padding-bottom: 10%; background-attachment: scroll; } }
-@media (min-width: 411px) and (max-width: 767px) { .cv-container { height: auto; padding-top: 10%; padding-bottom: 10%; background-attachment: scroll; } }
-@media (min-width: 768px) and (max-width: 989px) { .cv-container { height: auto; padding-top: 10%; padding-bottom: 10%; background-attachment: scroll; } }
-@media (min-width: 990px) and (max-width: 1199px) { .cv-container { height: auto; padding-top: 10%; padding-bottom: 10%; background-attachment: scroll; } }
-@media (min-width: 1199px) { .cv-container { height: auto; padding-top: 5%; padding-bottom: 10%; } }
-@media (min-width: 1920px) { .cv-container { height: 1080px; padding-top: 3%; padding-bottom: 7%; } }
+@media (max-width: 410px) { .cv-container { height: auto; background-attachment: scroll; } }
+@media (min-width: 411px) and (max-width: 767px) { .cv-container { height: auto; background-attachment: scroll; } }
+@media (min-width: 768px) and (max-width: 989px) { .cv-container { height: auto; background-attachment: scroll; } }
+@media (min-width: 990px) and (max-width: 1199px) { .cv-container { height: auto; background-attachment: scroll; } }
+@media (min-width: 1199px) { .cv-container { height: auto; } }
+@media (min-width: 1920px) { .cv-container { height: 1080px; } }
 
 .cv-content { height: auto; min-width: 1320px; max-width: 1320px; justify-content: flex-start; align-items: flex-start; }
 @media (max-width: 410px) { .cv-content { min-width: 100%; width: 100%; max-width: 100%; overflow: hidden; padding: 0px; } }

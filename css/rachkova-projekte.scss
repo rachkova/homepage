@@ -11,40 +11,49 @@
 
 }
 
-.projekte-index-container {
+.main-index-container {
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position:center;
 
   width: 100%;
-  height: auto;
-  @include widthLvl00 { height: auto;padding-top: 10%; padding-bottom: 10%;}
-  @include widthLvl01 { height: auto;padding-top: 10%; padding-bottom: 10%;}
-  @include widthLvl02 { height: auto;padding-top: 10%; padding-bottom: 10%;}
+  min-height: calc(100vh - 100px);
+
+
+  @include widthLvl00 { padding-top: 10%; padding-bottom: 10%;}
+  @include widthLvl01 { padding-top: 10%; padding-bottom: 10%;}
+  @include widthLvl02 { padding-top: 7.5%; padding-bottom: 7.5%;}
   background-color:$colorDarkGrey;
 
-  // its a hack, dont remove this
-  margin-top: -20px;
-  //
-  @include widthLvl03 { height: auto; padding-top: 10%; padding-bottom: 10%;}
-  @include widthLvl04 { height: auto; padding-top: 5%; padding-bottom: 5%;}
-  @include widthLvl05 { height: auto; padding-top: 3%; padding-bottom: 3%;}
+  @include widthLvl03 { padding-top: 2.5%; padding-bottom: 2.5%;}
+  @include widthLvl04 { padding-top: 2.5%; padding-bottom: 2.5%;}
+  @include widthLvl05 { padding-top: 2.5%; padding-bottom: 2.5%;}
 
   display: flex;
   justify-content: center;
 
 }
 
-.projekte-index-content {
+.main-index-content {
 
-    @include widthLvl00 { min-width: 100%; max-width: 100%; width: 100%; padding: 0px 20px 0px 20px;}
-    @include widthLvl01 { min-width: 100%; max-width: 100%; width: 100%; padding: 0px 20px 0px 20px;}
-    @include widthLvl02 { min-width: 100%; max-width: 100%; width: 100%; padding: 0px 20px 0px 20px;}
-    @include widthLvl03 { min-width: 100%; max-width: 100%; width: 100%; padding: 0px 20px 0px 20px;}
-    @include widthLvl04 { min-width: 100%; max-width: 100%; width: 100%; padding: 0px;}
-    @include widthLvl05 { min-width: 1320px;; max-width: 1320px;; width: 1320px; padding: 0px 20px 0px 20px;}
+  display: flex;
+  flex-direction: column;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position:center;
 
+  height: auto;
 
+  @include widthLvl00 { min-width: 100%; max-width: 100%; width: 100%;}
+  @include widthLvl01 { min-width: 100%; max-width: 100%; width: 100%;}
+  @include widthLvl02 { min-width: 100%; max-width: 100%; width: 100%;}
+  @include widthLvl03 { min-width: 100%; max-width: 100%; width: 100%;}
+  @include widthLvl04 { min-width: 100%; max-width: 100%; width: 100%;}
+  @include widthLvl05 { min-width: 1320px; max-width: 1320px; width: 1320px;}
 
-     justify-content: center;
-     align-items: center;
+  justify-content: flex-start;
+  align-items: center;
 
 }
 
@@ -52,9 +61,13 @@
 
   display: flex;
   flex-direction: row;
+  width: 100%;
+  justify-content: space-evenly;
 
-  justify-content: space-between;
-
+  @include widthLvl02{ padding-top: calc((7.5% - 38px));}
+  @include widthLvl03{ padding-top: calc((6% - 38px));}
+  @include widthLvl04{ padding-top: calc((6% - 38px));}
+  @include widthLvl05{ padding-top: calc((6% - 38px));}
 
   @include widthLvl00 { flex-direction: column;  text-align: center;align-items: center;justify-content: center;}
   @include widthLvl01 { flex-direction: column;  text-align: center;align-items: center;justify-content: center;}
@@ -88,13 +101,13 @@
 
 .projekte-preview-img-container {
   display: flex;
-
+  width: 100%;
   @include widthLvl00 {flex-flow: column; min-height: 200px; padding-top: 5%;}
   @include widthLvl01 {flex-flow: column; min-height: 200px; padding-top: 5%;}
   @include widthLvl02 {flex-flow: row; min-height: 300px; padding-top: 5%;}
-  @include widthLvl03 {flex-flow: row; min-height: 300px; padding-top: 15%;}
-  @include widthLvl04 {flex-flow: row; min-height: 500px; padding-top: 15%;}
-  @include widthLvl05 {flex-flow: row; min-height: 500px; padding-top: 15%;}
+  @include widthLvl03 {flex-flow: row; min-height: 300px; padding-top: 6%;}
+  @include widthLvl04 {flex-flow: row; min-height: 500px; padding-top: 6%;}
+  @include widthLvl05 {flex-flow: row; min-height: 500px; padding-top: 6%;}
 
 
   align-items: center;
