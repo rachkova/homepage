@@ -2,6 +2,13 @@
 layout: projekte
 ---
 
+## Front Seite
+
+
+  * **BUG** Einrückungen aktualisieren und vereinheitlichen
+  * **done** ~~hr grundsätzlich zu groß~~
+
+
 [Flexboxguide zum Nachlesen](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 
 ## Individuelles Projekt
@@ -17,10 +24,7 @@ layout: projekte
 * **done** ~~* 6.tes Element in der Projektübersicht Grafik Bug~~
 * **done** ~~Platzhalter Horizontal ganz unten am Boden funktioniert nicht bei bestimmter Anzahl von Projekten~~
 
-## Front Seite
 
-* **done** ~~Einrückungen aktualisieren und vereinheitlichen~~
-* **done** ~~hr grundsätzlich zu groß~~
 
 ## Navigationsleiste
 
