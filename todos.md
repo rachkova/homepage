@@ -4,17 +4,17 @@ layout: projekte
 
 [Flexboxguide zum Nachlesen](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 
-## Projekt Übersicht
-
-* **done** ~~* 6.tes Element in der Projektübersicht Grafik Bug~~
-* **done** ~~Platzhalter Horizontal ganz unten am Boden funktioniert nicht bei bestimmter Anzahl von Projekten~~
-
 ## Individuelles Projekt
 
 * individuelle Projekte Gallery Design
   * Modal On Click Support
   * Kachelsystem
 
+## Projekt Übersicht
+
+* Position bei Navigationsklick stimmt nicht
+* **done** ~~* 6.tes Element in der Projektübersicht Grafik Bug~~
+* **done** ~~Platzhalter Horizontal ganz unten am Boden funktioniert nicht bei bestimmter Anzahl von Projekten~~
 
 ## Front Seite
 
