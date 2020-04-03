@@ -7,8 +7,9 @@ layout: projekte
 ## Individuelles Projekt
 
 * individuelle Projekte Gallery Design
-  * Modal On Click Support
-  * Kachelsystem
+  * **done** ~~Modal On Click Support~~
+  * **done** ~~Kachelsystem~~
+  * **in progress 60%** Description Design
 
 ## Projekt Übersicht
 

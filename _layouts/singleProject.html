@@ -17,24 +17,45 @@
   {% endif %}
   {% endfor %}
 
-  <div id="projekt-gallery-modal gallery-modal">
-    <div class="modalImageContainer">
-
-    </div>
-  </div>
+  <div id="projektModal" class="projekt-gallery-modal"></div>
 
   <div class="projekt-container-fluid">
 
-    <div class="projekt-left-spacer"></div>
-
-
-    <div class="projekt-content-container">
-
-
-      <div class="projekt-header rachkova-animation-fromTopFast">
-        <h2>{{ projekt.titleMain }}</h2>
+      <div class="projekt-header-container">
+        <div class="projekt-left-spacer"></div>
+        <div class="projekt-header rachkova-animation-fromTopFast">
+          <h2>{{ projekt.titleMain }}</h2>
+        </div>
       </div>
 
+      <div class="projekt-spacer-horizontal"></div>
+      <div class="projekte-spacer-horizontal-mobile"></div>
+
+      <div class="projekt-ImgDescriContainer">
+        <div class="projekt-left-spacer-XL"></div>
+  
+        <div class="projekt-description-container">
+            <div class="projekt-description-top rachkova-animation-fromLeftOpacity">
+              {{ projekt.description }}
+            </div>
+            <div class="projekt-description-bottom rachkova-animation-fromLeftOpacity">
+              <b>Architektur:</b> {{ projekt.Architektur}}
+              <br>
+              <b>Auftraggeber:</b> {{ projekt.Auftraggeber }}
+              <br>
+              <b>Bauzeit:</b> {{ projekt.Bauzeit }}
+              <br>
+              <b>Leistung:</b> {{ projekt.Leistung }}
+              <br>
+            </div>
+        </div>
+
+      </div>
+
+  </div>
+
+{% comment %}
+<!--
       <div class="projekt-ImgDescriContainer">
         <div class="projekt-description-container">
 
@@ -78,7 +99,8 @@
     <div class="projekt-mobile-element"><span><b>Auftraggeber:<b> {{ projekt.Auftraggeber }}</span></div>
     <div class="projekt-mobile-element"><span><b>Bauzeit:<b> {{ projekt.Bauzeit }}</span></div>
     <div class="projekt-mobile-element"><span><b>Leistung:<b> {{ projekt.Leistung }}</span></div>
-  </div>
+  </div> -->
+{% endcomment %}
 
   <div class="projekt-spacer-horizontal"></div>
   <div class="projekte-spacer-horizontal-mobile"></div>
@@ -86,30 +108,99 @@
   <div class="projekt-gallery-container">
 
       {% assign gallery = projekt.imgGallery %}
-
-      <div class="projekt-spacer-vertical"></div>
+      {% assign pathhelper = "/img/projekte" %}
+      {% assign gallerySize = gallery | size %}
+      {% assign helper = totalNrProjects | plus: 5%}
+      {% assign NrForLoops = helper | divided_by: 5%}
 
       {% for image in gallery %}
 
-        <div class="projekt-gallery-element-container">
+        {% if forloop.index0 == NrForLoops %}
+          {% break %}
+        {% endif %}
 
-          {% assign pathhelper = "/img/projekte" %}
+        {% assign numHelper = forloop.index0 | times: 5 %}
 
-          <div class="nl-image projekt-gallery-element background-preloader" onclick="projektGalleryModal('{{ development }}{{ sortedProjects[num2].url }}')" data-background="{{ site.baseurl }}{{pathhelper}}{{ page.url }}/{{ image }}">
+        {% assign num1 = numHelper | plus: 0 %}
+        {% assign num2 = numHelper | plus: 1 %}
+        {% assign num3 = numHelper | plus: 2 %}
+        {% assign num4 = numHelper | plus: 3 %}
+        {% assign num5 = numHelper | plus: 4 %}
 
+      <div class="projekte-row-3">
+
+        <div class="projekte-spacer-vertical"></div>
+
+        {% if gallery[num1] %}<div class="projekte-element-container-5">{% else %}</div>{% break %}{% endif %}
+
+          <div class="nl-image projekte-element-5" onclick="projektGalleryModal('{{ site.baseurl }}{{pathhelper}}{{ page.url }}/{{ gallery[num1] }}')" data-background="{{ site.baseurl }}{{pathhelper}}{{ page.url }}/{{ gallery[num1] }}">
           </div>
         </div>
 
-        <div class="projekt-spacer-vertical"></div>
+        <div class="projekte-spacer-vertical"></div>
         <div class="projekte-spacer-horizontal-mobile"></div>
 
+        {% if gallery[num2] %}<div class="projekte-element-container-6">{% else %}<div class="projekte-element-container-6"></div><div class="projekte-element-container-7"></div></div>{% break %}{% endif %}
+
+          <div class="nl-image projekte-element-6" onclick="projektGalleryModal('{{ site.baseurl }}{{pathhelper}}{{ page.url }}/{{ gallery[num2] }}')" data-background="{{ site.baseurl }}{{pathhelper}}{{ page.url }}/{{ gallery[num2] }}">
+          </div>
+        </div>
+
+        <div class="projekte-spacer-vertical"></div>
+        <div class="projekte-spacer-horizontal-mobile"></div>
+
+        {% if gallery[num3] %}<div class="projekte-element-container-7">{% else %}<div class="projekte-element-container-7"></div></div>{% break %}{% endif %}
+
+          <div class="nl-image projekte-element-7" onclick="projektGalleryModal('{{ site.baseurl }}{{pathhelper}}{{ page.url }}/{{ gallery[num3] }}')" data-background="{{ site.baseurl }}{{pathhelper}}{{ page.url }}/{{ gallery[num3] }}">
+          </div>
+        </div>
+
+        <div class="projekte-spacer-vertical"></div>
+        <div class="projekte-spacer-horizontal-mobile"></div>
+
+      </div>
+
+      <div class="projekt-spacer-horizontal"></div>
+      <div class="projekte-spacer-horizontal-mobile"></div>
+
+  {% if gallery[num4] %}
+    <div class="projekte-row-2">
+
+      <div class="projekte-spacer-vertical"></div>
+
+      <div class="projekte-element-container-3">
+  {% else %}{% break %}{% endif %}
+
+        <div class="nl-image projekte-element-3" onclick="projektGalleryModal('{{ site.baseurl }}{{pathhelper}}{{ page.url }}/{{ gallery[num4] }}')" data-background="{{ site.baseurl }}{{pathhelper}}{{ page.url }}/{{ gallery[num4] }}">
+        </div>
+
+      </div>
+      <div class="projekte-spacer-vertical"></div>
+      <div class="projekte-spacer-horizontal-mobile"></div>
+  {% if gallery[num5] %}
+      <div class="projekte-element-container-4">
+      {% else %}
+          <div class="projekte-container-3"></div>
+          <div class="projekte-spacer-vertical"></div>
+
+    </div>
+    <div class="projekt-spacer-horizontal"></div>
+    <div class="projekte-spacer-horizontal-mobile"></div>
+
+      {% break %}{% endif %}
+
+      <div class="nl-image projekte-element-4" onclick="projektGalleryModal('{{ site.baseurl }}{{pathhelper}}{{ page.url }}/{{ gallery[num5] }}')" data-background="{{ site.baseurl }}{{pathhelper}}{{ page.url }}/{{ gallery[num5] }}">
+      </div>
+      <div class="projekte-spacer-vertical"></div>
+    </div>
+
+
+    </div>
+
+    <div class="projekt-spacer-horizontal"></div>
+    <div class="projekte-spacer-horizontal-mobile"></div>
       {% endfor %}
-
-
-  </div>
-
-
-  </div>
+</div>
 
   {% include modal.html %}
   {% include scripts.html %}

@@ -135,7 +135,18 @@ window.lazyBackground = function(){
 
 
 
+var modalGalleryClass = $('.projekt-gallery-modal');
+var modalGalleryId = $('#projektModal');
 
+
+function projektGalleryModal(path) {
+
+  var imgPath = "<img src=" + path + ">";
+  modalGalleryClass.toggleClass('visible');
+  modalGalleryId.html(imgPath);
+  // modalGalleryClass.toggleClass('visible');
+  console.log("modal fired " + path);
+}
 
 
 
@@ -317,6 +328,9 @@ $( window ).on('resize', function() {
 // var mobileNavigation = $("#modalMobileNavigation");
 var modalClass = $('.modal');
 
+
+
+
 (function($) {
    $('.item-transition').on('click', function() {
       $('.modalNav').toggleClass('visible');
@@ -324,6 +338,10 @@ var modalClass = $('.modal');
       modalClass.toggleClass('visible');
 
    });
+   modalGalleryId.on('click', function() {
+     modalGalleryClass.toggleClass('visible');
+   });
+
    modal.on('click', function() {
       $('.item-transition').toggleClass('active');
       modalClass.toggleClass('visible');
