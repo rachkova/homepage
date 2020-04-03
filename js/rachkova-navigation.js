@@ -312,23 +312,27 @@ $( window ).on('resize', function() {
 
 });
 
+// var modal = $("#myModal");
+// var modalClose = $("#modalClose");
+// var mobileNavigation = $("#modalMobileNavigation");
+var modalClass = $('.modal');
 
 (function($) {
    $('.item-transition').on('click', function() {
       $('.modalNav').toggleClass('visible');
-            $(this).toggleClass('active');
-      modal.toggleClass('visible');
-      mobileNavigation.toggleClass('visible');
+      $(this).toggleClass('active');
+      modalClass.toggleClass('visible');
+
    });
    modal.on('click', function() {
       $('.item-transition').toggleClass('active');
-      modal.toggleClass('visible');
-      mobileNavigation.toggleClass('visible');
+      modalClass.toggleClass('visible');
+      $('.modalNav').toggleClass('visible');
    });
    modalClose.on('click', function() {
       $('.item-transition').toggleClass('active');
-      modal.toggleClass('visible');
-      mobileNavigation.toggleClass('visible');
+      modalClass.toggleClass('visible');
+      $('.modalNav').toggleClass('visible');
    });
    $('.item-animation').on('click', function() {
       if($(this).hasClass('active-in')) {

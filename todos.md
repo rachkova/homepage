@@ -11,7 +11,7 @@ layout: projekte
 
 * **done** ~~Bei mittlerer Bildschirmbreite verschwindet der Home Button~~
 * **done** ~~Effekt nach dem Scrollen~~
-* Mobile Version Design and Usability Hotfix
+* **done** ~~Mobile Version Design and Usability Hotfix~~
 
 ## Projekte
 
