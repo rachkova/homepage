@@ -64,7 +64,11 @@ Kreative Lösungen für anspruchsvolle Architekturprojekte sind unser Markenzeic
 
 <body id="page-top">
 
-  <div class="rachkova-nav-container">
+  
+
+
+<div id="nav" class="rachkova-nav-container background-transparent">
+
 
   <div class="nav-left-spacer"></div>
 
@@ -73,9 +77,7 @@ Kreative Lösungen für anspruchsvolle Architekturprojekte sind unser Markenzeic
   </div>
 
   <div class="nav-menu">
-    <div class="nav-element" id="scrollfromTop"></div>
-    <div class="nav-element" id="ScreenHeight"></div>
-    <div class="nav-element" id="ProjekteTarget"></div>
+    
 
     
         <div class="nav-element" onclick="smoothScroll(document.getElementById('header-rachkova'))">Home</div>
@@ -98,8 +100,8 @@ Kreative Lösungen für anspruchsvolle Architekturprojekte sind unser Markenzeic
   <div class="nav-right-spacer"></div>
 </div>
 
+<!-- // If click on initiate, width goes to 100vw -->
 <div id="modalMobileNavigation" class="modalNav">
-
     <div class="mobileNavigationContainer">
       <div class="nav-element-mobile primary" onclick="clickLink('/#header')">Home</div>
       <div class="nav-element-mobile primary" onclick="clickLink('/projekte')">Projekte</a></div>
@@ -314,13 +316,7 @@ Kreative Lösungen für anspruchsvolle Architekturprojekte sind unser Markenzeic
 </div>
 </a>
 
-  <div id="myModal" class="modal">
-
-    <span id="modalclose">&times;</span>
-    <img class="modal-content" id="img01">
-    <div id="caption"></div>
-
-</div>
+  <div id="myModal" class="modal"></div>
 
   <!-- jQuery -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

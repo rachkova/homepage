@@ -1,4 +1,10 @@
-<div class="rachkova-nav-container">
+
+
+{% if page.url contains "stahl" or page.url contains "efh" or page.url contains "altbau" or page.url contains "projekte" %}
+<div id="nav" class="rachkova-nav-container background-white">
+{% else %}
+<div id="nav" class="rachkova-nav-container background-transparent">
+{% endif %}
 
   <div class="nav-left-spacer"></div>
 
@@ -7,9 +13,11 @@
   </div>
 
   <div class="nav-menu">
-    <div class="nav-element" id="scrollfromTop"></div>
+    {% comment %}
+    <!-- <div class="nav-element" id="scrollfromTop"></div>
     <div class="nav-element" id="ScreenHeight"></div>
-    <div class="nav-element" id="ProjekteTarget"></div>
+    <div class="nav-element" id="ProjekteTarget"></div> -->
+    {% endcomment %}
 
     {% if page.url contains "stahl" or page.url contains "efh" or page.url contains "altbau" or page.url contains "projekte" %}
         <div class="nav-element" onclick="clickLink('{{ environment }}/#header')">Home</div>
@@ -34,8 +42,8 @@
   <div class="nav-right-spacer"></div>
 </div>
 
+<!-- // If click on initiate, width goes to 100vw -->
 <div id="modalMobileNavigation" class="modalNav">
-
     <div class="mobileNavigationContainer">
       <div class="nav-element-mobile primary" onclick="clickLink('{{ environment }}/#header')">Home</div>
       <div class="nav-element-mobile primary" onclick="clickLink('{{ environment }}/projekte')">Projekte</a></div>

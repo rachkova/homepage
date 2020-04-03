@@ -86,7 +86,24 @@ $.fn.isInViewport = function(inViewType){
     }
 };
 
+window.navigationBackground = function(){
 
+    var url = window.location.href;
+    var nav = $('#nav');
+
+
+    if (!( (url.indexOf("stahl") >= 0) || (url.indexOf("projekte") >= 0) || (url.indexOf("altbau") >= 0) || (url.indexOf("efh") >= 0) )) {
+      if ( ($('body').scrollTop() > 0) && (nav.hasClass('background-transparent')) ) {
+        nav.removeClass('background-transparent');
+        nav.addClass('background-white');
+      }
+      else if (($('body').scrollTop() == 0) && (nav.hasClass('background-white'))) {
+        nav.removeClass('background-white');
+        nav.addClass('background-transparent');
+      }
+      console.log("navigatioBackground changed; url = " + url + " and navIdent is: " + nav);
+    }
+}
 
 window.lazyBackground = function(){
 		$('.nl-image[data-background]:visible').each(function(){
@@ -152,6 +169,7 @@ window.lazyBackground = function(){
 
 $('body').on('resize scroll', function() {
 
+    navigationBackground();
     lazyBackground();
 
     if ( !(projekteMain.hasClass("animationFired")) && $('#projekte-index-rachkova').isInViewport('topOnly') ) {
@@ -203,7 +221,7 @@ $('body').on('resize scroll', function() {
 });
 
  $( window ).on('load', function(){
-
+      navigationBackground();
       lazyBackground();
 
        if ( $('#projekte-index-rachkova').isInViewport('topOnly') ) {
@@ -297,7 +315,8 @@ $( window ).on('resize', function() {
 
 (function($) {
    $('.item-transition').on('click', function() {
-      $(this).toggleClass('active');
+      $('.modalNav').toggleClass('visible');
+            $(this).toggleClass('active');
       modal.toggleClass('visible');
       mobileNavigation.toggleClass('visible');
    });

@@ -9,8 +9,9 @@ layout: projekte
 
 ## Navigationsleiste
 
-* Bei mittlerer Bildschirmbreite verschwindet der Home Button
-* Effekte nach dem Scrollen mit Button einstellbar
+* **done** ~~Bei mittlerer Bildschirmbreite verschwindet der Home Button~~
+* **done** ~~Effekt nach dem Scrollen~~
+* Mobile Version Design and Usability Hotfix
 
 ## Projekte
 
