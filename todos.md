@@ -3,6 +3,9 @@ layout: projekte
 ---
 ## 05. April
 
+* Optimize Google Preview
+* Investigate external Fonts to Optimize speed score
+
 * **Abgesagt** Disable Logo on Mobile view after scrolling - *logo am Handy ist gut, da kann ma reinzoomen und genau nachlesen, finde das für den Besucher der Seite von Vorteil*
 
 * Investigate Animation Triggering
