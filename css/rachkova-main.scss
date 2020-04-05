@@ -72,8 +72,8 @@ p {
   position: relative;
 
   @include widthLvl00 {top: -75px;}
-  @include widthLvl01 {top: 13vh  ;}
-  @include widthLvl02 {top: -50px;}
+  @include widthLvl01 {top: -75px;}
+  @include widthLvl02 {top: -75px;}
   @include widthLvl03 {top: -75px;}
   @include widthLvl04 {top: -50px;}
   @include widthLvl05 {top: -80px;}

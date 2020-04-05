@@ -1,26 +1,29 @@
 ---
 layout: projekte
 ---
-## 05. April
-
-* Optimize Google Preview
-* Investigate external Fonts to Optimize speed score
-
-* **Abgesagt** Disable Logo on Mobile view after scrolling - *logo am Handy ist gut, da kann ma reinzoomen und genau nachlesen, finde das für den Besucher der Seite von Vorteil*
-
-* Investigate Animation Triggering
-* **don** ~~Bugfix "Anspruchsvolle EFH" & "Home" Button in Mobile Navigation~~
-* Fertig machen: Individuelles Projekt Design
-* **done** ~~Fix position to element when clicking the navigation~~
-* Kontakt als Hauptüberschrift, Büro statt Kontakt
-* Leerzeichen bei Kontakt fixen zw überschrift und content
-* CV Text Padding Lvl3
-* **done** ~~Investigate Height of Section (Höhe der einzelnen Sektionen auf der Front Seite passen nicht)~~
 
 ## Troubleshooting
 
+* Add 404.html page design
 * Investigate Iphone Ios Javascript Background Transition may not work
-* Prevent FOC navigation white background#
+* Prevent FOC navigation white background
+* Optimize Google Preview
+* Investigate external Fonts to Optimize speed score
+* Investigate Animation Triggering
+
+## 05. April
+
+* **Abgesagt** Disable Logo on Mobile view after scrolling - *logo am Handy ist gut, da kann ma reinzoomen und genau nachlesen, finde das für den Besucher der Seite von Vorteil*
+
+* **done** ~~Bugfix "Anspruchsvolle EFH" & "Home" Button in Mobile Navigation~~
+* **done** ~~Individuelles Projekt Design~~
+* **done** ~~Fix position to element when clicking the navigation~~
+* **done** ~~Kontakt als Hauptüberschrift, Büro statt Kontakt~~
+* **done** ~~Leerzeichen bei Kontakt fixen zw überschrift und content~~
+* **done** ~~CV Text Padding Lvl3~~
+* **done** ~~Investigate Height of Section (Höhe der einzelnen Sektionen auf der Front Seite passen nicht)~~
+
+
 
 ## Front Seite
 
@@ -34,7 +37,7 @@ layout: projekte
 * individuelle Projekte Gallery Design
   * **done** ~~Modal On Click Support~~
   * **done** ~~Kachelsystem~~
-  * **in progress 60%** Description Design
+  * **done** Description Design
 
 ## Projekt Übersicht
 

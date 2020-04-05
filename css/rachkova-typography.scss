@@ -297,3 +297,9 @@ h2 {
   text-align: center;
   font-weight: $fontweightBolder;
 }
+
+
+.projekt-description-top, .projekt-description-bottom {
+  @extend .font-size-4 ;
+
+}

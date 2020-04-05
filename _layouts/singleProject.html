@@ -22,7 +22,7 @@
   <div class="projekt-container-fluid">
 
       <div class="projekt-header-container">
-        <div class="projekt-left-spacer"></div>
+
         <div class="projekt-header rachkova-animation-fromTopFast">
           <h2>{{ projekt.titleMain }}</h2>
         </div>
@@ -32,7 +32,6 @@
       <div class="projekte-spacer-horizontal-mobile"></div>
 
       <div class="projekt-ImgDescriContainer">
-        <div class="projekt-left-spacer-XL"></div>
 
         <div class="projekt-description-container">
             <div class="projekt-description-top rachkova-animation-fromLeftOpacity">
@@ -48,6 +47,13 @@
               <b>Leistung:</b> {{ projekt.Leistung }}
               <br>
             </div>
+        </div>
+
+        {% assign pathhelper2 = "/img/projekte" %}
+        {% assign main = "main.jpg" %}
+
+        <div class="projekt-mainimage-container">
+          <img src="{{ site.baseurl }}{{pathhelper2}}{{ page.url }}/{{ main }}" onclick="projektGalleryModal('{{ site.baseurl }}{{pathhelper2}}{{ page.url }}/{{ main }}')" alt="main">
         </div>
 
       </div>
