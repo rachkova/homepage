@@ -8,8 +8,16 @@ layout: projekte
 * Investigate Animation Triggering
 * **don** ~~Bugfix "Anspruchsvolle EFH" & "Home" Button in Mobile Navigation~~
 * Fertig machen: Individuelles Projekt Design
-* ? Seitenverhältnis fixen, genauerer infos fehlen
 * **done** ~~Fix position to element when clicking the navigation~~
+* Kontakt als Hauptüberschrift, Büro statt Kontakt
+* Leerzeichen bei Kontakt fixen zw überschrift und content
+* CV Text Padding Lvl3
+* Investigate Height of Section (Höhe der einzelnen Sektionen auf der Front Seite passen nicht)
+
+## Troubleshooting
+
+* Investigate Iphone Ios Javascript Background Transition may not work
+* Prevent FOC navigation white background#
 
 ## Front Seite
 
