@@ -4,6 +4,8 @@ layout: projekte
 ## 05. April
 
 * Logo verschwinden beim Scrollen Mobile
+* Mobile Menü Fixen
+* Individuelles Projekt Design fertig machen
 * ? Seitenverhältnis fixen, genauerer infos fehlen
 
 ## Front Seite

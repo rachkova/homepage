@@ -24,8 +24,6 @@
   @include widthLvl00 { padding-top: 10%; padding-bottom: 10%;}
   @include widthLvl01 { padding-top: 10%; padding-bottom: 10%;}
   @include widthLvl02 { padding-top: 7.5%; padding-bottom: 7.5%;}
-  background-color:$colorDarkGrey;
-
   @include widthLvl03 { padding-top: 2.5%; padding-bottom: 2.5%;}
   @include widthLvl04 { padding-top: 2.5%; padding-bottom: 2.5%;}
   @include widthLvl05 { padding-top: 2.5%; padding-bottom: 2.5%;}
@@ -71,7 +69,7 @@
 
   @include widthLvl00 { flex-direction: column;  text-align: center;align-items: center;justify-content: center;}
   @include widthLvl01 { flex-direction: column;  text-align: center;align-items: center;justify-content: center;}
-  @include widthLvl02 { flex-direction: column;  text-align: center;align-items: center;justify-content: center;}
+  @include widthLvl02 { flex-direction: row;  text-align: center;align-items: center;justify-content: center;}
 
   .kategorien-element {
 

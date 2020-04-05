@@ -5,18 +5,17 @@
 @media (min-width: 411px) and (max-width: 767px) { .leistungen-sub-container { min-width: 100%; width: 100%; max-width: 100%; overflow: hidden; padding-left: 2.5%; } }
 @media (min-width: 768px) and (max-width: 989px) { .leistungen-sub-container { min-width: 100%; width: 100%; max-width: 100%; overflow: hidden; padding-left: 2.5%; } }
 @media (min-width: 990px) and (max-width: 1199px) { .leistungen-sub-container { min-width: 100%; width: 100%; max-width: 100%; overflow: hidden; padding-left: 2.5%; } }
-@media (min-width: 1199px) { .leistungen-sub-container { min-width: 100%; width: 100%; max-width: 100%; overflow: hidden; padding-left: 2.5%; } }
+@media (min-width: 1199px) { .leistungen-sub-container { justify-content: flex-start; flex-direction: row; min-width: 68.75%; max-width: 68.75%; width: 68.75%; overflow: hidden; padding-left: 2.5%; } }
 @media (min-width: 1920px) { .leistungen-sub-container { min-width: 100%; width: 100%; max-width: 100%; overflow: hidden; padding-left: 2.5%; } }
 
 .leistungen-mobile-content { display: none; width: 100%; height: auto; flex-direction: column; justify-content: center; align-items: center; }
 @media (max-width: 410px) { .leistungen-mobile-content { display: flex; padding-top: calc((7.5% - 38px)); } }
 @media (min-width: 411px) and (max-width: 767px) { .leistungen-mobile-content { display: flex; padding-top: calc((7.5% - 38px)); } }
-@media (min-width: 768px) and (max-width: 989px) { .leistungen-mobile-content { display: flex; padding-top: calc((7.5% - 38px)); } }
 
 .leistungen-element-container { display: flex; flex-flow: row; }
 @media (max-width: 410px) { .leistungen-element-container { display: none; padding-top: calc((7.5% - 38px)); } }
 @media (min-width: 411px) and (max-width: 767px) { .leistungen-element-container { display: none; padding-top: calc((7.5% - 38px)); } }
-@media (min-width: 768px) and (max-width: 989px) { .leistungen-element-container { display: none; padding-top: calc((7.5% - 38px)); } }
+@media (min-width: 768px) and (max-width: 989px) { .leistungen-element-container { display: flex; padding-top: calc((7.5% - 38px)); } }
 @media (min-width: 990px) and (max-width: 1199px) { .leistungen-element-container { padding-top: calc((6% - 38px)); } }
 @media (min-width: 1199px) { .leistungen-element-container { padding-top: calc((6% - 38px)); } }
 @media (min-width: 1920px) { .leistungen-element-container { padding-top: calc((6% - 38px)); } }

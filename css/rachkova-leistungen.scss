@@ -17,7 +17,7 @@
   @include widthLvl01 { min-width: 100%; width: 100%; max-width: 100%; overflow: hidden; padding-left: 2.5%;}
   @include widthLvl02 { min-width: 100%; width: 100%; max-width: 100%; overflow: hidden; padding-left: 2.5%;}
   @include widthLvl03 { min-width: 100%; width: 100%; max-width: 100%; overflow: hidden; padding-left: 2.5%;}
-  @include widthLvl04 { min-width: 100%; width: 100%; max-width: 100%; overflow: hidden; padding-left: 2.5%;}
+  @include widthLvl04 {justify-content: flex-start; flex-direction: row; min-width: 68.75%; max-width: 68.75%; width: 68.75%; overflow: hidden; padding-left: 2.5%;}
   @include widthLvl05 { min-width: 100%; width: 100%; max-width: 100%; overflow: hidden; padding-left: 2.5%;}
 
   height: auto;
@@ -32,7 +32,6 @@
   display: none;
   @include widthLvl00 { display: flex; padding-top: calc((7.5% - 38px));}
   @include widthLvl01 { display: flex; padding-top: calc((7.5% - 38px));}
-  @include widthLvl02 { display: flex; padding-top: calc((7.5% - 38px));}
 
   width: 100%;
   height: auto;
@@ -47,7 +46,7 @@
 
   @include widthLvl00{ display: none;  padding-top: calc((7.5% - 38px));}
   @include widthLvl01{ display: none;  padding-top: calc((7.5% - 38px));}
-  @include widthLvl02{ display: none;  padding-top: calc((7.5% - 38px));}
+  @include widthLvl02{ display: flex;  padding-top: calc((7.5% - 38px));}
   @include widthLvl03{ padding-top: calc((6% - 38px));}
   @include widthLvl04{ padding-top: calc((6% - 38px));}
   @include widthLvl05{ padding-top: calc((6% - 38px));}

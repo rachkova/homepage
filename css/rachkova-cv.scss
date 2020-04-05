@@ -3,50 +3,13 @@
 
 @import "import_mainResponsiveFunctions";
 
-.cv-container {
 
-  width: 100%;
-
-
-  @include widthLvl00 { height: auto; background-attachment: scroll;}
-  @include widthLvl01 { height: auto; background-attachment: scroll;}
-  @include widthLvl02 { height: auto; background-attachment: scroll;}
-  @include widthLvl03 { height: auto; background-attachment: scroll;}
-  @include widthLvl04 { height: auto; }
-  @include widthLvl05 { height: 1080px;}
-
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
-
-  display: flex;
-  justify-content: center;
-
-}
-
-.cv-content {
-
-  @include widthLvl00 { min-width: 100%; width: 100%; max-width: 100%; overflow: hidden; padding: 0px;}
-  @include widthLvl01 { min-width: 100%; width: 100%; max-width: 100%; overflow: hidden; padding: 0px;}
-  @include widthLvl02 { min-width: 100%; width: 100%; max-width: 100%; overflow: hidden; padding: 0px;}
-  @include widthLvl03 { min-width: 100%; width: 100%; max-width: 100%; overflow: hidden; padding: 0px;}
-  @include widthLvl04 { min-width: 68.75%; max-width: 68.75%; width: 68.75%; overflow: hidden; padding-left: 2.5%;;}
-
-  height: auto;
-
-  min-width: 1320px;
-  max-width: 1320px;
-
-  justify-content: flex-start;
-  align-items: flex-start;
-
-
-}
 .cv-description-container {
 
     width: 100%;
-
+    display: flex;
+    justify-content:
+    center;
 
 }
 
@@ -59,4 +22,5 @@
   @include widthLvl01 { padding-top: 0px; padding-left: 2.5%; padding-right:2.5%; }
   @include widthLvl02 { padding-top: 0px; padding-left: 2.5%; padding-right:2.5%; }
   @include widthLvl03 { padding-top: 0px; padding-left: 2.5%; padding-right:2.5%; }
+  @include widthLvl04 { justify-content: flex-start; flex-direction: row; min-width: 68.75%; max-width: 68.75%; width: 68.75%; overflow: hidden; padding-left: 2.5%;}
 }
