@@ -49,8 +49,6 @@
     min-width: 1320px;
     max-width: 1320px;
 
-    padding: 62px 20px 0px 20px;
-
     justify-content: flex-start;
     align-items: flex-start;
 
@@ -58,9 +56,15 @@
 }
 
 .buero-sub-container {
-  padding-top: 5%;
+
   width: 100%;
-  padding-bottom: 5%;
+  @include widthLvl00 { width: 95%;}
+  @include widthLvl01 { width: 95%;}
+  @include widthLvl02 { width: 90%;}
+  @include widthLvl03 { width: 90%;}
+  @include widthLvl04 { max-width: 68.75%; width: 68.75%; overflow: hidden; }
+  @include widthLvl05 { min-width: 100%; max-width: 100%; width: 100%; overflow: hidden; }
+
 }
 
 .buero-description {

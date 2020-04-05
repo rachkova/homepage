@@ -14,8 +14,12 @@ window.smoothScroll = function(target) {
 
    var targetY = 0;
    do { //find the top of target relatively to the container
-       if (target == scrollContainer) break;
+       if (target == scrollContainer) {
+
+         break;
+      }
        if ( $( window ).width() > 1200 ) {targetY += target.offsetTop - 100;}
+
        else {targetY += target.offsetTop - 60;}
 
    } while (target = target.offsetParent);
@@ -27,7 +31,7 @@ window.smoothScroll = function(target) {
    }
    // start scrolling
    scroll(scrollContainer, scrollContainer.scrollTop, targetY, 0);
-
+   // location.href = location.href.replace(location.hash,"");
    // load animation at target
 }
 
@@ -37,6 +41,7 @@ window.clickLink = function(target) {
       $('.item-transition').toggleClass('active');
       modal.toggleClass('visible');
       mobileNavigation.toggleClass('visible');
+
     }
     window.location.href = target;
     // smoothScroll(document.getElementById('leistungen-rachkova'));
@@ -186,6 +191,10 @@ function projektGalleryModal(path) {
   var cvHr = $('#cvHrAnimation');
   var cvSub = $('#cvSubContainer');
 
+  var kontaktMain = $('#kontakt-rachkova');
+  var kontaktHeadline = $('#kontaktHeader');
+  var kontaktHr = $('#kontaktHrAnimation');
+
 $('body').on('resize scroll', function() {
 
     navigationBackground();
@@ -234,8 +243,14 @@ $('body').on('resize scroll', function() {
         cvSub.addClass("rachkova-animation-fromBottomFast");
         console.log("CV in View and changed");
     }
+    else if ( !(kontaktMain.hasClass("animationFired")) &&  $('#kontakt-rachkova').isInViewport('topOnly') ) {
 
-
+        kontaktMain.addClass("animationFired");
+        kontaktHeadline.addClass("rachkova-animation-fromTopFast");
+        kontaktHeadline.css("opacity", "1");
+        kontaktHr.addClass("rachkova-hr-animationFast");
+        console.log("CV in View and changed");
+    }
 
 });
 

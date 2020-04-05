@@ -13,12 +13,12 @@
 .leistungen-sub-container {
 
 
-  @include widthLvl00 { min-width: 100%; width: 100%; max-width: 100%; overflow: hidden; padding-left: 2.5%;}
-  @include widthLvl01 { min-width: 100%; width: 100%; max-width: 100%; overflow: hidden; padding-left: 2.5%;}
-  @include widthLvl02 { min-width: 100%; width: 100%; max-width: 100%; overflow: hidden; padding-left: 2.5%;}
-  @include widthLvl03 { min-width: 100%; width: 100%; max-width: 100%; overflow: hidden; padding-left: 2.5%;}
-  @include widthLvl04 {justify-content: flex-start; flex-direction: row; min-width: 68.75%; max-width: 68.75%; width: 68.75%; overflow: hidden; padding-left: 2.5%;}
-  @include widthLvl05 { min-width: 100%; width: 100%; max-width: 100%; overflow: hidden; padding-left: 2.5%;}
+  @include widthLvl00 { min-width: 100%; width: 100%; max-width: 100%; overflow: hidden; }
+  @include widthLvl01 { min-width: 100%; width: 100%; max-width: 100%; overflow: hidden; }
+  @include widthLvl02 { min-width: 90%; width: 90%; max-width: 90%; overflow: hidden; }
+  @include widthLvl03 { min-width: 90%; width: 90%; max-width: 90%; overflow: hidden; }
+  @include widthLvl04 {justify-content: flex-start; flex-direction: row; min-width: 68.75%; max-width: 68.75%; width: 68.75%; overflow: hidden; }
+  @include widthLvl05 { min-width: 100%; width: 100%; max-width: 100%; overflow: hidden; }
 
   height: auto;
 
@@ -30,8 +30,8 @@
 
 .leistungen-mobile-content {
   display: none;
-  @include widthLvl00 { display: flex; padding-top: calc((7.5% - 38px));}
-  @include widthLvl01 { display: flex; padding-top: calc((7.5% - 38px));}
+  @include widthLvl00 { display: flex; }
+  @include widthLvl01 { display: flex; }
 
   width: 100%;
   height: auto;
@@ -66,5 +66,4 @@
 
   flex: 2;
 
-  @include widthLvl04 {padding-left: 2.5%;}
 }

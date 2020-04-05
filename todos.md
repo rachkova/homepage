@@ -12,7 +12,7 @@ layout: projekte
 * Kontakt als Hauptüberschrift, Büro statt Kontakt
 * Leerzeichen bei Kontakt fixen zw überschrift und content
 * CV Text Padding Lvl3
-* Investigate Height of Section (Höhe der einzelnen Sektionen auf der Front Seite passen nicht)
+* **done** ~~Investigate Height of Section (Höhe der einzelnen Sektionen auf der Front Seite passen nicht)~~
 
 ## Troubleshooting
 

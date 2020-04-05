@@ -4,35 +4,35 @@
 @import "import_colors";
 @import "import_mainResponsiveFunctions";
 
+#kontaktHeader {
+  opacity: 0;
+  color: $colorLightGrey;
+}
+
 .kontakt-adress-container {
   width: 50%;
-  @include widthLvl00 {width: 90%;}
-  @include widthLvl01 {width: 90%;}
-  @include widthLvl02 {width: 90%;}
+  @include widthLvl00 {width: 100%;}
+  @include widthLvl01 {width: 100%;}
+  @include widthLvl02 {width: 100%;}
 }
 .kontakt-description-container {
 
     width: 100%;
     display: flex;
-    @include widthLvl00 {width: 100%; flex-direction: column; padding-left: 2.5%; }
-    @include widthLvl01 {width: 100%; flex-direction: column; padding-left: 2.5%; }
-    @include widthLvl02 {width: 100%; flex-direction: column;  padding-left: 2.5%; }
-    @include widthLvl03 {width: 100%; justify-content: flex-start; flex-direction: row; padding-left: 2.5%;}
-    @include widthLvl04 {justify-content: flex-start; flex-direction: row; min-width: 68.75%; max-width: 68.75%; width: 68.75%; overflow: hidden; padding-left: 2.5%;}
-    @include widthLvl05 {justify-content: flex-start; flex-direction: row; min-width: 1320px; max-width: 1320px; overflow: hidden; padding-left: 2.5%;}
+    @include widthLvl00 {width: 95%; flex-direction: column;  }
+    @include widthLvl01 {width: 95%; flex-direction: column;  }
+    @include widthLvl02 {width: 90%; flex-direction: column;   }
+    @include widthLvl03 {width: 90%; justify-content: flex-start; flex-direction: row; }
+    @include widthLvl04 {justify-content: flex-start; flex-direction: row; min-width: 68.75%; max-width: 68.75%; width: 68.75%; overflow: hidden; }
+    @include widthLvl05 {justify-content: flex-start; flex-direction: row; min-width: 1320px; max-width: 1320px; overflow: hidden; }
 
 
 }
 
-.kontakt-description {
-
-  padding: 50px 0px 50px 0px;
-
-}
 
 .kontakt-googlemaps-container {
-  @include widthLvl00 {width: 97.5%; padding-right: 2.5;}
-  @include widthLvl01 {width: 97.5%; padding-right: 2.5;}
-  @include widthLvl02 {width: 97.5%; padding-right: 2.5;}
+  @include widthLvl00 {width: 100%; padding-top: 15px;}
+  @include widthLvl01 {width: 100%; padding-top: 15px;}
+  @include widthLvl02 {width: 100%; padding-top: 15px;}
   width: 50%;
 }

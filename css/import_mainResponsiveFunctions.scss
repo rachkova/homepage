@@ -6,7 +6,7 @@ $widthLevelTwoHigher: 989px;
 $widthLevelThreeLower: 990px;
 $widthLevelThreeHigher: 1199px;
 $widthLevelFour: 1199px;
-$widthLevelFive: 1920px;
+$widthLevelFive: 1919px;
 
 @mixin widthLvl00 {
   @media (max-width: $widthLevelZero) { @content; }
@@ -26,7 +26,6 @@ $widthLevelFive: 1920px;
 @mixin widthLvl03 {
   @media (min-width:$widthLevelThreeLower) and (max-width:$widthLevelThreeHigher) { @content; }
 }
-
 
 @mixin widthLvl04 {
   @media (min-width: $widthLevelFour) { @content; }

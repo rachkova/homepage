@@ -6,7 +6,7 @@
 @media (min-width: 768px) and (max-width: 989px) { .header-container-rachkova { padding-top: 30%; } }
 @media (min-width: 990px) and (max-width: 1199px) { .header-container-rachkova { padding-top: 30%; } }
 @media (min-width: 1199px) { .header-container-rachkova { padding-top: 360px; } }
-@media (min-width: 1920px) { .header-container-rachkova { padding-top: 360px; } }
+@media (min-width: 1919px) { .header-container-rachkova { padding-top: 360px; } }
 
 .p-container-center { display: flex; justify-content: center; }
 .p-container-center p { max-width: 1320px !important; align-self: center; }

@@ -71,10 +71,10 @@ p {
 .anchormarginLeistungen {
   position: relative;
 
-  @include widthLvl00 {top: -50px;}
-  @include widthLvl01 {top: -50px;}
+  @include widthLvl00 {top: -75px;}
+  @include widthLvl01 {top: 13vh  ;}
   @include widthLvl02 {top: -50px;}
-  @include widthLvl03 {top: -50px;}
+  @include widthLvl03 {top: -75px;}
   @include widthLvl04 {top: -50px;}
   @include widthLvl05 {top: -80px;}
 
@@ -91,4 +91,46 @@ p {
   @include widthLvl00 {display: none !important;}
   @include widthLvl01 {display: none !important;}
   @include widthLvl02 {display: none !important;}
+}
+
+.inner-content-padding {
+  @include widthLvl00 {
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  @include widthLvl01 {
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  @include widthLvl02 {
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  @include widthLvl03 {
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  @include widthLvl04 {
+    padding-left: 0%;
+    padding-right: 0%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  @include widthLvl05 {
+    padding-left: 0%;
+    padding-right: 0%;
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+
+//   padding-top: calc((7.5% - 38px));
+// padding-top: calc((7.5% - 38px));
 }

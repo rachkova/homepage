@@ -8,19 +8,23 @@
 
     width: 100%;
     display: flex;
-    justify-content:
-    center;
-
+    justify-content: center;
+    @include widthLvl00 { width: 95%;}
+    @include widthLvl01 { width: 95%;}
+    @include widthLvl02 { width: 90%;}
+    @include widthLvl03 { width: 90%;}
+    @include widthLvl04 {justify-content: flex-start; flex-direction: row; width: 68.75%; overflow: hidden; }
+    @include widthLvl05 {width: 100%;}
 }
 
 .cv-description {
 
   width: 100%;
-  padding-bottom: 75px;
 
-  @include widthLvl00 { word-wrap: break-word; overflow-wrap: break-word;padding-top: 0px; padding-right:2.5%; }
-  @include widthLvl01 { padding-top: 0px; padding-right:2.5%; }
-  @include widthLvl02 { padding-top: 0px; padding-right:2.5%; }
-  @include widthLvl03 { padding-top: 0px; padding-right:2.5%; }
+  @include widthLvl00 { word-wrap: break-word; overflow-wrap: break-word; }
+  @include widthLvl01 { }
+  @include widthLvl02 { }
+  @include widthLvl03 { }
   @include widthLvl04 { justify-content: flex-start; flex-direction: row; overflow: hidden; }
+  @include widthLvl05 { justify-content: flex-start; flex-direction: row; overflow: hidden; }
 }
