@@ -3,7 +3,8 @@ layout: projekte
 ---
 ## 05. April
 
-* Disable Logo on Mobile view after scrolling
+* **Abgesagt** Disable Logo on Mobile view after scrolling - *logo am Handy ist gut, da kann ma reinzoomen und genau nachlesen, finde das für den Besucher der Seite von Vorteil*
+
 * Investigate Animation Triggering
 * Bugfix Mobile Navigation
 * Fertig machen: Individuelles Projekt Design
