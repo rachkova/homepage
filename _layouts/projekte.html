@@ -39,7 +39,7 @@
           width: 100%;
           min-width: 100%;
           min-height: 100vh;
-          background-color: rgba(100,100,0,0.2);
+
           display: flex;
           justify-content: center;
           text-align: center;
@@ -48,10 +48,32 @@
           width: 1320px;
           max-width: 1320px;
           text-align: left;
-          background-color: rgba(0,100,200,0.3);
+
+          -webkit-box-shadow: 3px 3px 5px 6px #ccc;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+          -moz-box-shadow:    3px 3px 5px 6px #ccc;  /* Firefox 3.5 - 3.6 */
+          box-shadow:         3px 3px 5px 6px #ccc;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+
+          padding-top: 20px;
+          
+
           align-self: center;
           justify-content: flex-start;
 
+        }
+        ul {
+          list-style: none; /* Remove default bullets */
+
+
+          transition: all .5s ease-in-out;
+        }
+
+        ul li::before {
+          content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+          color: #008b8b; /* Change the color */
+          font-weight: bold; /* If you want it to be bold */
+          display: inline-block; /* Needed to add space between the bullet and the text */
+          width: 1em; /* Also needed for space (tweak if needed) */
+          margin-left: -1em; /* Also needed for space (tweak if needed) */
         }
         </style>
         <div class="todosContainer">

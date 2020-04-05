@@ -1,6 +1,6 @@
 
 
-{% if page.url contains "stahl" or page.url contains "efh" or page.url contains "altbau" or page.url contains "projekte" %}
+{% if page.url contains "stahl" or page.url contains "efh" or page.url contains "altbau" or page.url contains "projekte" or page.url contains "todo" %}
 <div id="nav" class="rachkova-nav-container background-white">
 {% else %}
 <div id="nav" class="rachkova-nav-container background-transparent">
@@ -19,7 +19,7 @@
     <div class="nav-element" id="ProjekteTarget"></div> -->
     {% endcomment %}
 
-    {% if page.url contains "stahl" or page.url contains "efh" or page.url contains "altbau" or page.url contains "projekte" %}
+    {% if page.url contains "stahl" or page.url contains "efh" or page.url contains "altbau" or page.url contains "projekte" or page.url contains "todo" %}
         <div class="nav-element" onclick="clickLink('{{ environment }}/#header')">Home</div>
     {% else %}
         <div class="nav-element" onclick="smoothScroll(document.getElementById('header-rachkova'))">Home</div>

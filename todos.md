@@ -2,14 +2,35 @@
 layout: projekte
 ---
 
-## Troubleshooting
+# Front End Technical Data
 
-* Add 404.html page design
-* Investigate Iphone Ios Javascript Background Transition may not work
-* Prevent FOC navigation white background
-* Optimize Google Preview
-* Investigate external Fonts to Optimize speed score
-* Investigate Animation Triggering
+Front End Developer: https://jasparkety.github.io
+
+* **Technology**: Jekyll Github Pages
+* **Javascripts**: jQuery 3.3.1 as jquery.min.js
+  * Additional Scripts validated via Esprima.org
+* **CSS**: SCSS Jekyll preprocessor
+* **HTML** specifications:
+  * Meta description tags
+  * Twitter Description Tags
+  * Google Customized Preview
+  * Site Validated via https://validator.w3.org/
+  * Site Validated via https://jigsaw.w3.org/css-validator/
+  * Site Validated via https://html5.validator.nu/
+  * Site Validated via https://datayze.com/
+
+* General:
+  * Google Page Speed insight score Desktop/Mobile 96%/84% (https://developers.google.com/speed/pagespeed/insights/?hl=de)
+  * Pagespeed https://gtmetrix.com Pagespeed 84%/YSlow 80%
+
+## Open Troubleshooting Points
+
+  * Add 404.html page design
+  * Investigate Iphone Ios Javascript Background Transition may not work
+  * Prevent FOC navigation white background
+  * Optimize Google Preview
+  * Investigate external Fonts to Optimize speed score
+  * Investigate Animation Triggering
 
 ## 05. April
 
