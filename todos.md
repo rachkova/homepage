@@ -1,6 +1,10 @@
 ---
 layout: projekte
 ---
+## 05. April
+
+* Logo verschwinden beim Scrollen Mobile
+* ? Seitenverhältnis fixen, genauerer infos fehlen
 
 ## Front Seite
 

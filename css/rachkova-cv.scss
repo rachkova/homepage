@@ -31,7 +31,7 @@
   @include widthLvl01 { min-width: 100%; width: 100%; max-width: 100%; overflow: hidden; padding: 0px;}
   @include widthLvl02 { min-width: 100%; width: 100%; max-width: 100%; overflow: hidden; padding: 0px;}
   @include widthLvl03 { min-width: 100%; width: 100%; max-width: 100%; overflow: hidden; padding: 0px;}
-  @include widthLvl04 { min-width: 68.75%; max-width: 68.75%; width: 68.75%; overflow: hidden; padding: 0px;}
+  @include widthLvl04 { min-width: 68.75%; max-width: 68.75%; width: 68.75%; overflow: hidden; padding-left: 2.5%;;}
 
   height: auto;
 

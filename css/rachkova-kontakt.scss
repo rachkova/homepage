@@ -14,13 +14,13 @@
 
     width: 100%;
     display: flex;
-    justify-content: flex-start;
-    flex-direction: row;
+    @include widthLvl00 {width: 100%; flex-direction: column; padding-left: 2.5%; }
+    @include widthLvl01 {width: 100%; flex-direction: column; padding-left: 2.5%; }
+    @include widthLvl02 {width: 100%; flex-direction: column;  padding-left: 2.5%; }
+    @include widthLvl03 {width: 100%; justify-content: flex-start; flex-direction: row; padding-left: 2.5%;}
+    @include widthLvl04 {justify-content: flex-start; flex-direction: row; min-width: 68.75%; max-width: 68.75%; width: 68.75%; overflow: hidden; padding-left: 2.5%;}
+    @include widthLvl05 {justify-content: flex-start; flex-direction: row; min-width: 1320px; max-width: 1320px; overflow: hidden; padding-left: 2.5%;}
 
-    @include widthLvl00 {flex-direction: column; padding-left: 2.5%; }
-    @include widthLvl01 {flex-direction: column; padding-left: 2.5%; }
-    @include widthLvl02 {flex-direction: column;  padding-left: 2.5%; }
-    @include widthLvl03 {flex-direction: row; padding-left: 2.5%;}
 
 }
 
