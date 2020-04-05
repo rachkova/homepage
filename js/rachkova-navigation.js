@@ -249,7 +249,7 @@ $('body').on('resize scroll', function() {
         kontaktHeadline.addClass("rachkova-animation-fromTopFast");
         kontaktHeadline.css("opacity", "1");
         kontaktHr.addClass("rachkova-hr-animationFast");
-        console.log("CV in View and changed");
+        console.log("Kontakt in View and changed");
     }
 
 });
@@ -286,6 +286,23 @@ $('body').on('resize scroll', function() {
            bueroHr.addClass("rachkova-hr-animationFast");
            bueroSub.addClass("rachkova-animation-fromBottomFast");
            console.log("Window Loaded, Buero in View and changed");
+       }
+       else if ( !(cvMain.hasClass("animationFired")) &&  $('#cv-rachkova').isInViewport('topOnly') ) {
+
+           cvMain.addClass("animationFired");
+           cvHeadline.addClass("rachkova-animation-fromTopFast");
+           cvHeadline.css("opacity", "1");
+           cvHr.addClass("rachkova-hr-animationFast");
+           cvSub.addClass("rachkova-animation-fromBottomFast");
+           console.log("CV in View and changed");
+       }
+       else if ( !(kontaktMain.hasClass("animationFired")) &&  $('#kontakt-rachkova').isInViewport('topOnly') ) {
+
+           kontaktMain.addClass("animationFired");
+           kontaktHeadline.addClass("rachkova-animation-fromTopFast");
+           kontaktHeadline.css("opacity", "1");
+           kontaktHr.addClass("rachkova-hr-animationFast");
+           console.log("Kontakt in View and changed");
        }
 
 });
