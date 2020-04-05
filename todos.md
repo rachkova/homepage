@@ -6,14 +6,14 @@ layout: projekte
 * **Abgesagt** Disable Logo on Mobile view after scrolling - *logo am Handy ist gut, da kann ma reinzoomen und genau nachlesen, finde das für den Besucher der Seite von Vorteil*
 
 * Investigate Animation Triggering
-* Bugfix Mobile Navigation
+* **don** ~~Bugfix "Anspruchsvolle EFH" & "Home" Button in Mobile Navigation~~
 * Fertig machen: Individuelles Projekt Design
 * ? Seitenverhältnis fixen, genauerer infos fehlen
-* Fix position to element when clicking the navigation
+* **done** ~~Fix position to element when clicking the navigation~~
 
 ## Front Seite
 
-  * **done** Einrückungen aktualisieren und vereinheitlichen
+  * **done** ~~Einrückungen aktualisieren und vereinheitlichen~~
   * **done** ~~hr grundsätzlich zu groß~~
 
 [Flexboxguide zum Nachlesen](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)

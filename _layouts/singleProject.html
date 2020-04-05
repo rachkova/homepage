@@ -33,7 +33,7 @@
 
       <div class="projekt-ImgDescriContainer">
         <div class="projekt-left-spacer-XL"></div>
-  
+
         <div class="projekt-description-container">
             <div class="projekt-description-top rachkova-animation-fromLeftOpacity">
               {{ projekt.description }}
@@ -140,7 +140,7 @@
         <div class="projekte-spacer-vertical"></div>
         <div class="projekte-spacer-horizontal-mobile"></div>
 
-        {% if gallery[num2] %}<div class="projekte-element-container-6">{% else %}<div class="projekte-element-container-6"></div><div class="projekte-element-container-7"></div></div>{% break %}{% endif %}
+        {% if gallery[num2] %}<div class="projekte-element-container-6">{% else %}<div class="projekte-element-container-6 disable-on-mobile"></div><div class="projekte-element-container-7 disable-on-mobile"></div></div>{% break %}{% endif %}
 
           <div class="nl-image projekte-element-6" onclick="projektGalleryModal('{{ site.baseurl }}{{pathhelper}}{{ page.url }}/{{ gallery[num2] }}')" data-background="{{ site.baseurl }}{{pathhelper}}{{ page.url }}/{{ gallery[num2] }}">
           </div>
@@ -149,7 +149,7 @@
         <div class="projekte-spacer-vertical"></div>
         <div class="projekte-spacer-horizontal-mobile"></div>
 
-        {% if gallery[num3] %}<div class="projekte-element-container-7">{% else %}<div class="projekte-element-container-7"></div></div>{% break %}{% endif %}
+        {% if gallery[num3] %}<div class="projekte-element-container-7">{% else %}<div class="projekte-element-container-7 disable-on-mobile"></div></div>{% break %}{% endif %}
 
           <div class="nl-image projekte-element-7" onclick="projektGalleryModal('{{ site.baseurl }}{{pathhelper}}{{ page.url }}/{{ gallery[num3] }}')" data-background="{{ site.baseurl }}{{pathhelper}}{{ page.url }}/{{ gallery[num3] }}">
           </div>
@@ -161,7 +161,7 @@
       </div>
 
       <div class="projekt-spacer-horizontal"></div>
-      <div class="projekte-spacer-horizontal-mobile"></div>
+
 
   {% if gallery[num4] %}
     <div class="projekte-row-2">
@@ -180,7 +180,7 @@
   {% if gallery[num5] %}
       <div class="projekte-element-container-4">
       {% else %}
-          <div class="projekte-container-3"></div>
+          <div class="projekte-container-3 disable-on-mobile"></div>
           <div class="projekte-spacer-vertical"></div>
 
     </div>

@@ -399,12 +399,13 @@
 }
 
 .nav-element-mobile {
-
+  white-space:nowrap;
   &.secondary {
 
     @include widthLvl02 {display: none;}
     padding-left: 28px;
     @media screen and (orientation:landscape) { padding-left: 16px;}
+    white-space:nowrap;
   }
 }
 
