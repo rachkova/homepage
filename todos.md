@@ -35,7 +35,6 @@ Front End Developer: https://jasparkety.github.io
 ## 05. April
 
 * **Abgesagt** Disable Logo on Mobile view after scrolling - *logo am Handy ist gut, da kann ma reinzoomen und genau nachlesen, finde das für den Besucher der Seite von Vorteil*
-
 * **done** ~~Bugfix "Anspruchsvolle EFH" & "Home" Button in Mobile Navigation~~
 * **done** ~~Individuelles Projekt Design~~
 * **done** ~~Fix position to element when clicking the navigation~~
@@ -55,14 +54,14 @@ Front End Developer: https://jasparkety.github.io
 
 ## Individuelles Projekt
 
-* individuelle Projekte Gallery Design
-  * **done** ~~Modal On Click Support~~
-  * **done** ~~Kachelsystem~~
-  * **done** Description Design
+* **done** ~~individuelle Projekte Gallery Design~~
+* **done** ~~Modal On Click Support~~
+* **done** ~~Kachelsystem~~
+* **done** ~~Description Design~~
 
 ## Projekt Übersicht
 
-* Position bei Navigationsklick stimmt nicht
+* **done** ~~Position bei Navigationsklick stimmt nicht~~
 * **done** ~~* 6.tes Element in der Projektübersicht Grafik Bug~~
 * **done** ~~Platzhalter Horizontal ganz unten am Boden funktioniert nicht bei bestimmter Anzahl von Projekten~~
 
@@ -72,7 +71,7 @@ Front End Developer: https://jasparkety.github.io
 
 * **done** ~~Bei mittlerer Bildschirmbreite verschwindet der Home Button~~
 * **done** ~~Effekt nach dem Scrollen~~
-* **in progress 90%** Mobile Version Design and Usability Hotfix
+* **done** ~~Mobile Version Design and Usability Hotfix~~
 
 ## Projekte
 
