@@ -86,3 +86,9 @@ p {
 .background-darkgrey {
   background-color: $colorDarkGrey;
 }
+
+.disable-on-mobile {
+  @include widthLvl00 {display: none !important;}
+  @include widthLvl01 {display: none !important;}
+  @include widthLvl02 {display: none !important;}
+}

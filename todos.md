@@ -4,6 +4,7 @@ layout: projekte
 ## 05. April
 
 * Disable Logo on Mobile view after scrolling
+* Investigate Animation Triggering
 * Bugfix Mobile Navigation
 * Fertig machen: Individuelles Projekt Design
 * ? Seitenverhältnis fixen, genauerer infos fehlen
@@ -11,10 +12,8 @@ layout: projekte
 
 ## Front Seite
 
-
   * **done** Einrückungen aktualisieren und vereinheitlichen
   * **done** ~~hr grundsätzlich zu groß~~
-
 
 [Flexboxguide zum Nachlesen](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 
