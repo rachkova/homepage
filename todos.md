@@ -3,15 +3,16 @@ layout: projekte
 ---
 ## 05. April
 
-* Logo verschwinden beim Scrollen Mobile
-* Mobile Menü Fixen
-* Individuelles Projekt Design fertig machen
+* Disable Logo on Mobile view after scrolling
+* Bugfix Mobile Navigation
+* Fertig machen: Individuelles Projekt Design
 * ? Seitenverhältnis fixen, genauerer infos fehlen
+* Fix position to element when clicking the navigation
 
 ## Front Seite
 
 
-  * **BUG** Einrückungen aktualisieren und vereinheitlichen
+  * **done** Einrückungen aktualisieren und vereinheitlichen
   * **done** ~~hr grundsätzlich zu groß~~
 
 
